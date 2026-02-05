@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TopPick Resume - Beat the Bots</title>
+    <meta name="description" content="AI-powered resume optimization that beats ATS systems and gets you hired">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #000;
+            color: white;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
+        .hero .tagline { font-size: 1.8rem; font-weight: bold; margin-bottom: 10px; }
+        .hero .subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px; }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #3b82f6;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: transform 0.2s;
+        }
+        .cta-button:hover { transform: scale(1.05); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
+        .section { margin-bottom: 80px; }
+        .section h2 { font-size: 2.5rem; margin-bottom: 30px; text-align: center; color: #3b82f6; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+        .feature-card {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 30px;
+            border-radius: 15px;
+        }
+        .feature-icon { font-size: 3rem; margin-bottom: 15px; }
+        .feature-title { font-size: 1.3rem; font-weight: bold; margin-bottom: 10px; color: #3b82f6; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .pricing-card {
+            background: rgba(139, 92, 246, 0.1);
+            border: 2px solid rgba(139, 92, 246, 0.3);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        .pricing-card.popular { border-color: #3b82f6; background: rgba(59, 130, 246, 0.15); }
+        .price { font-size: 3rem; font-weight: bold; color: #3b82f6; margin: 20px 0; }
+        .badge {
+            display: inline-block;
+            background: #3b82f6;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        footer {
+            background: rgba(255,255,255,0.05);
+            padding: 40px 20px;
+            text-align: center;
+        }
+        footer a { color: #3b82f6; text-decoration: none; margin: 0 15px; }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>TopPick Resume</h1>
+        <div class="tagline">Beat the Bots</div>
+        <div class="subtitle">AI-powered resume optimization that gets you hired</div>
+        <a href="#download" class="cta-button"> Coming to Google Play</a>
+    </div>
+
+    <div class="container">
+        <div class="section">
+            <h2> Stop Getting Auto-Rejected</h2>
+            <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                90% of companies use robots (ATS systems) to filter resumes. Most never reach human eyes.<br><br>
+                <strong style="color: #3b82f6;">TopPick uses AI to optimize your resume for ATS systems - so you actually get interviews.</strong>
+            </p>
+        </div>
+
+        <div class="section">
+            <h2> Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <div class="feature-title">ATS Optimization</div>
+                    <p>85%+ ATS compatibility score guaranteed</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <div class="feature-title">AI-Powered</div>
+                    <p>Industry-specific keywords and metrics</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <div class="feature-title">Real-Time Scoring</div>
+                    <p>See your ATS score instantly</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <div class="feature-title">10+ Industries</div>
+                    <p>Tech, Healthcare, Trades, Sales & more</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <div class="feature-title">PDF + TXT Export</div>
+                    <p>Download in multiple formats</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"></div>
+                    <div class="feature-title">Privacy First</div>
+                    <p>Your data is never permanently stored</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2> Simple Pricing</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>The Solo</h3>
+                    <div class="price">$3.99</div>
+                    <p>1 resume optimization</p>
+                    <ul style="text-align: left; margin: 20px 0;">
+                        <li> 1 enhanced resume</li>
+                        <li> PDF + TXT download</li>
+                        <li> All industries</li>
+                        <li> Valid 30 days</li>
+                    </ul>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="badge"> MOST POPULAR</div>
+                    <h3>Career Pack</h3>
+                    <div class="price">$9.99</div>
+                    <p>3 resume optimizations</p>
+                    <ul style="text-align: left; margin: 20px 0;">
+                        <li> 3 enhanced resumes</li>
+                        <li> PDF + TXT download</li>
+                        <li> All industries</li>
+                        <li> Valid 90 days</li>
+                        <li> Save $2</li>
+                    </ul>
+                </div>
+                <div class="pricing-card">
+                    <div class="badge"> BEST VALUE</div>
+                    <h3>Pro Hunter</h3>
+                    <div class="price">$19.99</div>
+                    <p>10 resume optimizations</p>
+                    <ul style="text-align: left; margin: 20px 0;">
+                        <li> 10 enhanced resumes</li>
+                        <li> PDF + TXT download</li>
+                        <li> All industries</li>
+                        <li> Valid 180 days</li>
+                        <li> Save $20</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="download" style="text-align: center;">
+            <h2> Download Now</h2>
+            <p style="margin-bottom: 30px;">Available on Google Play Store</p>
+            <a href="#" class="cta-button">[Google Play Badge Coming Soon]</a>
+            <p style="margin-top: 20px; color: #666;">Coming soon to iOS</p>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>TopPick Resume</strong> - Beat the Bots</p>
+        <p> 2026 Trendsetter Group LLC. All rights reserved.</p>
+        <div style="margin-top: 20px;">
+            <a href="/">Home</a>
+            <a href="/privacy.html">Privacy Policy</a>
+            <a href="/support.html">Support</a>
+        </div>
+    </footer>
+</body>
+</html>
