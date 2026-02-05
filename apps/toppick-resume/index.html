@@ -21,18 +21,50 @@
         .hero h1 { font-size: 3.5rem; margin-bottom: 20px; }
         .hero .tagline { font-size: 1.8rem; font-weight: bold; margin-bottom: 10px; }
         .hero .subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 40px; }
-        .cta-button {
-            display: inline-block;
-            background: white;
-            color: #3b82f6;
-            padding: 18px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: transform 0.2s;
+        .download-section {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid rgba(255,255,255,0.2);
         }
-        .cta-button:hover { transform: scale(1.05); }
+        .download-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .download-card {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .qr-placeholder {
+            width: 120px;
+            height: 120px;
+            background: white;
+            margin: 0 auto 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #3b82f6;
+            font-weight: bold;
+            font-size: 14px;
+            text-align: center;
+        }
+        .platform-icon { font-size: 2rem; margin-bottom: 10px; }
+        .platform-name { font-size: 1.2rem; font-weight: bold; margin-bottom: 10px; }
+        .status { 
+            font-size: 0.9rem; 
+            opacity: 0.8; 
+            color: #fbbf24;
+            margin-bottom: 15px;
+        }
         .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
         .section { margin-bottom: 80px; }
         .section h2 { font-size: 2.5rem; margin-bottom: 30px; text-align: center; color: #3b82f6; }
@@ -70,6 +102,10 @@
             text-align: center;
         }
         footer a { color: #3b82f6; text-decoration: none; margin: 0 15px; }
+        @media (max-width: 768px) {
+            .download-grid { grid-template-columns: 1fr; gap: 20px; }
+            .hero h1 { font-size: 2.5rem; }
+        }
     </style>
 </head>
 <body>
@@ -77,7 +113,29 @@
         <h1>TopPick Resume</h1>
         <div class="tagline">Beat the Bots</div>
         <div class="subtitle">AI-powered resume optimization that gets you hired</div>
-        <a href="#download" class="cta-button"> Coming to Google Play</a>
+        
+        <div class="download-section">
+            <h3 style="margin-bottom: 10px;"> Download the App</h3>
+            <p style="opacity: 0.9; margin-bottom: 20px;">Scan QR code to download on your device</p>
+            
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="platform-icon"></div>
+                    <div class="platform-name">Android</div>
+                    <div class="qr-placeholder">QR CODE<br>GOOGLE PLAY</div>
+                    <div class="status">Coming Soon</div>
+                    <p style="font-size: 0.8rem;">Scan with camera app</p>
+                </div>
+                
+                <div class="download-card">
+                    <div class="platform-icon"></div>
+                    <div class="platform-name">iOS</div>
+                    <div class="qr-placeholder">QR CODE<br>APP STORE</div>
+                    <div class="status">Coming Later</div>
+                    <p style="font-size: 0.8rem;">Scan with camera app</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="container">
@@ -168,11 +226,27 @@
             </div>
         </div>
 
-        <div class="section" id="download" style="text-align: center;">
-            <h2> Download Now</h2>
-            <p style="margin-bottom: 30px;">Available on Google Play Store</p>
-            <a href="#" class="cta-button">[Google Play Badge Coming Soon]</a>
-            <p style="margin-top: 20px; color: #666;">Coming soon to iOS</p>
+        <div class="section">
+            <h2> How It Works</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div style="padding: 20px;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;"></div>
+                        <h4 style="color: #3b82f6; margin-bottom: 10px;">1. Upload</h4>
+                        <p style="opacity: 0.8;">Upload your current resume</p>
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;"></div>
+                        <h4 style="color: #3b82f6; margin-bottom: 10px;">2. AI Optimize</h4>
+                        <p style="opacity: 0.8;">AI adds keywords & improves formatting</p>
+                    </div>
+                    <div style="padding: 20px;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;"></div>
+                        <h4 style="color: #3b82f6; margin-bottom: 10px;">3. Download</h4>
+                        <p style="opacity: 0.8;">Get your ATS-optimized resume</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
