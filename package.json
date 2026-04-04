@@ -4,9 +4,12 @@
     "engines":  {
                     "node":  "20.19.4"
                 },
+    "volta": {
+                    "node": "20.19.4"
+                },
     "scripts":  {
                     "start":  "npx serve -s . -l 3001",
-                    "build":  "echo \u0027Building...\u0027 \u0026\u0026 ls"
+                    "build":  "echo 'No build step for static site'"
                 },
     "dependencies":  {
                          "serve":  "^14.2.6"

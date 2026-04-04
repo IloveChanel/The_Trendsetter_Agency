@@ -2,5 +2,6 @@
     "cleanUrls":  true,
     "public":  true,
     "version":  2,
-    "framework":  null
+    "framework":  null,
+    "outputDirectory": "."
 }
