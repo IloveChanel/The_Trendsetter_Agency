@@ -1,0 +1,7 @@
+{
+  "name": "toppick-resume-site",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npx serve -s . 3000"
+  }
+}
