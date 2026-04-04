@@ -1,0 +1,9 @@
+{
+  "appName": "TopPick Resume",
+  "platform": "Android",
+  "testingUrl": "https://play.google.com/apps/internaltest/4701104737816607948",
+  "appIcon": "TOPLOGO.png",
+  "preview": "",
+  "testCredentials": "",
+  "notes": "Provided by user: basic app details for QA and deployment metadata."
+}
