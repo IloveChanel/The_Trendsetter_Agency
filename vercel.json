@@ -1,7 +1,8 @@
 {
     "cleanUrls":  true,
-    "public":  true,
     "version":  2,
-    "framework":  null,
-    "outputDirectory": "."
+    "public":  true,
+    "installCommand":  null,
+    "outputDirectory":  ".",
+    "buildCommand":  null
 }
