@@ -2,5 +2,9 @@
   "version": 2,
   "outputDirectory": ".",
   "cleanUrls": true,
-  "public": true
+  "public": true,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/index", "destination": "/index.html" }
+  ]
 }
