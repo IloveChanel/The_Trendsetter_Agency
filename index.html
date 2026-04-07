@@ -3,318 +3,646 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Trendsetter Agency | App Studio</title>
-  <meta name="description" content="The Trendsetter Agency builds polished, modern apps for ambitious people." />
+  <title>The Trendsetter Agency | Presented by Trendsetter Studio</title>
+  <meta name="description" content="The Trendsetter Agency, presented by Trendsetter Studio — a cinematic app studio building elevated, emotionally intelligent digital products." />
   <style>
-:root{
-  --bg:#070b16;
-  --bg2:#0f1630;
-  --bg3:#151f45;
-  --surface:rgba(255,255,255,0.06);
-  --surface2:rgba(255,255,255,0.08);
-  --card:#ffffff;
-  --ink:#0f172a;
-  --muted:#64748b;
-  --line:rgba(255,255,255,0.12);
-  --line-soft:#dbe4f0;
-  --brand:#8b5cf6;
-  --brand2:#06b6d4;
-  --brand3:#ec4899;
-  --glow:0 0 80px rgba(139,92,246,.22);
-  --shadow:0 24px 80px rgba(0,0,0,.28);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  font-family:Inter,Segoe UI,Arial,sans-serif;
-  color:#fff;
-  background:
-    radial-gradient(circle at top left, rgba(139,92,246,.22), transparent 32%),
-    radial-gradient(circle at top right, rgba(6,182,212,.16), transparent 26%),
-    radial-gradient(circle at 50% 85%, rgba(236,72,153,.12), transparent 24%),
-    linear-gradient(135deg,var(--bg) 0%,var(--bg2) 45%,var(--bg3) 100%);
-  min-height:100vh;
-}
-a{color:inherit}
-.shell{max-width:1240px;margin:0 auto;padding:28px}
-.nav{
-  display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;
-  padding:14px 0 26px 0
-}
-.brand{
-  text-decoration:none;
-  font-weight:900;
-  letter-spacing:.04em;
-  font-size:1rem;
-  text-transform:uppercase;
-}
-.brand span{
-  background:linear-gradient(90deg,#fff,#c4b5fd,#67e8f9);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-.links{display:flex;flex-wrap:wrap;gap:14px}
-.links a{
-  text-decoration:none;
-  color:rgba(255,255,255,.84);
-  font-size:.95rem;
-}
-.links a:hover{color:#fff}
-.hero{
-  position:relative;
-  overflow:hidden;
-  border:1px solid var(--line);
-  background:
-    linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
-  backdrop-filter:blur(16px);
-  border-radius:32px;
-  padding:64px 40px 40px 40px;
-  box-shadow:var(--shadow), var(--glow);
-}
-.hero:before{
-  content:"";
-  position:absolute;
-  inset:-30% auto auto -10%;
-  width:340px;height:340px;border-radius:999px;
-  background:radial-gradient(circle, rgba(139,92,246,.24), transparent 70%);
-  pointer-events:none;
-}
-.hero:after{
-  content:"";
-  position:absolute;
-  inset:auto -8% -20% auto;
-  width:280px;height:280px;border-radius:999px;
-  background:radial-gradient(circle, rgba(6,182,212,.18), transparent 70%);
-  pointer-events:none;
-}
-.kicker{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  padding:8px 12px;
-  border-radius:999px;
-  background:rgba(255,255,255,.08);
-  border:1px solid rgba(255,255,255,.12);
-  font-size:.78rem;
-  font-weight:800;
-  text-transform:uppercase;
-  letter-spacing:.14em;
-  color:#dbeafe;
-  margin-bottom:18px;
-}
-.hero h1{
-  margin:0 0 14px 0;
-  max-width:900px;
-  font-size:clamp(2.4rem,6vw,5.2rem);
-  line-height:.95;
-  letter-spacing:-.04em;
-}
-.hero p{
-  margin:0;
-  max-width:760px;
-  color:rgba(255,255,255,.82);
-  line-height:1.8;
-  font-size:1.05rem;
-}
-.hero-row{
-  display:grid;
-  grid-template-columns: 1.4fr .8fr;
-  gap:26px;
-  align-items:end;
-}
-.hero-panel{
-  border:1px solid rgba(255,255,255,.10);
-  background:rgba(255,255,255,.06);
-  border-radius:24px;
-  padding:22px;
-}
-.hero-panel h3{
-  margin:0 0 8px 0;
-  font-size:1rem;
-  color:#fff;
-}
-.hero-panel p{
-  margin:0;
-  font-size:.95rem;
-  color:rgba(255,255,255,.72);
-}
-.cta{
-  display:flex;flex-wrap:wrap;gap:12px;margin-top:26px
-}
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:10px;
-  padding:13px 18px;
-  border-radius:14px;
-  text-decoration:none;
-  font-weight:800;
-  transition:transform .18s ease, opacity .18s ease;
-}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{
-  color:#08111f;
-  background:linear-gradient(90deg,#ffffff,#dbeafe);
-}
-.btn.secondary{
-  color:#fff;
-  border:1px solid rgba(255,255,255,.16);
-  background:rgba(255,255,255,.05);
-}
-.main-card{
-  margin-top:26px;
-  border:1px solid var(--line);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-  backdrop-filter:blur(14px);
-  border-radius:32px;
-  padding:30px;
-  box-shadow:var(--shadow);
-}
-.section-header{
-  display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap;
-  margin-bottom:22px;
-}
-.section-header h2{
-  margin:0;
-  font-size:2rem;
-  letter-spacing:-.03em;
-}
-.section-header p{
-  margin:0;
-  color:rgba(255,255,255,.68);
-  max-width:660px;
-  line-height:1.7;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-}
-.card{
-  position:relative;
-  overflow:hidden;
-  min-height:260px;
-  border-radius:26px;
-  padding:24px;
-  border:1px solid rgba(255,255,255,.10);
-  background:
-    linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
-  box-shadow:0 16px 40px rgba(0,0,0,.18);
-}
-.card:before{
-  content:"";
-  position:absolute;
-  top:-60px;right:-60px;
-  width:170px;height:170px;border-radius:999px;
-  background:radial-gradient(circle, rgba(255,255,255,.18), transparent 70%);
-  pointer-events:none;
-}
-.card .eyebrow{
-  display:inline-block;
-  padding:6px 10px;
-  border-radius:999px;
-  background:rgba(255,255,255,.12);
-  color:#dbeafe;
-  font-size:.76rem;
-  font-weight:800;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-  margin-bottom:14px;
-}
-.card h3{
-  margin:0 0 10px 0;
-  font-size:1.7rem;
-  letter-spacing:-.03em;
-}
-.card p{
-  margin:0 0 18px 0;
-  color:rgba(255,255,255,.72);
-  line-height:1.75;
-}
-.card .meta{
-  font-size:.92rem;
-  color:rgba(255,255,255,.62);
-  margin-bottom:18px;
-}
-.card .btn{
-  margin-top:auto;
-}
-.stack{
-  display:grid;
-  gap:16px;
-}
-.info-card{
-  border-radius:22px;
-  padding:22px;
-  background:#fff;
-  color:var(--ink);
-  box-shadow:0 18px 50px rgba(0,0,0,.20);
-}
-.info-card h2,.info-card h3{
-  margin-top:0;
-  letter-spacing:-.03em;
-}
-.info-card p,.info-card li{
-  color:var(--muted);
-  line-height:1.8;
-}
-.info-card ul{padding-left:20px}
-.note{
-  background:#ecfeff;
-  border:1px solid #a5f3fc;
-  color:#155e75;
-  padding:14px 16px;
-  border-radius:16px;
-  margin-top:18px;
-}
-.badge{
-  display:inline-block;
-  padding:6px 10px;
-  border-radius:999px;
-  background:#eef2ff;
-  color:#4338ca;
-  font-size:.82rem;
-  font-weight:800;
-  margin-right:8px;
-  margin-bottom:8px;
-}
-.sep{
-  border:none;
-  border-top:1px solid #e2e8f0;
-  margin:26px 0;
-}
-.footer{
-  padding:26px 4px 10px 4px;
-  color:rgba(255,255,255,.62);
-  text-align:center;
-}
-.footer a{color:#fff}
-.highlight{
-  background:linear-gradient(90deg,#ffffff,#c4b5fd,#67e8f9);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-}
-@media (max-width: 920px){
-  .hero-row{grid-template-columns:1fr}
-}
-@media (max-width: 640px){
-  .shell{padding:18px}
-  .hero{padding:34px 22px 22px 22px}
-  .main-card{padding:18px}
-  .card h3{font-size:1.45rem}
-}
+    :root{
+      --bg:#040814;
+      --bg2:#0a1023;
+      --bg3:#131c39;
+      --white:#ffffff;
+      --text:rgba(255,255,255,.90);
+      --muted:rgba(255,255,255,.66);
+      --line:rgba(255,255,255,.12);
+      --glass:rgba(255,255,255,.06);
+      --glass-strong:rgba(255,255,255,.10);
+      --violet:#8b5cf6;
+      --cyan:#22d3ee;
+      --pink:#ec4899;
+      --gold:#f8d26a;
+      --shadow:0 30px 80px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,Segoe UI,Arial,sans-serif;
+      color:var(--white);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(139,92,246,.22), transparent 24%),
+        radial-gradient(circle at 85% 18%, rgba(34,211,238,.16), transparent 22%),
+        radial-gradient(circle at 50% 85%, rgba(236,72,153,.14), transparent 24%),
+        linear-gradient(135deg, var(--bg) 0%, var(--bg2) 45%, var(--bg3) 100%);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size:48px 48px;
+      mask-image:linear-gradient(to bottom, rgba(0,0,0,.65), rgba(0,0,0,.15));
+      pointer-events:none;
+      z-index:0;
+    }
+
+    .aurora{
+      position:fixed;
+      inset:-10%;
+      pointer-events:none;
+      z-index:0;
+      filter:blur(60px);
+      opacity:.8;
+    }
+
+    .orb{
+      position:absolute;
+      border-radius:999px;
+      animation:floatOrb linear infinite alternate;
+      mix-blend-mode:screen;
+    }
+
+    .orb.one{
+      width:420px;height:420px;
+      top:6%;left:3%;
+      background:radial-gradient(circle, rgba(139,92,246,.30), transparent 70%);
+      animation-duration:15s;
+    }
+
+    .orb.two{
+      width:360px;height:360px;
+      top:8%;right:4%;
+      background:radial-gradient(circle, rgba(34,211,238,.24), transparent 70%);
+      animation-duration:18s;
+    }
+
+    .orb.three{
+      width:420px;height:420px;
+      bottom:-4%;left:36%;
+      background:radial-gradient(circle, rgba(236,72,153,.18), transparent 70%);
+      animation-duration:20s;
+    }
+
+    .shell{
+      position:relative;
+      z-index:2;
+      max-width:1280px;
+      margin:0 auto;
+      padding:28px;
+    }
+
+    .nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      align-items:center;
+      gap:18px;
+      padding:8px 0 24px 0;
+    }
+
+    .brand{
+      text-decoration:none;
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+    }
+
+    .brand-top{
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.24em;
+      color:rgba(255,255,255,.62);
+      font-weight:800;
+    }
+
+    .brand-main{
+      font-size:1.18rem;
+      font-weight:900;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+      background:linear-gradient(90deg,#fff,#d8b4fe,#67e8f9,#fff4b5);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .nav-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .nav-links a{
+      text-decoration:none;
+      color:rgba(255,255,255,.78);
+      font-size:.95rem;
+      transition:color .18s ease, transform .18s ease;
+    }
+
+    .nav-links a:hover{
+      color:#fff;
+      transform:translateY(-1px);
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      backdrop-filter:blur(18px);
+      border-radius:34px;
+      box-shadow:var(--shadow);
+      padding:42px;
+      min-height:720px;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-1px;
+      border-radius:34px;
+      padding:1px;
+      background:linear-gradient(135deg, rgba(255,255,255,.25), rgba(255,255,255,.03), rgba(34,211,238,.22), rgba(139,92,246,.18));
+      -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite:xor;
+      mask-composite:exclude;
+      pointer-events:none;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.3fr .75fr;
+      gap:26px;
+      align-items:stretch;
+      position:relative;
+      z-index:2;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:9px 14px;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      background:rgba(255,255,255,.08);
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:800;
+      color:#dbeafe;
+      margin-bottom:18px;
+    }
+
+    .pulse-dot{
+      width:10px;height:10px;
+      border-radius:999px;
+      background:linear-gradient(135deg, var(--pink), var(--gold));
+      box-shadow:0 0 0 0 rgba(236,72,153,.55);
+      animation:pulseDot 1.8s infinite;
+    }
+
+    .headline{
+      margin:0;
+      font-size:clamp(2.9rem,7vw,6.3rem);
+      line-height:.92;
+      letter-spacing:-.05em;
+      max-width:900px;
+    }
+
+    .headline .shine{
+      background:linear-gradient(90deg,#ffffff,#c4b5fd,#67e8f9,#fde68a,#ffffff);
+      background-size:200% auto;
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+      animation:shineMove 6s linear infinite;
+    }
+
+    .subline{
+      margin:22px 0 0 0;
+      max-width:760px;
+      color:var(--text);
+      line-height:1.85;
+      font-size:1.06rem;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:28px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-decoration:none;
+      padding:14px 18px;
+      border-radius:15px;
+      font-weight:800;
+      transition:transform .18s ease, box-shadow .18s ease, opacity .18s ease;
+    }
+
+    .btn:hover{
+      transform:translateY(-2px);
+    }
+
+    .btn-primary{
+      color:#09101d;
+      background:linear-gradient(90deg,#ffffff,#dbeafe,#e9d5ff);
+      box-shadow:0 14px 35px rgba(255,255,255,.14);
+    }
+
+    .btn-secondary{
+      color:#fff;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.14);
+    }
+
+    .hero-bottom{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      margin-top:36px;
+    }
+
+    .mini-panel{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      border-radius:22px;
+      padding:20px;
+      min-height:120px;
+    }
+
+    .mini-panel h3{
+      margin:0 0 8px 0;
+      font-size:1rem;
+      letter-spacing:-.02em;
+    }
+
+    .mini-panel p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:.95rem;
+    }
+
+    .showcase{
+      position:relative;
+      min-height:100%;
+      display:flex;
+      align-items:stretch;
+    }
+
+    .device{
+      position:relative;
+      width:100%;
+      min-height:560px;
+      border-radius:30px;
+      border:1px solid rgba(255,255,255,.14);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .device::before{
+      content:"";
+      position:absolute;
+      width:420px;height:420px;
+      top:-120px;right:-120px;
+      border-radius:999px;
+      background:radial-gradient(circle, rgba(139,92,246,.28), transparent 70%);
+      filter:blur(10px);
+    }
+
+    .device::after{
+      content:"";
+      position:absolute;
+      width:280px;height:280px;
+      bottom:-80px;left:-60px;
+      border-radius:999px;
+      background:radial-gradient(circle, rgba(34,211,238,.18), transparent 70%);
+    }
+
+    .device-inner{
+      position:relative;
+      z-index:2;
+      height:100%;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+    }
+
+    .device-label{
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.18em;
+      font-weight:800;
+      color:#dbeafe;
+      opacity:.85;
+    }
+
+    .device-title{
+      margin:12px 0 10px 0;
+      font-size:2rem;
+      letter-spacing:-.03em;
+      line-height:1;
+    }
+
+    .device-copy{
+      color:var(--muted);
+      line-height:1.8;
+      font-size:.96rem;
+      max-width:420px;
+    }
+
+    .heartbeat{
+      position:relative;
+      height:110px;
+      margin-top:18px;
+      border-radius:20px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      overflow:hidden;
+    }
+
+    .heartbeat svg{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+    }
+
+    .heartbeat path{
+      stroke:url(#pulseGradient);
+      stroke-width:3;
+      fill:none;
+      stroke-linecap:round;
+      stroke-linejoin:round;
+      filter:drop-shadow(0 0 12px rgba(34,211,238,.35));
+      stroke-dasharray:420;
+      stroke-dashoffset:420;
+      animation:heartbeatDraw 3.2s linear infinite;
+    }
+
+    .rings{
+      position:absolute;
+      right:28px;
+      bottom:28px;
+      width:160px;
+      height:160px;
+      display:grid;
+      place-items:center;
+    }
+
+    .ring{
+      position:absolute;
+      border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);
+      animation:pulseRing 3.8s ease-out infinite;
+    }
+
+    .ring.one{width:72px;height:72px;animation-delay:0s}
+    .ring.two{width:108px;height:108px;animation-delay:1s}
+    .ring.three{width:146px;height:146px;animation-delay:2s}
+
+    .core{
+      width:28px;height:28px;
+      border-radius:999px;
+      background:radial-gradient(circle at 35% 35%, #fff, #f9a8d4 38%, #8b5cf6 72%, #22d3ee 100%);
+      box-shadow:0 0 30px rgba(139,92,246,.55), 0 0 60px rgba(34,211,238,.22);
+      animation:coreBeat 2.2s ease-in-out infinite;
+    }
+
+    .main-card{
+      margin-top:28px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      backdrop-filter:blur(16px);
+      border-radius:32px;
+      padding:30px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      align-items:end;
+      gap:22px;
+      flex-wrap:wrap;
+      margin-bottom:24px;
+    }
+
+    .section-head h2{
+      margin:0;
+      font-size:2rem;
+      letter-spacing:-.04em;
+    }
+
+    .section-head p{
+      margin:0;
+      max-width:720px;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
+    }
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      min-height:280px;
+      border-radius:26px;
+      padding:24px;
+      border:1px solid rgba(255,255,255,.10);
+      background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+      box-shadow:0 16px 40px rgba(0,0,0,.18);
+      transition:transform .22s ease, border-color .22s ease, box-shadow .22s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-6px);
+      border-color:rgba(255,255,255,.20);
+      box-shadow:0 24px 56px rgba(0,0,0,.24);
+    }
+
+    .card::before{
+      content:"";
+      position:absolute;
+      top:-80px;
+      right:-80px;
+      width:180px;
+      height:180px;
+      border-radius:999px;
+      background:radial-gradient(circle, rgba(255,255,255,.20), transparent 70%);
+      opacity:.9;
+    }
+
+    .card-badge{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      color:#dbeafe;
+      font-size:.76rem;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:800;
+      margin-bottom:16px;
+    }
+
+    .card h3{
+      margin:0 0 8px 0;
+      font-size:1.7rem;
+      letter-spacing:-.03em;
+    }
+
+    .card .meta{
+      color:rgba(255,255,255,.62);
+      font-size:.93rem;
+      margin-bottom:14px;
+    }
+
+    .card p{
+      margin:0 0 18px 0;
+      color:var(--muted);
+      line-height:1.8;
+    }
+
+    .card a{
+      text-decoration:none;
+      font-weight:800;
+      color:#fff;
+    }
+
+    .card a:hover{
+      color:#dbeafe;
+    }
+
+    .footer{
+      padding:28px 4px 12px 4px;
+      text-align:center;
+      color:rgba(255,255,255,.62);
+      font-size:.95rem;
+    }
+
+    .footer a{
+      color:#fff;
+      text-decoration:none;
+    }
+
+    .footer a:hover{
+      text-decoration:underline;
+    }
+
+    .particle-field{
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      overflow:hidden;
+      z-index:1;
+    }
+
+    .particle{
+      position:absolute;
+      width:4px;
+      height:4px;
+      border-radius:999px;
+      background:rgba(255,255,255,.55);
+      box-shadow:0 0 12px rgba(255,255,255,.18);
+      animation:drift linear infinite;
+    }
+
+    @keyframes floatOrb{
+      from{transform:translate3d(0,0,0) scale(1)}
+      to{transform:translate3d(30px,-24px,0) scale(1.08)}
+    }
+
+    @keyframes pulseDot{
+      0%{box-shadow:0 0 0 0 rgba(236,72,153,.52)}
+      70%{box-shadow:0 0 0 14px rgba(236,72,153,0)}
+      100%{box-shadow:0 0 0 0 rgba(236,72,153,0)}
+    }
+
+    @keyframes shineMove{
+      0%{background-position:0% center}
+      100%{background-position:200% center}
+    }
+
+    @keyframes pulseRing{
+      0%{transform:scale(.72);opacity:.0}
+      25%{opacity:.38}
+      100%{transform:scale(1.18);opacity:0}
+    }
+
+    @keyframes coreBeat{
+      0%,100%{transform:scale(1)}
+      15%{transform:scale(1.18)}
+      30%{transform:scale(.98)}
+      45%{transform:scale(1.12)}
+      60%{transform:scale(1)}
+    }
+
+    @keyframes heartbeatDraw{
+      0%{stroke-dashoffset:420;opacity:.6}
+      18%{opacity:1}
+      55%{stroke-dashoffset:0;opacity:1}
+      100%{stroke-dashoffset:-420;opacity:.45}
+    }
+
+    @keyframes drift{
+      from{transform:translateY(18px) scale(.85);opacity:0}
+      20%{opacity:.85}
+      100%{transform:translateY(-120px) scale(1.08);opacity:0}
+    }
+
+    @media (max-width: 980px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero{min-height:auto}
+    }
+
+    @media (max-width: 640px){
+      .shell{padding:18px}
+      .hero{padding:26px 20px}
+      .main-card{padding:18px}
+      .hero-bottom{grid-template-columns:1fr}
+      .headline{font-size:clamp(2.4rem,10vw,4rem)}
+    }
   </style>
 </head>
 <body>
+  <div class="aurora">
+    <div class="orb one"></div>
+    <div class="orb two"></div>
+    <div class="orb three"></div>
+  </div>
+
   <div class="shell">
     <nav class="nav">
-      <a class="brand" href="/"><span>The Trendsetter Agency</span></a>
-      <div class="links">
+      <a class="brand" href="/">
+        <div class="brand-top">The Trendsetter Agency</div>
+        <div class="brand-main">Presented by Trendsetter Studio</div>
+      </a>
+
+      <div class="nav-links">
         <a href="/">Home</a>
         <a href="/apps/toppick-resume/">TopPick Resume</a>
         <a href="/apps/my-muse/">My Muse</a>
@@ -326,91 +654,176 @@ a{color:inherit}
     </nav>
 
     <section class="hero">
-      <div class="hero-row">
+      <div class="particle-field" id="particles"></div>
+
+      <div class="hero-grid">
         <div>
-          <div class="kicker">Product Studio • Privacy-First • Founder-Led</div>
-          <h1>We build <span class="highlight">beautiful, focused apps</span> for real life.</h1>
-          <p>
-            The Trendsetter Agency is a modern app studio creating polished digital products that feel powerful,
-            premium, and genuinely useful. This site is the public home for our current apps, future launches,
-            support, and privacy policy pages.
+          <div class="kicker">
+            <span class="pulse-dot"></span>
+            Digital Products • Emotion • Motion • Beauty
+          </div>
+
+          <h1 class="headline">
+            A living, breathing <span class="shine">product universe</span> for apps that matter.
+          </h1>
+
+          <p class="subline">
+            The Trendsetter Agency, presented by Trendsetter Studio, creates elevated apps that feel
+            cinematic, soulful, intelligent, and unforgettable. This is not just a website.
+            It is the front door to a growing ecosystem of beautifully built products.
           </p>
-          <div class="cta">
-            <a class="btn primary" href="/apps/toppick-resume/">Explore TopPick Resume</a>
-            <a class="btn secondary" href="/about/">Meet the Studio</a>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href="/apps/toppick-resume/">Enter TopPick Resume</a>
+            <a class="btn btn-secondary" href="/about/">Explore the Studio</a>
+          </div>
+
+          <div class="hero-bottom">
+            <div class="mini-panel">
+              <h3>What we build</h3>
+              <p>
+                Career tools. Reflection tools. Wellness tools. Premium digital experiences designed to feel
+                both powerful and deeply human.
+              </p>
+            </div>
+
+            <div class="mini-panel">
+              <h3>What this site should feel like</h3>
+              <p>
+                Alive. Magnetic. High-end. The kind of first impression that makes people stop,
+                stare, and instantly feel the quality.
+              </p>
+            </div>
           </div>
         </div>
 
-        <div class="hero-panel">
-          <h3>What this studio is building</h3>
-          <p>
-            Career tools. Reflective tools. Health tools. Thoughtfully designed apps with clean interfaces,
-            clear purpose, and privacy-aware foundations.
-          </p>
+        <div class="showcase">
+          <div class="device">
+            <div class="device-inner">
+              <div>
+                <div class="device-label">Studio Signal</div>
+                <h2 class="device-title">Apps with pulse.</h2>
+                <p class="device-copy">
+                  Products built with clarity, movement, beauty, and intention — designed to feel like they
+                  belong in the future, but rooted in real emotional usefulness.
+                </p>
+
+                <div class="heartbeat">
+                  <svg viewBox="0 0 500 110" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                      <linearGradient id="pulseGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#8b5cf6"></stop>
+                        <stop offset="50%" stop-color="#22d3ee"></stop>
+                        <stop offset="100%" stop-color="#ec4899"></stop>
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,62 L70,62 L115,62 L140,30 L165,92 L196,16 L225,62 L275,62 L322,62 L348,40 L372,74 L395,62 L500,62"></path>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="rings">
+                <div class="ring one"></div>
+                <div class="ring two"></div>
+                <div class="ring three"></div>
+                <div class="core"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <main class="main-card">
-      <div class="section-header">
-        <div>
-          <h2>Current & Upcoming Products</h2>
-        </div>
+      <div class="section-head">
+        <h2>Current & Upcoming Experiences</h2>
         <p>
-          Each app has its own public page with product details, support access, and privacy information.
+          Every product has its own identity, its own public-facing page, and its own privacy/support path —
+          all inside one cohesive studio brand.
         </p>
       </div>
 
       <div class="grid">
         <article class="card">
-          <div class="eyebrow">Live Priority</div>
+          <div class="card-badge">Live Priority</div>
           <h3>TopPick Resume</h3>
           <div class="meta">Career Intelligence</div>
           <p>
-            A precision resume tool designed to help users strengthen applications, sharpen positioning,
-            and improve resume quality with AI-assisted support.
+            A focused resume-improvement product built to sharpen user positioning, strengthen resume quality,
+            and bring back more powerful results.
           </p>
-          <a class="btn primary" href="/apps/toppick-resume/">Open Product Page</a>
+          <a href="/apps/toppick-resume/">Open Product Page →</a>
         </article>
 
         <article class="card">
-          <div class="eyebrow">Prelaunch</div>
+          <div class="card-badge">Prelaunch</div>
           <h3>My Muse</h3>
           <div class="meta">Reflection & Creative Flow</div>
           <p>
-            A guided space for prompts, inspiration, and personal alignment — built to feel calm,
-            elevated, and emotionally intelligent.
+            A guided emotional and creative product designed to feel intimate, beautiful, and supportive —
+            a digital space that feels like part of you.
           </p>
-          <a class="btn primary" href="/apps/my-muse/">Open Product Page</a>
+          <a href="/apps/my-muse/">Open Product Page →</a>
         </article>
 
         <article class="card">
-          <div class="eyebrow">Prelaunch</div>
+          <div class="card-badge">Prelaunch</div>
           <h3>Health Logic</h3>
           <div class="meta">Wellness & Insight</div>
           <p>
-            A privacy-conscious wellness product focused on helping users organize habits,
-            observations, and personal health thinking.
+            A privacy-conscious product built around thoughtful structure, self-understanding,
+            and a more elevated wellness experience.
           </p>
-          <a class="btn primary" href="/apps/health-logic/">Open Product Page</a>
+          <a href="/apps/health-logic/">Open Product Page →</a>
         </article>
 
         <article class="card">
-          <div class="eyebrow">Studio</div>
-          <h3>About the Agency</h3>
-          <div class="meta">Who We Are</div>
+          <div class="card-badge">Studio</div>
+          <h3>About the Studio</h3>
+          <div class="meta">Presented by Trendsetter Studio</div>
           <p>
-            Learn about the studio, what this platform is for, and how privacy, support,
-            and product identity are structured across the site.
+            Learn how the Agency and Studio relationship is framed, and how this site is designed
+            to scale into a real product ecosystem.
           </p>
-          <a class="btn primary" href="/about/">Open About Page</a>
+          <a href="/about/">Open About Page →</a>
         </article>
       </div>
     </main>
 
     <footer class="footer">
-      <p>&copy; 2026 The Trendsetter Agency • <a href="/privacy">Privacy</a> • <a href="/support">Support</a></p>
+      <p>
+        &copy; 2026 The Trendsetter Agency • Presented by Trendsetter Studio •
+        <a href="/privacy">Privacy</a> • <a href="/support">Support</a>
+      </p>
     </footer>
   </div>
+
+  <script>
+    (function () {
+      const container = document.getElementById('particles');
+      if (!container) return;
+
+      const count = 28;
+      for (let i = 0; i < count; i++) {
+        const dot = document.createElement('span');
+        dot.className = 'particle';
+        const size = (Math.random() * 3) + 2;
+        const left = Math.random() * 100;
+        const delay = Math.random() * 8;
+        const duration = 8 + (Math.random() * 10);
+        const opacity = 0.25 + (Math.random() * 0.45);
+
+        dot.style.left = left + '%';
+        dot.style.bottom = (-10 - Math.random() * 30) + 'px';
+        dot.style.width = size + 'px';
+        dot.style.height = size + 'px';
+        dot.style.opacity = opacity;
+        dot.style.animationDelay = delay + 's';
+        dot.style.animationDuration = duration + 's';
+
+        container.appendChild(dot);
+      }
+    })();
+  </script>
 </body>
 </html>
