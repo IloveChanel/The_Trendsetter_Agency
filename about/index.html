@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | The Trendsetter Agency</title>
+  <meta name="description" content="About The Trendsetter Agency." />
+  <style>
+:root{
+  --bg:#0b1020;
+  --bg2:#111936;
+  --card:#ffffff;
+  --ink:#0f172a;
+  --muted:#475569;
+  --line:#dbe4f0;
+  --brand:#5b7cfa;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(135deg,var(--bg),var(--bg2));
+}
+a{color:inherit}
+.shell{max-width:1160px;margin:0 auto;padding:24px}
+.nav{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+  padding:16px 0 24px 0;color:#fff
+}
+.nav .brand{font-weight:800;text-decoration:none}
+.nav .links{display:flex;flex-wrap:wrap;gap:14px}
+.nav .links a{color:#fff;text-decoration:none;opacity:.92}
+.nav .links a:hover{text-decoration:underline;opacity:1}
+.hero{
+  background:rgba(255,255,255,.08);
+  color:#fff;border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;padding:40px;backdrop-filter:blur(10px);
+  box-shadow:0 20px 60px rgba(0,0,0,.22)
+}
+.hero h1{margin:0 0 12px 0;font-size:clamp(2rem,4vw,3.4rem)}
+.hero p{margin:0;max-width:820px;line-height:1.7;opacity:.96}
+.main-card{
+  background:var(--card);border-radius:24px;padding:30px;margin-top:24px;
+  box-shadow:0 18px 50px rgba(0,0,0,.18)
+}
+.section h2,.section h3{margin-top:0}
+.section p,.section li{color:var(--muted);line-height:1.75}
+.section ul{padding-left:20px}
+.kicker{font-size:.85rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#cbd5e1}
+.sep{border:none;border-top:1px solid var(--line);margin:26px 0}
+.footer{color:#fff;opacity:.92;text-align:center;padding:26px 0 12px 0}
+.footer a{color:#fff}
+.note{
+  background:#ecfeff;border:1px solid #a5f3fc;color:#155e75;
+  padding:14px 16px;border-radius:14px;margin:18px 0
+}
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#3730a3;
+  font-size:.82rem;
+  font-weight:700;
+  margin-right:8px
+}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <nav class="nav">
+      <a class="brand" href="/">The Trendsetter Agency</a>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/apps/toppick-resume/">TopPick Resume</a>
+        <a href="/apps/my-muse/">My Muse</a>
+        <a href="/apps/health-logic/">Health Logic</a>
+        <a href="/about/">About Us</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/support">Support</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="kicker">About Us</div>
+      <h1>The Trendsetter Agency</h1>
+      <p>This site is the public app hub for Trendsetter Agency products, support, and privacy policy pages.</p>
+    </section>
+
+    <main class="main-card">
+      <section class="section">
+        <h2>What this site does</h2>
+        <ul>
+          <li>Home page for all current and future apps</li>
+          <li>Dedicated app page for each product</li>
+          <li>Stable privacy policy locations for store listings</li>
+          <li>Support and public contact information</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer"><p>&copy; 2026 The Trendsetter Agency</p></footer>
+  </div>
+</body>
+</html>
