@@ -1,123 +1,416 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trendsetter Agency - Premium Mobile Apps</title>
-    <meta name="description" content="Premium mobile apps for modern professionals by The Trendsetter Agency">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: white;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; margin-bottom: 60px; padding-top: 40px; }
-        h1 { font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .tagline { font-size: 1.2rem; opacity: 0.9; }
-        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .app-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .app-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .app-icon { font-size: 4rem; margin-bottom: 20px; }
-        .app-name { font-size: 1.8rem; font-weight: bold; margin-bottom: 10px; }
-        .app-tagline { font-size: 1rem; opacity: 0.9; margin-bottom: 15px; }
-        .app-description { font-size: 0.9rem; opacity: 0.8; line-height: 1.6; margin-bottom: 20px; }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.2s;
-        }
-        .btn:hover { background: #f0f0f0; transform: scale(1.05); }
-        .coming-soon {
-            opacity: 0.6;
-            position: relative;
-        }
-        .coming-soon::after {
-            content: "COMING SOON";
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(255,255,255,0.2);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            margin-top: 80px;
-            padding: 40px 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-        footer a { color: white; text-decoration: none; margin: 0 15px; opacity: 0.9; }
-        footer a:hover { text-decoration: underline; opacity: 1; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Trendsetter Agency | App Studio</title>
+  <meta name="description" content="The Trendsetter Agency builds polished, modern apps for ambitious people." />
+  <style>
+:root{
+  --bg:#070b16;
+  --bg2:#0f1630;
+  --bg3:#151f45;
+  --surface:rgba(255,255,255,0.06);
+  --surface2:rgba(255,255,255,0.08);
+  --card:#ffffff;
+  --ink:#0f172a;
+  --muted:#64748b;
+  --line:rgba(255,255,255,0.12);
+  --line-soft:#dbe4f0;
+  --brand:#8b5cf6;
+  --brand2:#06b6d4;
+  --brand3:#ec4899;
+  --glow:0 0 80px rgba(139,92,246,.22);
+  --shadow:0 24px 80px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:#fff;
+  background:
+    radial-gradient(circle at top left, rgba(139,92,246,.22), transparent 32%),
+    radial-gradient(circle at top right, rgba(6,182,212,.16), transparent 26%),
+    radial-gradient(circle at 50% 85%, rgba(236,72,153,.12), transparent 24%),
+    linear-gradient(135deg,var(--bg) 0%,var(--bg2) 45%,var(--bg3) 100%);
+  min-height:100vh;
+}
+a{color:inherit}
+.shell{max-width:1240px;margin:0 auto;padding:28px}
+.nav{
+  display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;
+  padding:14px 0 26px 0
+}
+.brand{
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:.04em;
+  font-size:1rem;
+  text-transform:uppercase;
+}
+.brand span{
+  background:linear-gradient(90deg,#fff,#c4b5fd,#67e8f9);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.links{display:flex;flex-wrap:wrap;gap:14px}
+.links a{
+  text-decoration:none;
+  color:rgba(255,255,255,.84);
+  font-size:.95rem;
+}
+.links a:hover{color:#fff}
+.hero{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+  backdrop-filter:blur(16px);
+  border-radius:32px;
+  padding:64px 40px 40px 40px;
+  box-shadow:var(--shadow), var(--glow);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:-30% auto auto -10%;
+  width:340px;height:340px;border-radius:999px;
+  background:radial-gradient(circle, rgba(139,92,246,.24), transparent 70%);
+  pointer-events:none;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:auto -8% -20% auto;
+  width:280px;height:280px;border-radius:999px;
+  background:radial-gradient(circle, rgba(6,182,212,.18), transparent 70%);
+  pointer-events:none;
+}
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  font-size:.78rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:#dbeafe;
+  margin-bottom:18px;
+}
+.hero h1{
+  margin:0 0 14px 0;
+  max-width:900px;
+  font-size:clamp(2.4rem,6vw,5.2rem);
+  line-height:.95;
+  letter-spacing:-.04em;
+}
+.hero p{
+  margin:0;
+  max-width:760px;
+  color:rgba(255,255,255,.82);
+  line-height:1.8;
+  font-size:1.05rem;
+}
+.hero-row{
+  display:grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap:26px;
+  align-items:end;
+}
+.hero-panel{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.06);
+  border-radius:24px;
+  padding:22px;
+}
+.hero-panel h3{
+  margin:0 0 8px 0;
+  font-size:1rem;
+  color:#fff;
+}
+.hero-panel p{
+  margin:0;
+  font-size:.95rem;
+  color:rgba(255,255,255,.72);
+}
+.cta{
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:26px
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:13px 18px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:800;
+  transition:transform .18s ease, opacity .18s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{
+  color:#08111f;
+  background:linear-gradient(90deg,#ffffff,#dbeafe);
+}
+.btn.secondary{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.05);
+}
+.main-card{
+  margin-top:26px;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  backdrop-filter:blur(14px);
+  border-radius:32px;
+  padding:30px;
+  box-shadow:var(--shadow);
+}
+.section-header{
+  display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap;
+  margin-bottom:22px;
+}
+.section-header h2{
+  margin:0;
+  font-size:2rem;
+  letter-spacing:-.03em;
+}
+.section-header p{
+  margin:0;
+  color:rgba(255,255,255,.68);
+  max-width:660px;
+  line-height:1.7;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  position:relative;
+  overflow:hidden;
+  min-height:260px;
+  border-radius:26px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.10);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+  box-shadow:0 16px 40px rgba(0,0,0,.18);
+}
+.card:before{
+  content:"";
+  position:absolute;
+  top:-60px;right:-60px;
+  width:170px;height:170px;border-radius:999px;
+  background:radial-gradient(circle, rgba(255,255,255,.18), transparent 70%);
+  pointer-events:none;
+}
+.card .eyebrow{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:#dbeafe;
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.card h3{
+  margin:0 0 10px 0;
+  font-size:1.7rem;
+  letter-spacing:-.03em;
+}
+.card p{
+  margin:0 0 18px 0;
+  color:rgba(255,255,255,.72);
+  line-height:1.75;
+}
+.card .meta{
+  font-size:.92rem;
+  color:rgba(255,255,255,.62);
+  margin-bottom:18px;
+}
+.card .btn{
+  margin-top:auto;
+}
+.stack{
+  display:grid;
+  gap:16px;
+}
+.info-card{
+  border-radius:22px;
+  padding:22px;
+  background:#fff;
+  color:var(--ink);
+  box-shadow:0 18px 50px rgba(0,0,0,.20);
+}
+.info-card h2,.info-card h3{
+  margin-top:0;
+  letter-spacing:-.03em;
+}
+.info-card p,.info-card li{
+  color:var(--muted);
+  line-height:1.8;
+}
+.info-card ul{padding-left:20px}
+.note{
+  background:#ecfeff;
+  border:1px solid #a5f3fc;
+  color:#155e75;
+  padding:14px 16px;
+  border-radius:16px;
+  margin-top:18px;
+}
+.badge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:#eef2ff;
+  color:#4338ca;
+  font-size:.82rem;
+  font-weight:800;
+  margin-right:8px;
+  margin-bottom:8px;
+}
+.sep{
+  border:none;
+  border-top:1px solid #e2e8f0;
+  margin:26px 0;
+}
+.footer{
+  padding:26px 4px 10px 4px;
+  color:rgba(255,255,255,.62);
+  text-align:center;
+}
+.footer a{color:#fff}
+.highlight{
+  background:linear-gradient(90deg,#ffffff,#c4b5fd,#67e8f9);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+@media (max-width: 920px){
+  .hero-row{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  .shell{padding:18px}
+  .hero{padding:34px 22px 22px 22px}
+  .main-card{padding:18px}
+  .card h3{font-size:1.45rem}
+}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>The Trendsetter Agency</h1>
-            <p class="tagline">presents</p>
-        </header>
+  <div class="shell">
+    <nav class="nav">
+      <a class="brand" href="/"><span>The Trendsetter Agency</span></a>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/apps/toppick-resume/">TopPick Resume</a>
+        <a href="/apps/my-muse/">My Muse</a>
+        <a href="/apps/health-logic/">Health Logic</a>
+        <a href="/about/">About</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/support">Support</a>
+      </div>
+    </nav>
 
-        <div class="apps-grid">
-            <!-- TopPick Resume (in-page) -->
-            <div class="app-card">
-                <div class="app-icon"></div>
-                <div class="app-name">TopPick Resume</div>
-                <div class="app-tagline">Beat the Bots</div>
-                <div class="app-description">
-                    AI-powered resume optimization designed to beat ATS systems and get you hired.
-                </div>
-                <a href="/apps/toppick-resume/" class="btn">Open</a>
-            </div>
-
-            <!-- My Muse (in-page) -->
-            <div class="app-card">
-                <div class="app-icon"></div>
-                <div class="app-name">My Muse</div>
-                <div class="app-tagline">Creative Prompts</div>
-                <div class="app-description">
-                    Prompts, templates, and AI-assisted drafting tools.
-                </div>
-                <a href="/apps/my-muse/" class="btn">Open</a>
-            </div>
-
-            <!-- Health Logic (in-page) -->
-            <div class="app-card">
-                <div class="app-icon"></div>
-                <div class="app-name">Health Logic</div>
-                <div class="app-tagline">Personal Health Insights</div>
-                <div class="app-description">
-                    Habit tracking and privacy-first summaries.
-                </div>
-                <a href="/apps/health-logic/" class="btn">Open</a>
-            </div>
+    <section class="hero">
+      <div class="hero-row">
+        <div>
+          <div class="kicker">Product Studio • Privacy-First • Founder-Led</div>
+          <h1>We build <span class="highlight">beautiful, focused apps</span> for real life.</h1>
+          <p>
+            The Trendsetter Agency is a modern app studio creating polished digital products that feel powerful,
+            premium, and genuinely useful. This site is the public home for our current apps, future launches,
+            support, and privacy policy pages.
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="/apps/toppick-resume/">Explore TopPick Resume</a>
+            <a class="btn secondary" href="/about/">Meet the Studio</a>
+          </div>
         </div>
 
-        <footer>
-            <p style="font-size: 1.1rem; margin-bottom: 15px;"> 2026 The Trendsetter Agency</p>
-            <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 20px;">All rights reserved.</p>
-            <div>
-                <a href="/privacy/index.html">Privacy Policy</a>
-                <a href="/support.html">Support</a>
-                <a href="/privacy/top-pick-resume-policy.html">TopPick Resume Policy</a>
-            </div>
-        </footer>
-    </div>
+        <div class="hero-panel">
+          <h3>What this studio is building</h3>
+          <p>
+            Career tools. Reflective tools. Health tools. Thoughtfully designed apps with clean interfaces,
+            clear purpose, and privacy-aware foundations.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-card">
+      <div class="section-header">
+        <div>
+          <h2>Current & Upcoming Products</h2>
+        </div>
+        <p>
+          Each app has its own public page with product details, support access, and privacy information.
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="eyebrow">Live Priority</div>
+          <h3>TopPick Resume</h3>
+          <div class="meta">Career Intelligence</div>
+          <p>
+            A precision resume tool designed to help users strengthen applications, sharpen positioning,
+            and improve resume quality with AI-assisted support.
+          </p>
+          <a class="btn primary" href="/apps/toppick-resume/">Open Product Page</a>
+        </article>
+
+        <article class="card">
+          <div class="eyebrow">Prelaunch</div>
+          <h3>My Muse</h3>
+          <div class="meta">Reflection & Creative Flow</div>
+          <p>
+            A guided space for prompts, inspiration, and personal alignment — built to feel calm,
+            elevated, and emotionally intelligent.
+          </p>
+          <a class="btn primary" href="/apps/my-muse/">Open Product Page</a>
+        </article>
+
+        <article class="card">
+          <div class="eyebrow">Prelaunch</div>
+          <h3>Health Logic</h3>
+          <div class="meta">Wellness & Insight</div>
+          <p>
+            A privacy-conscious wellness product focused on helping users organize habits,
+            observations, and personal health thinking.
+          </p>
+          <a class="btn primary" href="/apps/health-logic/">Open Product Page</a>
+        </article>
+
+        <article class="card">
+          <div class="eyebrow">Studio</div>
+          <h3>About the Agency</h3>
+          <div class="meta">Who We Are</div>
+          <p>
+            Learn about the studio, what this platform is for, and how privacy, support,
+            and product identity are structured across the site.
+          </p>
+          <a class="btn primary" href="/about/">Open About Page</a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 The Trendsetter Agency • <a href="/privacy">Privacy</a> • <a href="/support">Support</a></p>
+    </footer>
+  </div>
 </body>
 </html>

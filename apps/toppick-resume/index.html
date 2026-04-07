@@ -3,222 +3,411 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TopPick Resume Privacy Policy | The Trendsetter Agency</title>
-  <meta name="description" content="TopPick Resume privacy policy and public app information." />
+  <title>TopPick Resume | The Trendsetter Agency</title>
+  <meta name="description" content="TopPick Resume official product page and privacy policy." />
   <style>
 :root{
-  --bg:#0b1020;
-  --bg2:#111936;
+  --bg:#070b16;
+  --bg2:#0f1630;
+  --bg3:#151f45;
+  --surface:rgba(255,255,255,0.06);
+  --surface2:rgba(255,255,255,0.08);
   --card:#ffffff;
   --ink:#0f172a;
-  --muted:#475569;
-  --line:#dbe4f0;
-  --brand:#5b7cfa;
+  --muted:#64748b;
+  --line:rgba(255,255,255,0.12);
+  --line-soft:#dbe4f0;
+  --brand:#8b5cf6;
+  --brand2:#06b6d4;
+  --brand3:#ec4899;
+  --glow:0 0 80px rgba(139,92,246,.22);
+  --shadow:0 24px 80px rgba(0,0,0,.28);
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family:Inter,Segoe UI,Arial,sans-serif;
-  color:var(--ink);
-  background:linear-gradient(135deg,var(--bg),var(--bg2));
+  color:#fff;
+  background:
+    radial-gradient(circle at top left, rgba(139,92,246,.22), transparent 32%),
+    radial-gradient(circle at top right, rgba(6,182,212,.16), transparent 26%),
+    radial-gradient(circle at 50% 85%, rgba(236,72,153,.12), transparent 24%),
+    linear-gradient(135deg,var(--bg) 0%,var(--bg2) 45%,var(--bg3) 100%);
+  min-height:100vh;
 }
 a{color:inherit}
-.shell{max-width:1160px;margin:0 auto;padding:24px}
+.shell{max-width:1240px;margin:0 auto;padding:28px}
 .nav{
-  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
-  padding:16px 0 24px 0;color:#fff
+  display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center;
+  padding:14px 0 26px 0
 }
-.nav .brand{font-weight:800;text-decoration:none}
-.nav .links{display:flex;flex-wrap:wrap;gap:14px}
-.nav .links a{color:#fff;text-decoration:none;opacity:.92}
-.nav .links a:hover{text-decoration:underline;opacity:1}
+.brand{
+  text-decoration:none;
+  font-weight:900;
+  letter-spacing:.04em;
+  font-size:1rem;
+  text-transform:uppercase;
+}
+.brand span{
+  background:linear-gradient(90deg,#fff,#c4b5fd,#67e8f9);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.links{display:flex;flex-wrap:wrap;gap:14px}
+.links a{
+  text-decoration:none;
+  color:rgba(255,255,255,.84);
+  font-size:.95rem;
+}
+.links a:hover{color:#fff}
 .hero{
+  position:relative;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.04));
+  backdrop-filter:blur(16px);
+  border-radius:32px;
+  padding:64px 40px 40px 40px;
+  box-shadow:var(--shadow), var(--glow);
+}
+.hero:before{
+  content:"";
+  position:absolute;
+  inset:-30% auto auto -10%;
+  width:340px;height:340px;border-radius:999px;
+  background:radial-gradient(circle, rgba(139,92,246,.24), transparent 70%);
+  pointer-events:none;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:auto -8% -20% auto;
+  width:280px;height:280px;border-radius:999px;
+  background:radial-gradient(circle, rgba(6,182,212,.18), transparent 70%);
+  pointer-events:none;
+}
+.kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
   background:rgba(255,255,255,.08);
-  color:#fff;border:1px solid rgba(255,255,255,.12);
-  border-radius:24px;padding:40px;backdrop-filter:blur(10px);
-  box-shadow:0 20px 60px rgba(0,0,0,.22)
+  border:1px solid rgba(255,255,255,.12);
+  font-size:.78rem;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  color:#dbeafe;
+  margin-bottom:18px;
 }
-.hero h1{margin:0 0 12px 0;font-size:clamp(2rem,4vw,3.4rem)}
-.hero p{margin:0;max-width:820px;line-height:1.7;opacity:.96}
+.hero h1{
+  margin:0 0 14px 0;
+  max-width:900px;
+  font-size:clamp(2.4rem,6vw,5.2rem);
+  line-height:.95;
+  letter-spacing:-.04em;
+}
+.hero p{
+  margin:0;
+  max-width:760px;
+  color:rgba(255,255,255,.82);
+  line-height:1.8;
+  font-size:1.05rem;
+}
+.hero-row{
+  display:grid;
+  grid-template-columns: 1.4fr .8fr;
+  gap:26px;
+  align-items:end;
+}
+.hero-panel{
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.06);
+  border-radius:24px;
+  padding:22px;
+}
+.hero-panel h3{
+  margin:0 0 8px 0;
+  font-size:1rem;
+  color:#fff;
+}
+.hero-panel p{
+  margin:0;
+  font-size:.95rem;
+  color:rgba(255,255,255,.72);
+}
+.cta{
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:26px
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:13px 18px;
+  border-radius:14px;
+  text-decoration:none;
+  font-weight:800;
+  transition:transform .18s ease, opacity .18s ease;
+}
+.btn:hover{transform:translateY(-2px)}
+.btn.primary{
+  color:#08111f;
+  background:linear-gradient(90deg,#ffffff,#dbeafe);
+}
+.btn.secondary{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.05);
+}
 .main-card{
-  background:var(--card);border-radius:24px;padding:30px;margin-top:24px;
-  box-shadow:0 18px 50px rgba(0,0,0,.18)
+  margin-top:26px;
+  border:1px solid var(--line);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+  backdrop-filter:blur(14px);
+  border-radius:32px;
+  padding:30px;
+  box-shadow:var(--shadow);
 }
-.section h2,.section h3{margin-top:0}
-.section p,.section li{color:var(--muted);line-height:1.75}
-.section ul{padding-left:20px}
-.kicker{font-size:.85rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#cbd5e1}
-.sep{border:none;border-top:1px solid var(--line);margin:26px 0}
-.footer{color:#fff;opacity:.92;text-align:center;padding:26px 0 12px 0}
-.footer a{color:#fff}
+.section-header{
+  display:flex;justify-content:space-between;gap:20px;align-items:end;flex-wrap:wrap;
+  margin-bottom:22px;
+}
+.section-header h2{
+  margin:0;
+  font-size:2rem;
+  letter-spacing:-.03em;
+}
+.section-header p{
+  margin:0;
+  color:rgba(255,255,255,.68);
+  max-width:660px;
+  line-height:1.7;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+}
+.card{
+  position:relative;
+  overflow:hidden;
+  min-height:260px;
+  border-radius:26px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.10);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.05));
+  box-shadow:0 16px 40px rgba(0,0,0,.18);
+}
+.card:before{
+  content:"";
+  position:absolute;
+  top:-60px;right:-60px;
+  width:170px;height:170px;border-radius:999px;
+  background:radial-gradient(circle, rgba(255,255,255,.18), transparent 70%);
+  pointer-events:none;
+}
+.card .eyebrow{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  color:#dbeafe;
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+.card h3{
+  margin:0 0 10px 0;
+  font-size:1.7rem;
+  letter-spacing:-.03em;
+}
+.card p{
+  margin:0 0 18px 0;
+  color:rgba(255,255,255,.72);
+  line-height:1.75;
+}
+.card .meta{
+  font-size:.92rem;
+  color:rgba(255,255,255,.62);
+  margin-bottom:18px;
+}
+.card .btn{
+  margin-top:auto;
+}
+.stack{
+  display:grid;
+  gap:16px;
+}
+.info-card{
+  border-radius:22px;
+  padding:22px;
+  background:#fff;
+  color:var(--ink);
+  box-shadow:0 18px 50px rgba(0,0,0,.20);
+}
+.info-card h2,.info-card h3{
+  margin-top:0;
+  letter-spacing:-.03em;
+}
+.info-card p,.info-card li{
+  color:var(--muted);
+  line-height:1.8;
+}
+.info-card ul{padding-left:20px}
 .note{
-  background:#ecfeff;border:1px solid #a5f3fc;color:#155e75;
-  padding:14px 16px;border-radius:14px;margin:18px 0
+  background:#ecfeff;
+  border:1px solid #a5f3fc;
+  color:#155e75;
+  padding:14px 16px;
+  border-radius:16px;
+  margin-top:18px;
 }
 .badge{
   display:inline-block;
   padding:6px 10px;
   border-radius:999px;
   background:#eef2ff;
-  color:#3730a3;
+  color:#4338ca;
   font-size:.82rem;
-  font-weight:700;
-  margin-right:8px
+  font-weight:800;
+  margin-right:8px;
+  margin-bottom:8px;
+}
+.sep{
+  border:none;
+  border-top:1px solid #e2e8f0;
+  margin:26px 0;
+}
+.footer{
+  padding:26px 4px 10px 4px;
+  color:rgba(255,255,255,.62);
+  text-align:center;
+}
+.footer a{color:#fff}
+.highlight{
+  background:linear-gradient(90deg,#ffffff,#c4b5fd,#67e8f9);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+@media (max-width: 920px){
+  .hero-row{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  .shell{padding:18px}
+  .hero{padding:34px 22px 22px 22px}
+  .main-card{padding:18px}
+  .card h3{font-size:1.45rem}
 }
   </style>
 </head>
 <body>
   <div class="shell">
     <nav class="nav">
-      <a class="brand" href="/">The Trendsetter Agency</a>
+      <a class="brand" href="/"><span>The Trendsetter Agency</span></a>
       <div class="links">
         <a href="/">Home</a>
         <a href="/apps/toppick-resume/">TopPick Resume</a>
         <a href="/apps/my-muse/">My Muse</a>
         <a href="/apps/health-logic/">Health Logic</a>
-        <a href="/about/">About Us</a>
+        <a href="/about/">About</a>
         <a href="/privacy">Privacy</a>
         <a href="/support">Support</a>
       </div>
     </nav>
 
     <section class="hero">
-      <div class="kicker">Official App Page + Privacy Policy</div>
-      <h1>TopPick Resume Privacy Policy</h1>
+      <div class="kicker">Career Intelligence Product</div>
+      <h1>TopPick Resume</h1>
       <p>
-        This page is the official privacy policy for TopPick Resume, a resume-improvement application published by
-        The Trendsetter Agency.
+        A resume-improvement app built to help users sharpen resume content, compare against target roles,
+        and return stronger edited material in a clean, focused workflow.
       </p>
     </section>
 
     <main class="main-card">
-      <section class="section">
-        <span class="badge">Effective Date: April 7, 2026</span>
-        <span class="badge">Last Updated: April 7, 2026</span>
-        <p>
-          TopPick Resume is operated by <strong>The Trendsetter Agency</strong>. This Privacy Policy explains how
-          TopPick Resume handles information when you use the app.
-        </p>
-      </section>
+      <div class="stack">
+        <section class="info-card">
+          <h2>Product Overview</h2>
+          <p>
+            TopPick Resume is designed for people who want smarter resume refinement without the clutter.
+            It focuses on precision, usability, and privacy-aware handling of submitted content.
+          </p>
+        </section>
 
-      <hr class="sep" />
+        <section class="info-card">
+          <h2>Privacy Policy</h2>
+          <span class="badge">Effective Date: April 7, 2026</span>
+          <span class="badge">Last Updated: April 7, 2026</span>
 
-      <section class="section">
-        <h2>1. Information the App Handles</h2>
-        <ul>
-          <li>Resume text, resume content, and related job application material that you choose to provide</li>
-          <li>Job descriptions, target role information, and other text that you choose to provide</li>
-          <li>Basic technical and app-functionality data reasonably necessary to operate the app, troubleshoot issues, prevent abuse, or validate purchases</li>
-          <li>Purchase or entitlement information handled by the relevant app marketplace or billing provider where applicable</li>
-        </ul>
-      </section>
+          <p>
+            This page is the official privacy policy for TopPick Resume.
+          </p>
 
-      <hr class="sep" />
+          <hr class="sep" />
 
-      <section class="section">
-        <h2>2. How Information Is Used</h2>
-        <ul>
-          <li>To analyze and improve resume content and related text that you submit</li>
-          <li>To briefly send submitted text to a third-party processor so the requested feature can be performed</li>
-          <li>To return the edited or enhanced result back to your device in the app</li>
-          <li>To operate app features, technical support, security, fraud prevention, and purchase validation where applicable</li>
-        </ul>
-      </section>
+          <h3>1. Information the app handles</h3>
+          <ul>
+            <li>Resume text and related job application content that you choose to provide</li>
+            <li>Job descriptions, target role details, and comparison text you choose to provide</li>
+            <li>Basic technical or app-functionality data reasonably needed to operate the service</li>
+            <li>Purchase or entitlement information handled by the relevant app marketplace where applicable</li>
+          </ul>
 
-      <hr class="sep" />
+          <h3>2. How the information is used</h3>
+          <ul>
+            <li>To analyze and improve resume content</li>
+            <li>To send submitted text briefly to a third-party processor so the requested feature can be performed</li>
+            <li>To return edited or enhanced results back to your device</li>
+            <li>To support security, abuse prevention, purchase validation, and app reliability where needed</li>
+          </ul>
 
-      <section class="section">
-        <h2>3. Third-Party Processing</h2>
-        <p>
-          To provide editing and enhancement features, content you submit may be transmitted briefly to a third-party service provider for processing.
-        </p>
-        <p>
-          We do <strong>not</strong> sell your personal information or resume information. We do <strong>not</strong> intentionally maintain a permanent server-side database of submitted resume content for ordinary product use.
-        </p>
-      </section>
+          <h3>3. Storage and retention</h3>
+          <p>
+            We do not intentionally keep or permanently store your submitted resume or job-description content on our own servers.
+            Submitted content may leave the device briefly for processing, then the result is returned to the app.
+            User-facing saved content is intended to remain on your phone unless you delete it, clear app data, or uninstall the app.
+          </p>
 
-      <hr class="sep" />
+          <h3>4. Data sharing</h3>
+          <p>
+            We do not sell or rent personal information. Data may be shared only with service providers needed to operate the requested feature,
+            payment or marketplace providers where applicable, or where required by law or safety/security needs.
+          </p>
 
-      <section class="section">
-        <h2>4. Storage, Retention, and Deletion</h2>
-        <p>
-          <strong>We do not intentionally keep or permanently store your submitted resume or job-description content on our own servers.</strong>
-        </p>
-        <ul>
-          <li>Your submitted content may leave the device briefly only so it can be processed and returned to you</li>
-          <li>We do not sell that content</li>
-          <li>We do not intentionally retain that content as a permanent server-side user-content archive</li>
-          <li>Any user-facing results saved by the app are intended to remain on your phone unless you delete them, clear app storage, or uninstall the app</li>
-        </ul>
-      </section>
+          <h3>5. Security</h3>
+          <p>
+            We use reasonable safeguards designed to protect information handled through the app, but no method of transmission or storage is completely secure.
+          </p>
 
-      <hr class="sep" />
+          <h3>6. Your choices</h3>
+          <ul>
+            <li>You may stop using the app at any time</li>
+            <li>You may remove locally stored data by clearing app storage or uninstalling the app</li>
+            <li>You may contact us regarding privacy questions</li>
+          </ul>
 
-      <section class="section">
-        <h2>5. Data Sharing</h2>
-        <p>We do not sell or rent personal information.</p>
-        <p>We may share data only when necessary:</p>
-        <ul>
-          <li>With service providers or processors needed to operate the requested app feature</li>
-          <li>With app marketplace or payment providers when needed for purchases or entitlement validation</li>
-          <li>If required by law or valid legal process</li>
-          <li>To protect rights, safety, security, and prevent fraud or abuse</li>
-        </ul>
-      </section>
+          <h3>7. Contact</h3>
+          <p>
+            The Trendsetter Agency<br />
+            Email: <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a><br />
+            Support: <a href="/support">/support</a>
+          </p>
 
-      <hr class="sep" />
-
-      <section class="section">
-        <h2>6. Security</h2>
-        <p>
-          We use reasonable administrative and technical safeguards designed to protect information handled through the app.
-          However, no method of transmission or storage is completely secure, and absolute security cannot be guaranteed.
-        </p>
-      </section>
-
-      <hr class="sep" />
-
-      <section class="section">
-        <h2>7. Your Choices</h2>
-        <ul>
-          <li>You may stop using the app at any time</li>
-          <li>You may remove locally stored data by deleting content in the app, clearing the app’s storage, or uninstalling the app, depending on your device</li>
-          <li>You may contact us with privacy questions at <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a></li>
-        </ul>
-      </section>
-
-      <hr class="sep" />
-
-      <section class="section">
-        <h2>8. Children’s Privacy</h2>
-        <p>
-          TopPick Resume is not directed to children. If you believe a child has provided personal information through the app, contact us.
-        </p>
-      </section>
-
-      <hr class="sep" />
-
-      <section class="section">
-        <h2>9. Changes to This Privacy Policy</h2>
-        <p>
-          We may update this Privacy Policy from time to time. If we do, we will update the “Last Updated” date on this page.
-        </p>
-      </section>
-
-      <hr class="sep" />
-
-      <section class="section">
-        <h2>10. Contact</h2>
-        <p>
-          <strong>The Trendsetter Agency</strong><br />
-          Email: <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a><br />
-          Support: <a href="https://www.thetrendsetteragency.com/support">https://www.thetrendsetteragency.com/support</a>
-        </p>
-      </section>
-
-      <div class="note">
-        Use this public URL in Google Play Console and App Store Connect:
-        <strong>https://www.thetrendsetteragency.com/apps/toppick-resume/</strong>
+          <div class="note">
+            Store privacy policy URL:
+            <strong>https://www.thetrendsetteragency.com/apps/toppick-resume/</strong>
+          </div>
+        </section>
       </div>
     </main>
 
