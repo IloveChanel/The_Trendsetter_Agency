@@ -200,11 +200,9 @@ a{color:inherit}
         e.preventDefault();
         result.textContent='Sending...';
         var payload={ resume: document.getElementById('resumeText').value || '', job: document.getElementById('jobDesc').value || '' };
-        if(!BACKEND){
-          result.textContent='Backend URL not configured. Set data-backend on the .shell element to your Railway app URL.';
-          return;
-        }
-        fetch(BACKEND + '/api/analyze', {
+        // Use the serverless proxy so the API key is injected server-side.
+        // The proxy forwards to TOPPICK_BACKEND_URL and adds TOPPICK_API_KEY from Vercel env.
+        fetch('/api/proxy/analyze', {
           method: 'POST',
           headers: { 'Content-Type':'application/json' },
           body: JSON.stringify(payload)
