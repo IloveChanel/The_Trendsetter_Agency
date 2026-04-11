@@ -1,123 +1,143 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Trendsetter Agency - Premium Mobile Apps</title>
-    <meta name="description" content="Premium mobile apps for modern professionals by The Trendsetter Agency">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            color: white;
-        }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-        header { text-align: center; margin-bottom: 60px; padding-top: 40px; }
-        h1 { font-size: 3rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .tagline { font-size: 1.2rem; opacity: 0.9; }
-        .apps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
-        .app-card {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .app-card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
-        .app-icon { font-size: 4rem; margin-bottom: 20px; }
-        .app-name { font-size: 1.8rem; font-weight: bold; margin-bottom: 10px; }
-        .app-tagline { font-size: 1rem; opacity: 0.9; margin-bottom: 15px; }
-        .app-description { font-size: 0.9rem; opacity: 0.8; line-height: 1.6; margin-bottom: 20px; }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background: white;
-            color: #667eea;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: background 0.3s, transform 0.2s;
-        }
-        .btn:hover { background: #f0f0f0; transform: scale(1.05); }
-        .coming-soon {
-            opacity: 0.6;
-            position: relative;
-        }
-        .coming-soon::after {
-            content: "COMING SOON";
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: rgba(255,255,255,0.2);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            margin-top: 80px;
-            padding: 40px 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-        }
-        footer a { color: white; text-decoration: none; margin: 0 15px; opacity: 0.9; }
-        footer a:hover { text-decoration: underline; opacity: 1; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Trendsetter Agency</title>
+  <meta name="description" content="Welcome to The Trendsetter Agency official app hub." />
+  <style>
+:root{
+  --bg:#0b1020;
+  --bg2:#111936;
+  --card:#ffffff;
+  --ink:#0f172a;
+  --muted:#475569;
+  --line:#dbe4f0;
+  --brand:#5b7cfa;
+  --light:#f8fafc;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(135deg,var(--bg),var(--bg2));
+}
+a{color:inherit}
+.shell{max-width:1160px;margin:0 auto;padding:24px}
+.nav{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+  padding:16px 0 24px 0;color:#fff
+}
+.nav .brand{font-weight:800;text-decoration:none}
+.nav .links{display:flex;flex-wrap:wrap;gap:14px}
+.nav .links a{color:#fff;text-decoration:none;opacity:.92}
+.nav .links a:hover{text-decoration:underline;opacity:1}
+.hero{
+  background:rgba(255,255,255,.08);
+  color:#fff;border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;padding:40px;backdrop-filter:blur(10px);
+  box-shadow:0 20px 60px rgba(0,0,0,.22)
+}
+.hero h1{margin:0 0 12px 0;font-size:clamp(2rem,4vw,3.4rem)}
+.hero p{margin:0;max-width:760px;line-height:1.7;opacity:.96}
+.btn{
+  display:inline-block;padding:12px 18px;border-radius:12px;
+  text-decoration:none;font-weight:700;border:1px solid transparent
+}
+.btn.primary{background:#fff;color:var(--brand)}
+.btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.main-card{
+  background:var(--card);border-radius:24px;padding:30px;margin-top:24px;
+  box-shadow:0 18px 50px rgba(0,0,0,.18)
+}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px
+}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;
+  box-shadow:0 10px 24px rgba(15,23,42,.06)
+}
+.card h3{margin:0 0 10px 0}
+.card p{margin:0 0 16px 0;color:var(--muted);line-height:1.65}
+.section h2{margin:0 0 10px 0}
+.section p,.section li{color:var(--muted);line-height:1.75}
+.section ul{padding-left:20px}
+.kicker{font-size:.85rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#cbd5e1}
+.tag{
+  display:inline-block;background:#eef2ff;color:#3730a3;
+  padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:700
+}
+.sep{border:none;border-top:1px solid var(--line);margin:26px 0}
+.footer{color:#fff;opacity:.92;text-align:center;padding:26px 0 12px 0}
+.footer a{color:#fff}
+.note{
+  background:#ecfeff;border:1px solid #a5f3fc;color:#155e75;
+  padding:14px 16px;border-radius:14px;margin:18px 0
+}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>The Trendsetter Agency</h1>
-            <p class="tagline">presents</p>
-        </header>
+  <div class="shell">
+    <nav class="nav">
+      <a class="brand" href="/">The Trendsetter Agency</a>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/apps/toppick-resume/">TopPick Resume</a>
+        <a href="/apps/my-muse/">My Muse</a>
+        <a href="/apps/health-logic/">Health Logic</a>
+        <a href="/about/">About Us</a>
+      </div>
+    </nav>
 
-        <div class="apps-grid">
-            <!-- TopPick Resume (in-page) -->
-            <div class="app-card">
-                <div class="app-icon"></div>
-                <div class="app-name">TopPick Resume</div>
-                <div class="app-tagline">Beat the Bots</div>
-                <div class="app-description">
-                    AI-powered resume optimization designed to beat ATS systems and get you hired.
-                </div>
-                <a href="/apps/toppick-resume/" class="btn">Open</a>
-            </div>
+    <section class="hero">
+      <div class="kicker">Official App Hub</div>
+      <h1>Welcome to the App Hub.</h1>
+      <p>
+        A Trendsetter Studio Production.
+      </p>
+    </section>
 
-            <!-- My Muse (in-page) -->
-            <div class="app-card">
-                <div class="app-icon"></div>
-                <div class="app-name">My Muse</div>
-                <div class="app-tagline">Creative Prompts</div>
-                <div class="app-description">
-                    Prompts, templates, and AI-assisted drafting tools.
-                </div>
-                <a href="/apps/my-muse/" class="btn">Open</a>
-            </div>
+    <main class="main-card">
+      <div class="grid">
+        <article class="card">
+          <span class="tag">Live / Priority</span>
+          <h3>TopPick Resume</h3>
+          <p>AI-powered resume support with a public-facing product page and privacy policy.</p>
+          <a class="btn primary" href="/apps/toppick-resume/">Open page</a>
+        </article>
 
-            <!-- Health Logic (in-page) -->
-            <div class="app-card">
-                <div class="app-icon"></div>
-                <div class="app-name">Health Logic</div>
-                <div class="app-tagline">Personal Health Insights</div>
-                <div class="app-description">
-                    Habit tracking and privacy-first summaries.
-                </div>
-                <a href="/apps/health-logic/" class="btn">Open</a>
-            </div>
-        </div>
+        <article class="card">
+          <span class="tag">Prelaunch</span>
+          <h3>My Muse</h3>
+          <p>Guided inspiration and reflection tools with a future-ready public app page.</p>
+          <a class="btn primary" href="/apps/my-muse/">Open page</a>
+        </article>
 
-        <footer>
-            <p style="font-size: 1.1rem; margin-bottom: 15px;"> 2026 The Trendsetter Agency</p>
-            <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 20px;">All rights reserved.</p>
-            <div>
-                <a href="/privacy/index.html">Privacy Policy</a>
-                <a href="/support.html">Support</a>
-                <a href="/privacy/top-pick-resume-policy.html">TopPick Resume Policy</a>
-            </div>
-        </footer>
-    </div>
+        <article class="card">
+          <span class="tag">Prelaunch</span>
+          <h3>Health Logic</h3>
+          <p>A privacy-conscious wellness app with a dedicated product page and policy location.</p>
+          <a class="btn primary" href="/apps/health-logic/">Open page</a>
+        </article>
+
+        <article class="card">
+          <span class="tag">Agency</span>
+          <h3>About Us</h3>
+          <p>Learn about The Trendsetter Agency and how this website is organized.</p>
+          <a class="btn primary" href="/about/">Open page</a>
+        </article>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 The Trendsetter Agency. All rights reserved.</p>
+      <p>
+        <a href="/privacy">Privacy</a> |
+        <a href="/support">Support</a> |
+        <a href="/about/">About Us</a>
+      </p>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,0 +1,1 @@
+{`"name`": `"toppick-resume`", `"version`": `"1.0.0`", `"main`": `"index.html`", `"scripts`": {`"start`": `"npx serve -s . -l 3001`", `"build`": `"echo `"Static site: no build step needed`" && exit 0`"}, `"dependencies`": {`"serve`": `"^14.2.6`"}}

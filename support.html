@@ -1,68 +1,111 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support - The Trendsetter Agency</title>
-    <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 20px; background: #f5f5f5; }
-        .container { background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        h1 { color: #3b82f6; margin-bottom: 10px; }
-        h2 { color: #1e40af; margin-top: 30px; border-bottom: 2px solid #3b82f6; padding-bottom: 10px; }
-        .faq-item { margin-bottom: 20px; padding: 20px; background: #f9fafb; border-left: 4px solid #3b82f6; }
-        .faq-question { font-weight: bold; color: #1e40af; margin-bottom: 10px; }
-        .contact-box { background: #eff6ff; padding: 20px; border-radius: 8px; margin-top: 20px; }
-        a { color: #3b82f6; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | The Trendsetter Agency</title>
+  <meta name="description" content="Support information for Trendsetter Agency apps." />
+  <style>
+:root{
+  --bg:#0b1020;
+  --bg2:#111936;
+  --card:#ffffff;
+  --ink:#0f172a;
+  --muted:#475569;
+  --line:#dbe4f0;
+  --brand:#5b7cfa;
+  --light:#f8fafc;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  color:var(--ink);
+  background:linear-gradient(135deg,var(--bg),var(--bg2));
+}
+a{color:inherit}
+.shell{max-width:1160px;margin:0 auto;padding:24px}
+.nav{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
+  padding:16px 0 24px 0;color:#fff
+}
+.nav .brand{font-weight:800;text-decoration:none}
+.nav .links{display:flex;flex-wrap:wrap;gap:14px}
+.nav .links a{color:#fff;text-decoration:none;opacity:.92}
+.nav .links a:hover{text-decoration:underline;opacity:1}
+.hero{
+  background:rgba(255,255,255,.08);
+  color:#fff;border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;padding:40px;backdrop-filter:blur(10px);
+  box-shadow:0 20px 60px rgba(0,0,0,.22)
+}
+.hero h1{margin:0 0 12px 0;font-size:clamp(2rem,4vw,3.4rem)}
+.hero p{margin:0;max-width:760px;line-height:1.7;opacity:.96}
+.btn{
+  display:inline-block;padding:12px 18px;border-radius:12px;
+  text-decoration:none;font-weight:700;border:1px solid transparent
+}
+.btn.primary{background:#fff;color:var(--brand)}
+.btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
+.main-card{
+  background:var(--card);border-radius:24px;padding:30px;margin-top:24px;
+  box-shadow:0 18px 50px rgba(0,0,0,.18)
+}
+.grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px
+}
+.card{
+  background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;
+  box-shadow:0 10px 24px rgba(15,23,42,.06)
+}
+.card h3{margin:0 0 10px 0}
+.card p{margin:0 0 16px 0;color:var(--muted);line-height:1.65}
+.section h2{margin:0 0 10px 0}
+.section p,.section li{color:var(--muted);line-height:1.75}
+.section ul{padding-left:20px}
+.kicker{font-size:.85rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#cbd5e1}
+.tag{
+  display:inline-block;background:#eef2ff;color:#3730a3;
+  padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:700
+}
+.sep{border:none;border-top:1px solid var(--line);margin:26px 0}
+.footer{color:#fff;opacity:.92;text-align:center;padding:26px 0 12px 0}
+.footer a{color:#fff}
+.note{
+  background:#ecfeff;border:1px solid #a5f3fc;color:#155e75;
+  padding:14px 16px;border-radius:14px;margin:18px 0
+}
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>The Trendsetter Agency Support</h1>
-        <p style="color: #666;">We're here to help!</p>
+  <div class="shell">
+    <nav class="nav">
+      <a class="brand" href="/">The Trendsetter Agency</a>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/apps/toppick-resume/">TopPick Resume</a>
+        <a href="/apps/my-muse/">My Muse</a>
+        <a href="/apps/health-logic/">Health Logic</a>
+        <a href="/about/">About Us</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/support">Support</a>
+      </div>
+    </nav>
 
-        <h2> Contact Support</h2>
-        <div class="contact-box">
-            <p><strong>General Support:</strong> <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a></p>
-            <p><strong>Privacy Questions:</strong> <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a></p>
-            <p><strong>Bug Reports:</strong> <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a></p>
-            <p><strong>Response Time:</strong> Within 24-48 hours (business days)</p>
-        </div>
+    <section class="hero">
+      <div class="kicker">Support</div>
+      <h1>Need help?</h1>
+      <p>For support or privacy questions regarding any app, use the contact below.</p>
+    </section>
 
-        <h2> Report a Bug</h2>
-        <div class="contact-box">
-            <p>Found a bug? Help us improve! Email: <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a></p>
-            <p><strong>Please include:</strong></p>
-            <ul>
-                <li>App name and version</li>
-                <li>Device model (e.g., Samsung Galaxy S23)</li>
-                <li>Android version (e.g., Android 13)</li>
-                <li>Description of the issue</li>
-                <li>Screenshots (if applicable)</li>
-            </ul>
-        </div>
-
-        <h2> Feature Requests</h2>
-        <p>Have an idea to make our apps better? We'd love to hear it!</p>
+    <main class="main-card">
+      <section class="section">
+        <h2>Contact</h2>
         <p>Email: <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a></p>
+      </section>
+    </main>
 
-        <h2> Our Apps</h2>
-        <ul>
-            <li><a href="/apps/toppick-resume">TopPick Resume - Beat the Bots</a></li>
-            <li>More apps coming soon...</li>
-        </ul>
-
-        <hr style="margin: 40px 0; border: none; border-top: 1px solid #ddd;">
-
-        <div style="text-align: center; color: #666; font-size: 14px;">
-            <p><strong>The Trendsetter Agency</strong></p>
-            <p> 2026 The Trendsetter Agency. All rights reserved.</p>
-            <p>
-                <a href="/">Home</a>  
-                <a href="/privacy.html">Privacy Policy</a>  
-                <a href="https://www.michelletrendsetter.com" target="_blank">About Us</a>
-            </p>
-        </div>
-    </div>
+    <footer class="footer"><p>&copy; 2026 The Trendsetter Agency</p></footer>
+  </div>
 </body>
 </html>

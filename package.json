@@ -1,0 +1,23 @@
+{
+  "name": "toppick-resume",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "20.19.4"
+  },
+  "volta": {
+    "node": "20.19.4"
+  },
+  "scripts": {
+    "start": "serve -s . -l 3001",
+    "build": "echo \"No build step for static site\"",
+    "vercel:preview": "vercel deploy",
+    "vercel:prod": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "serve": "^14.2.6"
+  },
+  "devDependencies": {
+    "vercel": "^50.41.0"
+  }
+}
