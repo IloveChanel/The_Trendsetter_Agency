@@ -50,6 +50,14 @@ a{color:inherit}
 }
 .hero h1{margin:0 0 12px 0;font-size:clamp(2rem,4vw,3.4rem)}
 .hero p{margin:0;max-width:760px;line-height:1.7;opacity:.96}
+.hero{min-height:48vh;display:flex;flex-direction:column;justify-content:center}
+.section{padding:18px 0}
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.feature{background:#fff;border-radius:12px;padding:14px;color:var(--ink);box-shadow:0 8px 20px rgba(15,23,42,.06)}
+.cta-form{background:linear-gradient(180deg,#fff 0,#f7fafc 100%);padding:18px;border-radius:12px}
+.input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);margin-bottom:10px}
+.submit{background:var(--brand);color:#fff;padding:12px 16px;border-radius:10px;border:none;font-weight:700}
+.note-small{font-size:.9rem;color:var(--muted)}
 .btn{
   display:inline-block;padding:12px 18px;border-radius:12px;
   text-decoration:none;font-weight:700;border:1px solid transparent
@@ -87,7 +95,9 @@ a{color:inherit}
   </style>
 </head>
 <body>
-  <div class="shell">
+  <!-- Set your Railway backend base URL on the body data-backend attribute -->
+  <body-data data-backend="https://fantastic-enchantment-production.up.railway.app" />
+  <div class="shell" data-backend="https://fantastic-enchantment-production.up.railway.app">
     <nav class="nav">
       <a class="brand" href="/">The Trendsetter Agency</a>
       <div class="links">
@@ -114,14 +124,49 @@ a{color:inherit}
         TopPick Resume helps users improve resume content, compare against job targets,
         and strengthen application materials.
       </p>
+      <p style="margin-top:16px"><a class="btn primary" href="#try">Try it (mobile)</a></p>
     </section>
 
     <main class="main-card">
-      <section class="section">
+      <section class="section" id="about">
         <h2>About the app</h2>
         <p>
-          This page is the official public page and privacy-policy location for TopPick Resume.
+          This one-page mobile-first app provides resume analysis and suggestions.
+          The desktop view is a single-page expanded layout. The app posts resume text
+          to a backend API (Railway) for processing — set the backend URL in this file before deploying.
         </p>
+      </section>
+
+      <section class="section">
+        <h2>Features</h2>
+        <div class="features">
+          <div class="feature">
+            <h3>AI-powered suggestions</h3>
+            <p class="note-small">Improve bullets, tone, and clarity.</p>
+          </div>
+          <div class="feature">
+            <h3>Job-target matching</h3>
+            <p class="note-small">Compare your resume to target job descriptions.</p>
+          </div>
+          <div class="feature">
+            <h3>Privacy-first</h3>
+            <p class="note-small">Content processed transiently; see the app privacy page.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="try">
+        <h2>Try TopPick Resume</h2>
+        <div class="cta-form">
+          <form id="resumeForm">
+            <label for="resumeText">Paste your resume or job text</label>
+            <textarea id="resumeText" rows="8" class="input" placeholder="Paste resume text here"></textarea>
+            <label for="jobDesc">Optional: Job description (for matching)</label>
+            <textarea id="jobDesc" rows="4" class="input" placeholder="Paste job description"></textarea>
+            <button type="submit" class="submit">Analyze</button>
+            <p id="result" class="note-small" style="margin-top:12px"></p>
+          </form>
+        </div>
       </section>
 
       <hr class="sep" />
@@ -135,5 +180,43 @@ a{color:inherit}
 
     <footer class="footer"><p>&copy; 2026 The Trendsetter Agency</p></footer>
   </div>
+  <script>
+    (function(){
+      // read backend URL from the nearest shell data attribute if present
+      function getBackend(){
+        var el=document.querySelector('.shell');
+        var url=el && el.getAttribute('data-backend');
+        if(!url || url.trim()==='') return ''; // user must set this
+        return url.replace(/\/+$/,'');
+      }
+
+      var BACKEND = getBackend();
+      var form=document.getElementById('resumeForm');
+      var result=document.getElementById('result');
+      if(!form) return;
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+        result.textContent='Sending...';
+        var payload={ resume: document.getElementById('resumeText').value || '', job: document.getElementById('jobDesc').value || '' };
+        if(!BACKEND){
+          result.textContent='Backend URL not configured. Set data-backend on the .shell element to your Railway app URL.';
+          return;
+        }
+        fetch(BACKEND + '/api/analyze', {
+          method: 'POST',
+          headers: { 'Content-Type':'application/json' },
+          body: JSON.stringify(payload)
+        }).then(function(r){
+          if(!r.ok) throw new Error('Server returned ' + r.status);
+          return r.json();
+        }).then(function(json){
+          result.textContent = json.summary || 'Analysis complete. (No summary returned)';
+        }).catch(function(err){
+          result.textContent = 'Error: ' + err.message;
+        });
+      });
+    })();
+  </script>
 </body>
 </html>
