@@ -1,4 +1,4 @@
-﻿:root{
+:root{
   --bg:#020617;
   --text:#f8fbff;
   --muted:#a8b5d8;
@@ -78,7 +78,7 @@ main,.wrap,.container{
 
 .hero:after{
   content:"";
-  min-height:380px;
+  min-height:300px;
   border-radius:44px;
   background:
     linear-gradient(135deg,rgba(139,92,246,.34),rgba(34,211,238,.18)),
@@ -101,9 +101,9 @@ main,.wrap,.container{
 }
 
 h1{
-  font-size:clamp(44px,7vw,86px);
+  font-size:clamp(38px,5.2vw,64px);
   line-height:.94;
-  letter-spacing:-.07em;
+  letter-spacing:-.045em;
   margin:22px 0 20px;
   max-width:1020px;
 }
