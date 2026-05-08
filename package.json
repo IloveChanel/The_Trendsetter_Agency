@@ -1,22 +1,22 @@
-﻿{
-    "name":  "the-trendsetter-agency",
+{
+    "volta":  {
+                  "node":  "20.x"
+              },
     "version":  "1.0.0",
+    "dependencies":  {
+                         "serve":  "^14.2.6"
+                     },
+    "name":  "the-trendsetter-agency",
+    "scripts":  {
+                    "vercel:preview":  "vercel deploy",
+                    "vercel:prod":  "vercel deploy --prod",
+                    "build":  "echo \"No build step for static site\"",
+                    "start":  "serve -s . -l 3001"
+                },
     "private":  true,
     "engines":  {
                     "node":  "20.x"
                 },
-    "volta":  {
-                  "node":  "20.x"
-              },
-    "scripts":  {
-                    "start":  "serve -s . -l 3001",
-                    "build":  "echo \"No build step for static site\"",
-                    "vercel:preview":  "vercel deploy",
-                    "vercel:prod":  "vercel deploy --prod"
-                },
-    "dependencies":  {
-                         "serve":  "^14.2.6"
-                     },
     "devDependencies":  {
                             "vercel":  "^50.41.0"
                         }

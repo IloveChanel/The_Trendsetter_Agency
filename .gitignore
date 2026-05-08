@@ -4,3 +4,6 @@ _recovery
 .vercel-preview-url.txt
 .vercel-prod-url.txt
 _quarantine/
+.env*.local
+.vercel/
+.env.local
