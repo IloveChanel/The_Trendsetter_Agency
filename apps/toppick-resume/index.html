@@ -1,222 +1,202 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TopPick Resume | The Trendsetter Agency</title>
-  <meta name="description" content="TopPick Resume official page and privacy policy." />
-  <style>
-:root{
-  --bg:#0b1020;
-  --bg2:#111936;
-  --card:#ffffff;
-  --ink:#0f172a;
-  --muted:#475569;
-  --line:#dbe4f0;
-  --brand:#5b7cfa;
-  --light:#f8fafc;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title>TopPick Resume: AI Resume Builder That Gets Interviews</title>
+<meta name="author" content="The Trendsetter Agency LLC" />
+<meta property="og:title" content="TopPick Resume: AI Resume Assistant" />
+<meta property="og:description" content="Build ATS-aware resumes faster with your intelligent resume assistant." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.thetrendsetteragency.com/apps/toppick-resume/" />
+<meta property="og:image" content="https://www.thetrendsetteragency.com/apps/toppick-resume/preview.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="TopPick Resume" />
+<meta name="twitter:description" content="Your resume assistant for real hiring results." />
+<meta name="description" content="Build ATS-friendly resumes in minutes with TopPick Resume. Your intelligent resume assistant designed for real hiring results." />
+<meta name="keywords" content="resume builder, ATS resume, AI resume app, job resume, resume templates" />
+
+<link rel="canonical" href="https://www.thetrendsetteragency.com/apps/toppick-resume/" />
+
+
+
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "TopPick Resume",
+ "applicationCategory": "BusinessApplication",
+ "operatingSystem": "Android, iOS",
+ "description": "AI-powered resume assistant designed to improve resume clarity, relevance, and hiring outcomes.",
+ "publisher": {
+   "@type": "Organization",
+   "name": "The Trendsetter Agency LLC"
+ }
 }
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family:Inter,Segoe UI,Arial,sans-serif;
-  color:var(--ink);
-  background:linear-gradient(135deg,var(--bg),var(--bg2));
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"BreadcrumbList",
+ "itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Home","item":"https://www.thetrendsetteragency.com/"},
+  {"@type":"ListItem","position":2,"name":"Apps","item":"https://www.thetrendsetteragency.com/#apps"},
+  {"@type":"ListItem","position":3,"name":"TopPick Resume","item":"https://www.thetrendsetteragency.com/apps/toppick-resume/"}
+ ]
 }
-a{color:inherit}
-.shell{max-width:1160px;margin:0 auto;padding:24px}
-.nav{
-  display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center;
-  padding:16px 0 24px 0;color:#fff;
-  position:relative; /* ensure nav can host absolutely positioned dropdowns */
-  z-index:1000; /* place nav above main content */
-  overflow:visible;
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"SoftwareApplication",
+ "name":"TopPick Resume",
+ "alternateName":["Top Pick Resume","TopPick Resume App","Resume Assistant"],
+ "applicationCategory":"BusinessApplication",
+ "operatingSystem":"Android, iOS",
+ "url":"https://www.thetrendsetteragency.com/apps/toppick-resume/",
+ "description":"TopPick Resume is an AI-assisted resume assistant designed to help job seekers create clearer, stronger, ATS-aware resumes.",
+ "publisher":{"@type":"Organization","name":"The Trendsetter Agency LLC"},
+ "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}
 }
-.nav .brand{font-weight:800;text-decoration:none}
-.nav .links{display:flex;flex-wrap:wrap;gap:14px}
-.nav .links a{color:#fff;text-decoration:none;opacity:.92}
-.nav .links a:hover{text-decoration:underline;opacity:1}
-/* dropdown for app-specific links */
-.dropdown{position:relative}
-.dropdown .menu{display:none;position:absolute;left:0;top:110%;background:rgba(255,255,255,.06);border-radius:8px;padding:8px;min-width:180px;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:2000}
-.dropdown:hover .menu{display:block}
-.dropdown .menu a{display:block;padding:8px 10px;color:#fff;text-decoration:none;border-radius:6px}
-.dropdown .menu a:hover{text-decoration:underline}
-.hero{
-  background:rgba(255,255,255,.08);
-  color:#fff;border:1px solid rgba(255,255,255,.12);
-  border-radius:24px;padding:40px;backdrop-filter:blur(10px);
-  box-shadow:0 20px 60px rgba(0,0,0,.22)
+</script>
+<meta name="application-name" content="TopPick Resume" />
+<meta name="apple-mobile-web-app-title" content="TopPick Resume" />
+<meta name="apple-itunes-app" content="app-id=REPLACE_WITH_APPLE_APP_ID" />
+<meta name="google-play-app" content="app-id=REPLACE_WITH_ANDROID_PACKAGE_NAME" />
+<meta name="theme-color" content="#0b1220" />
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"HowTo",
+ "name":"How to Make a Resume ATS-Friendly",
+ "description":"Basic steps for improving resume clarity, structure, and ATS readability.",
+ "step":[
+  {"@type":"HowToStep","name":"Use clear headings","text":"Use standard headings like Work Experience, Education, Skills, and Certifications."},
+  {"@type":"HowToStep","name":"Keep formatting simple","text":"Avoid heavy graphics, complex tables, and confusing layouts."},
+  {"@type":"HowToStep","name":"Add measurable achievements","text":"Use concise bullet points with metrics, scope, and results when possible."},
+  {"@type":"HowToStep","name":"Align to the role","text":"Use relevant skills and experience that match the job description naturally."}
+ ]
 }
-.hero h1{margin:0 0 12px 0;font-size:clamp(2rem,4vw,3.4rem)}
-.hero p{margin:0;max-width:760px;line-height:1.7;opacity:.96}
-.hero{min-height:48vh;display:flex;flex-direction:column;justify-content:center}
-.section{padding:18px 0}
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.feature{background:#fff;border-radius:12px;padding:14px;color:var(--ink);box-shadow:0 8px 20px rgba(15,23,42,.06)}
-.cta-form{background:linear-gradient(180deg,#fff 0,#f7fafc 100%);padding:18px;border-radius:12px}
-.input,textarea{width:100%;padding:12px;border-radius:8px;border:1px solid var(--line);margin-bottom:10px}
-.submit{background:var(--brand);color:#fff;padding:12px 16px;border-radius:10px;border:none;font-weight:700}
-.note-small{font-size:.9rem;color:var(--muted)}
-.btn{
-  display:inline-block;padding:12px 18px;border-radius:12px;
-  text-decoration:none;font-weight:700;border:1px solid transparent
+</script>
+
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"FAQPage",
+ "mainEntity":[
+  {
+   "@type":"Question",
+   "name":"What is TopPick Resume?",
+   "acceptedAnswer":{"@type":"Answer","text":"TopPick Resume is an intelligent resume assistant designed to help users improve resume structure, clarity, wording, and professional presentation."}
+  },
+  {
+   "@type":"Question",
+   "name":"Is TopPick Resume ATS-aware?",
+   "acceptedAnswer":{"@type":"Answer","text":"TopPick Resume is designed around ATS-aware formatting, readable structure, and clear professional presentation."}
+  },
+  {
+   "@type":"Question",
+   "name":"Does TopPick Resume promise interviews or job offers?",
+   "acceptedAnswer":{"@type":"Answer","text":"No. Interview and job outcomes depend on many factors outside any resume tool."}
+  }
+ ]
 }
-.btn.primary{background:#fff;color:var(--brand)}
-.btn.secondary{background:transparent;color:#fff;border-color:rgba(255,255,255,.35)}
-.main-card{
-  background:var(--card);border-radius:24px;padding:30px;margin-top:24px;
-  box-shadow:0 18px 50px rgba(0,0,0,.18)
-}
-.grid{
-  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px
-}
-.card{
-  background:#fff;border:1px solid var(--line);border-radius:20px;padding:22px;
-  box-shadow:0 10px 24px rgba(15,23,42,.06)
-}
-.card h3{margin:0 0 10px 0}
-.card p{margin:0 0 16px 0;color:var(--muted);line-height:1.65}
-.section h2{margin:0 0 10px 0}
-.section p,.section li{color:var(--muted);line-height:1.75}
-.section ul{padding-left:20px}
-.kicker{font-size:.85rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#cbd5e1}
-.tag{
-  display:inline-block;background:#eef2ff;color:#3730a3;
-  padding:6px 10px;border-radius:999px;font-size:.82rem;font-weight:700
-}
-.sep{border:none;border-top:1px solid var(--line);margin:26px 0}
-.footer{color:#fff;opacity:.92;text-align:center;padding:26px 0 12px 0}
-.footer a{color:#fff}
-.note{
-  background:#ecfeff;border:1px solid #a5f3fc;color:#155e75;
-  padding:14px 16px;border-radius:14px;margin:18px 0
-}
-  </style>
+</script>
+<link rel="stylesheet" href="/assets/trendsetter-design.css" />
 </head>
 <body>
-  <!-- Set your Railway backend base URL on the body data-backend attribute -->
-  <body-data data-backend="https://fantastic-enchantment-production.up.railway.app" />
-  <div class="shell" data-backend="https://fantastic-enchantment-production.up.railway.app">
-    <nav class="nav">
-      <a class="brand" href="/">The Trendsetter Agency</a>
-      <div class="links">
-        <a href="/">Home</a>
-        <div class="dropdown">
-          <a href="/apps/toppick-resume/">TopPick Resume ▾</a>
-          <div class="menu">
-            <a href="/apps/toppick-resume/">Overview</a>
-            <a href="/apps/toppick-resume/app/">Open App</a>
-            <a href="/apps/toppick-resume/privacy/">Privacy Policy</a>
-          </div>
-        </div>
-        <a href="/apps/my-muse/">My Muse</a>
-        <a href="/apps/health-logic/">Health Logic</a>
-        <a href="/about/">About Us</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/support">Support</a>
-      </div>
-    </nav>
+<div class="container">
 
-    <section class="hero">
-      <div class="kicker">Official App Page</div>
-      <h1>TopPick Resume <span style="display:inline-block;background:#ffedd5;color:#92400e;padding:6px 10px;border-radius:999px;font-weight:800;font-size:.78rem;margin-left:12px;vertical-align:middle">BETA</span></h1>
-      <p>
-        TopPick Resume helps users improve resume content, compare against job targets,
-        and strengthen application materials.
-      </p>
-      <p style="margin-top:16px"><a class="btn primary" href="#try">Try it (mobile)</a></p>
-      <p style="margin-top:10px"><a class="btn secondary" href="https://play.google.com/" target="_blank" rel="noopener">Join Closed Beta on Google Play</a></p>
-    </section>
-
-    <main class="main-card">
-      <section class="section" id="about">
-        <h2>About the app</h2>
-        <p>
-          This one-page mobile-first app provides resume analysis and suggestions.
-          The desktop view is a single-page expanded layout. The app posts resume text
-          to a backend API (Railway) for processing — set the backend URL in this file before deploying.
-        </p>
-      </section>
-
-      <section class="section">
-        <h2>Features</h2>
-        <div class="features">
-          <div class="feature">
-            <h3>AI-powered suggestions</h3>
-            <p class="note-small">Improve bullets, tone, and clarity.</p>
-          </div>
-          <div class="feature">
-            <h3>Job-target matching</h3>
-            <p class="note-small">Compare your resume to target job descriptions.</p>
-          </div>
-          <div class="feature">
-            <h3>Privacy-first</h3>
-            <p class="note-small">Content processed transiently; see the app privacy page.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="try">
-        <h2>Try TopPick Resume</h2>
-        <div class="cta-form">
-          <form id="resumeForm">
-            <label for="resumeText">Paste your resume or job text</label>
-            <textarea id="resumeText" rows="8" class="input" placeholder="Paste resume text here"></textarea>
-            <label for="jobDesc">Optional: Job description (for matching)</label>
-            <textarea id="jobDesc" rows="4" class="input" placeholder="Paste job description"></textarea>
-            <button type="submit" class="submit">Analyze</button>
-            <p id="result" class="note-small" style="margin-top:12px"></p>
-          </form>
-        </div>
-      </section>
-
-      <hr class="sep" />
-
-      <section class="section" id="privacy">
-        <h2>Privacy Policy</h2>
-        <p>The full privacy policy for TopPick Resume is available on its dedicated page.</p>
-        <p><a class="btn secondary" href="/apps/toppick-resume/privacy/">Open TopPick Resume privacy page</a></p>
-      </section>
-    </main>
-
-    <footer class="footer"><p>&copy; 2026 The Trendsetter Agency</p></footer>
+<nav class="nav">
+  <a class="brand" href="/">The Trendsetter Agency</a>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/apps/toppick-resume/privacy/">Privacy</a>
   </div>
-  <script>
-    (function(){
-      // read backend URL from the nearest shell data attribute if present
-      function getBackend(){
-        var el=document.querySelector('.shell');
-        var url=el && el.getAttribute('data-backend');
-        if(!url || url.trim()==='') return ''; // user must set this
-        return url.replace(/\/+$/,'');
-      }
+</nav>
 
-      var BACKEND = getBackend();
-      var form=document.getElementById('resumeForm');
-      var result=document.getElementById('result');
-      if(!form) return;
+<header class="hero">
+  <div>
+    <span class="badge">Resume assistant • ATS-aware • Mobile-first</span>
+    <h1>TopPick Resume is built for sharper applications and stronger professional positioning.</h1>
+    <p class="lead">An intelligent resume assistant designed to refine structure, elevate language, and help users present their experience with clarity and confidence.</p>
+    <p>
+      <a class="btn" href="REPLACE_WITH_GOOGLE_PLAY_LINK">Get it on Google Play</a>
+      <a class="btn alt" href="/apps/toppick-resume/privacy/">Privacy Policy</a>
+    </p>
+  </div>
+</header>
 
-      form.addEventListener('submit', function(e){
-        e.preventDefault();
-        result.textContent='Sending...';
-        var payload={ resume: document.getElementById('resumeText').value || '', job: document.getElementById('jobDesc').value || '' };
-        // Use the serverless proxy so the API key is injected server-side.
-        // The proxy forwards to TOPPICK_BACKEND_URL and adds TOPPICK_API_KEY from Vercel env.
-        fetch('/api/proxy/analyze', {
-          method: 'POST',
-          headers: { 'Content-Type':'application/json' },
-          body: JSON.stringify(payload)
-        }).then(function(r){
-          if(!r.ok) throw new Error('Server returned ' + r.status);
-          return r.json();
-        }).then(function(json){
-          result.textContent = json.summary || 'Analysis complete. (No summary returned)';
-        }).catch(function(err){
-          result.textContent = 'Error: ' + err.message;
-        });
-      });
-    })();
-  </script>
+<section class="section" id="why-toppick">
+  <h2>A smarter standard for resume building.</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Not another template tool</h3>
+      <p>TopPick Resume focuses on the substance of the resume — structure, relevance, wording, and professional presentation.</p>
+    </div>
+    <div class="card">
+      <h3>ATS-aware structure</h3>
+      <p>Designed around clear headings, readable formatting, and practical job-application standards.</p>
+    </div>
+    <div class="card">
+      <h3>Professional clarity</h3>
+      <p>Helps users turn scattered experience into a more focused, credible career document.</p>
+    </div>
+    <div class="card">
+      <h3>Responsible positioning</h3>
+      <p>No inflated promises. No shortcuts. Just focused resume refinement for serious applications.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="resume-resources">
+  <h2>Resume resources built around the app.</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Guides</h3>
+      <p><a href="/blog/best-ats-resume-format/">Best ATS resume format</a></p>
+      <p><a href="/blog/ai-resume-builder-vs-template/">AI resume builder vs resume template</a></p>
+    </div>
+    <div class="card">
+      <h3>Comparisons</h3>
+      <p><a href="/compare/toppick-resume-vs-canva/">TopPick Resume vs Canva</a></p>
+      <p><a href="/compare/toppick-resume-vs-zety/">TopPick Resume vs Zety</a></p>
+    </div>
+    <div class="card">
+      <h3>Glossary</h3>
+      <p><a href="/glossary/what-is-a-resume-assistant/">What is a resume assistant?</a></p>
+      <p><a href="/glossary/what-is-an-ats-friendly-resume/">What is an ATS-friendly resume?</a></p>
+    </div>
+    <div class="card">
+      <h3>Job seeker paths</h3>
+      <p><a href="/job-seekers/resume-builder-for-students/">Students</a></p>
+      <p><a href="/job-seekers/resume-builder-for-executives/">Executives & leaders</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <h2>Frequently asked questions.</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Does TopPick Resume promise job outcomes?</h3>
+      <p>No. Interview and job outcomes depend on many factors outside any resume tool.</p>
+    </div>
+    <div class="card">
+      <h3>Is TopPick Resume ATS-aware?</h3>
+      <p>Yes. It is designed around readable structure, clean formatting, and professional presentation.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 The Trendsetter Agency LLC · <a href="/apps/toppick-resume/privacy/">Privacy</a> · <a href="/support.html">Support</a></p>
+</footer>
+
+</div>
 </body>
 </html>

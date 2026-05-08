@@ -1,0 +1,3 @@
+﻿Contact: mailto:MichelleTrendsetters@gmail.com
+Preferred-Languages: en
+Canonical: https://www.thetrendsetteragency.com/.well-known/security.txt

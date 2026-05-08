@@ -3,3 +3,4 @@ node_modules
 _recovery
 .vercel-preview-url.txt
 .vercel-prod-url.txt
+_quarantine/

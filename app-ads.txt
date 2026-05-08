@@ -1,0 +1,2 @@
+﻿# app-ads.txt for The Trendsetter Agency LLC
+# Add authorized ad sellers here only if/when ads are used.
