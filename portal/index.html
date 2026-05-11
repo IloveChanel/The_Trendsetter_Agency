@@ -4,11 +4,35 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Portal | The Trendsetter Agency</title>
-<meta name="description" content="Secure access portal for Trendsetter Agency affiliates, clients, team members, demos, and authorized platform administration." />
+<meta name="description" content="Secure portal for affiliate and partnership sign up, client login, team login, demo access, and platform login." />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://www.thetrendsetteragency.com/portal/" />
 <link rel="stylesheet" href="/assets/trendsetter-design.css" />
+
+<style>
+.portal-shell{max-width:1180px;margin:0 auto;padding:52px 18px 80px}
+.portal-kicker{text-align:center;letter-spacing:.34em;text-transform:uppercase;color:#8fb7ff;font-weight:800;margin-bottom:10px}
+.portal-title{text-align:center;font-size:clamp(46px,7vw,82px);line-height:.95;margin:0;color:#f8fbff}
+.portal-subtitle{text-align:center;color:#b9c7df;font-size:22px;margin:22px auto 46px;max-width:760px}
+.portal-main-card{border:1px solid rgba(120,150,255,.75);border-radius:30px;background:radial-gradient(circle at 20% 0%,rgba(129,93,255,.22),transparent 38%),linear-gradient(135deg,rgba(18,25,44,.96),rgba(4,13,28,.96));box-shadow:0 0 42px rgba(80,120,255,.22);padding:54px 42px;text-align:center;margin-bottom:28px}
+.portal-icon{font-size:58px;margin-bottom:18px}
+.portal-main-card h2{font-size:clamp(34px,5vw,56px);margin:0 0 18px;color:#fff}
+.portal-main-card p{font-size:22px;color:#c5d1e8;max-width:760px;margin:0 auto 32px;line-height:1.55}
+.portal-primary-btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;width:min(760px,100%);padding:24px 30px;border-radius:18px;background:linear-gradient(90deg,#865cff,#10d7ee);color:white;text-decoration:none;font-weight:900;font-size:clamp(20px,3vw,32px);box-shadow:0 18px 48px rgba(21,181,238,.25)}
+.portal-list{display:grid;gap:16px}
+.portal-row{display:grid;grid-template-columns:76px 1fr auto;gap:22px;align-items:center;border:1px solid rgba(148,163,184,.18);border-radius:22px;background:rgba(15,23,42,.78);padding:22px}
+.portal-row-icon{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(59,130,246,.12);font-size:28px}
+.portal-row h3{margin:0 0 6px;color:#fff;font-size:24px}
+.portal-row p{margin:0;color:#b9c7df;font-size:17px}
+.portal-small-btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(148,163,184,.28);border-radius:14px;padding:13px 18px;min-width:158px;color:#eff6ff;text-decoration:none;background:rgba(30,41,59,.85);font-weight:800}
+@media(max-width:760px){
+  .portal-main-card{padding:34px 20px}
+  .portal-row{grid-template-columns:1fr;gap:12px}
+  .portal-small-btn{width:100%}
+}
+</style>
 </head>
+
 <body>
 <div class="wrap">
 
@@ -22,54 +46,35 @@
   </div>
 </nav>
 
-<header class="hero">
-  <div>
-    <span class="badge">Secure access hub</span>
-    <h1>Trendsetter Portal</h1>
-    <p class="lead">Choose the correct access area for affiliates, clients, team members, demos, and authorized platform administration.</p>
-  </div>
-</header>
+<main class="portal-shell">
+  <div class="portal-kicker">Access</div>
+  <h1 class="portal-title">Welcome</h1>
+  <p class="portal-subtitle">Affiliate and partnership sign up is below. Authorized users can sign in with one login.</p>
 
-<section class="section">
-  <h2>Access Areas</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Authority Access</h3>
-      <p>Authorized administrative access for platform control, client oversight, affiliate management, and system operations.</p>
-      <p><a class="btn" href="https://controltower-production.up.railway.app/login">Open Authority Login</a></p>
-    </div>
+  <section class="portal-main-card">
+    <div class="portal-icon">🤝</div>
+    <h2>Affiliate &amp; Partnership Sign Up</h2>
+    <p>Join as an affiliate or partner to receive your referral link, track commissions, and request payouts.</p>
+    <a class="portal-primary-btn" href="https://controltower-production.up.railway.app/affiliate/signup">Affiliate &amp; Partnership Sign Up →</a>
+  </section>
 
-    <div class="card">
-      <h3>Affiliate Portal</h3>
-      <p>Affiliate and sales partners can sign in, access referral links, view sales records, track commission status, and request PayPal payout.</p>
-      <p><a class="btn" href="https://controltower-production.up.railway.app/affiliate/login">Affiliate Login</a></p>
-      <p><a href="https://controltower-production.up.railway.app/affiliate/signup">Create Affiliate Account</a></p>
+  <section class="portal-list">
+    <div class="portal-row">
+      <div class="portal-row-icon">🔒</div>
+      <div>
+        <h3>Administrative Login</h3>
+        <p>Authorized users only. Sign in once to access your assigned dashboard.</p>
+      </div>
+      <a class="portal-small-btn" href="https://controltower-production.up.railway.app/login">Login →</a>
     </div>
-
-    <div class="card">
-      <h3>Client Login</h3>
-      <p>Licensed clients can access approved dashboards, HealthLogic views, reporting, and data tools.</p>
-      <p><a class="btn" href="https://controltower-production.up.railway.app/login">Client Login</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Team Access</h3>
-      <p>Internal team and employee access for future operations, support, and platform workflows.</p>
-      <p><a class="btn" href="https://controltower-production.up.railway.app/login">Team Login</a></p>
-    </div>
-
-    <div class="card">
-      <h3>Demo Access</h3>
-      <p>Demo area for presentations, walkthroughs, client previews, and controlled platform examples.</p>
-      <p><a class="btn" href="https://controltower-production.up.railway.app/login">Open Demo</a></p>
-    </div>
-  </div>
-</section>
+  </section>
+</main>
 
 <footer class="footer">
-  <p>© 2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/security.html">Security</a> · <a href="/support.html">Support</a></p>
+  <p>© 2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/security.html">Security</a> · <a href="/data-deletion.html">Data Deletion</a> · <a href="/portal/">Portal</a> · <a href="/support.html">Support</a></p>
 </footer>
 
 </div>
 </body>
 </html>
+
