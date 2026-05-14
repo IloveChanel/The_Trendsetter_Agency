@@ -1,0 +1,586 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portal | The Trendsetter Agency</title>
+<meta name="description" content="Secure portal for affiliate and partnership sign up, client login, team login, demo access, and platform login." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.thetrendsetteragency.com/portal/" />
+<link rel="stylesheet" href="/assets/trendsetter-design.css" />
+
+<style>
+.portal-shell{max-width:1180px;margin:0 auto;padding:52px 18px 80px}
+.portal-kicker{text-align:center;letter-spacing:.34em;text-transform:uppercase;color:#8fb7ff;font-weight:800;margin-bottom:10px}
+.portal-title{text-align:center;font-size:clamp(46px,7vw,82px);line-height:.95;margin:0;color:#f8fbff}
+.portal-subtitle{text-align:center;color:#b9c7df;font-size:22px;margin:22px auto 46px;max-width:760px}
+.portal-main-card{border:1px solid rgba(120,150,255,.75);border-radius:30px;background:radial-gradient(circle at 20% 0%,rgba(129,93,255,.22),transparent 38%),linear-gradient(135deg,rgba(18,25,44,.96),rgba(4,13,28,.96));box-shadow:0 0 42px rgba(80,120,255,.22);padding:54px 42px;text-align:center;margin-bottom:28px}
+.portal-icon{font-size:58px;margin-bottom:18px}
+.portal-main-card h2{font-size:clamp(34px,5vw,56px);margin:0 0 18px;color:#fff}
+.portal-main-card p{font-size:22px;color:#c5d1e8;max-width:760px;margin:0 auto 32px;line-height:1.55}
+.portal-primary-btn{display:inline-flex;align-items:center;justify-content:center;gap:16px;width:min(760px,100%);padding:24px 30px;border-radius:18px;background:linear-gradient(90deg,#865cff,#10d7ee);color:white;text-decoration:none;font-weight:900;font-size:clamp(20px,3vw,32px);box-shadow:0 18px 48px rgba(21,181,238,.25)}
+.portal-list{display:grid;gap:16px}
+.portal-row{display:grid;grid-template-columns:76px 1fr auto;gap:22px;align-items:center;border:1px solid rgba(148,163,184,.18);border-radius:22px;background:rgba(15,23,42,.78);padding:22px}
+.portal-row-icon{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;background:rgba(59,130,246,.12);font-size:28px}
+.portal-row h3{margin:0 0 6px;color:#fff;font-size:24px}
+.portal-row p{margin:0;color:#b9c7df;font-size:17px}
+.portal-small-btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid rgba(148,163,184,.28);border-radius:14px;padding:13px 18px;min-width:158px;color:#eff6ff;text-decoration:none;background:rgba(30,41,59,.85);font-weight:800}
+@media(max-width:760px){
+  .portal-main-card{padding:34px 20px}
+  .portal-row{grid-template-columns:1fr;gap:12px}
+  .portal-small-btn{width:100%}
+}
+
+/* OWNER_POM_ACCESS — private owner entry, intentionally subtle */
+.owner-pom-access{
+  position:fixed;
+  top:14px;
+  right:16px;
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:20px;
+  line-height:1;
+  opacity:.32;
+  z-index:9999;
+  background:rgba(15,23,42,.18);
+  border:1px solid rgba(148,163,184,.16);
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.owner-pom-access:hover{
+  opacity:.82;
+  transform:translateY(-1px);
+}
+
+.portal-disabled-btn{
+  cursor:not-allowed;
+  opacity:.58;
+  pointer-events:none;
+}
+.portal-card-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+.owner-pom-access{
+  opacity:.58;
+  background:rgba(255,244,214,.16);
+}
+.owner-pom-access:hover{
+  opacity:1;
+}
+
+/* TRENDSETTER_UNIVERSAL_ACCESS_CARD */
+.portal-access-grid{
+  display:grid;
+  gap:18px;
+}
+.portal-access-card{
+  display:grid;
+  grid-template-columns:74px 1fr auto;
+  gap:22px;
+  align-items:center;
+  border:1px solid rgba(148,163,184,.20);
+  border-radius:24px;
+  background:linear-gradient(135deg,rgba(15,23,42,.88),rgba(12,22,39,.96));
+  box-shadow:0 18px 42px rgba(0,0,0,.18);
+  padding:24px;
+}
+.portal-access-icon{
+  width:58px;
+  height:58px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(59,130,246,.13);
+  font-size:28px;
+}
+.portal-access-card h3{
+  margin:0 0 7px;
+  color:#fff;
+  font-size:24px;
+}
+.portal-access-card p{
+  margin:0;
+  color:#b9c7df;
+  font-size:17px;
+  line-height:1.45;
+}
+.portal-card-action{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(148,163,184,.30);
+  border-radius:15px;
+  padding:13px 20px;
+  min-width:160px;
+  color:#eff6ff;
+  text-decoration:none;
+  background:rgba(30,41,59,.88);
+  font-weight:900;
+}
+.portal-card-action.primary{
+  background:linear-gradient(90deg,#865cff,#10d7ee);
+  border-color:rgba(255,255,255,.18);
+}
+.portal-card-action.disabled{
+  cursor:not-allowed;
+  opacity:.56;
+  pointer-events:none;
+}
+.private-access-card{
+  display:none;
+  margin-top:22px;
+  border:1px solid rgba(245,158,11,.32);
+  border-radius:26px;
+  background:linear-gradient(135deg,rgba(30,41,59,.96),rgba(8,18,35,.98));
+  box-shadow:0 22px 54px rgba(0,0,0,.22);
+  padding:28px;
+}
+.private-access-card:target{
+  display:block;
+}
+.private-login-form{
+  display:grid;
+  gap:14px;
+  margin-top:18px;
+}
+.private-login-form input{
+  width:100%;
+  box-sizing:border-box;
+  border:1px solid rgba(148,163,184,.22);
+  border-radius:14px;
+  background:rgba(15,23,42,.78);
+  color:#eff6ff;
+  padding:15px 16px;
+  font-size:16px;
+}
+.private-login-form input::placeholder{
+  color:#94a3b8;
+}
+.private-login-actions{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+.owner-pom-access{
+  opacity:.72;
+  background:rgba(255,244,214,.18);
+}
+.owner-pom-access:hover{
+  opacity:1;
+}
+@media(max-width:760px){
+  .portal-access-card{
+    grid-template-columns:1fr;
+    gap:13px;
+  }
+  .portal-card-action{
+    width:100%;
+  }
+}
+
+/* TRENDSETTER_COMPACT_UNIFORM_LOGIN */
+.portal-shell{
+  max-width:980px;
+  padding:34px 18px 58px;
+}
+.portal-title{
+  font-size:clamp(34px,5vw,56px);
+}
+.portal-subtitle{
+  font-size:17px;
+  margin:14px auto 24px;
+  max-width:660px;
+}
+.portal-main-card{
+  padding:26px 24px;
+  border-radius:22px;
+  margin-bottom:18px;
+}
+.portal-icon{
+  font-size:34px;
+  margin-bottom:10px;
+}
+.portal-main-card h2{
+  font-size:clamp(26px,4vw,38px);
+  margin-bottom:10px;
+}
+.portal-main-card p{
+  font-size:17px;
+  line-height:1.4;
+  margin-bottom:0;
+}
+.portal-access-grid{
+  gap:12px;
+}
+.portal-access-card{
+  grid-template-columns:54px 1fr auto;
+  gap:16px;
+  padding:16px 18px;
+  border-radius:18px;
+}
+.portal-access-icon{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  font-size:22px;
+}
+.portal-access-card h3{
+  font-size:20px;
+  margin-bottom:4px;
+}
+.portal-access-card p{
+  font-size:14px;
+  line-height:1.35;
+}
+.portal-card-action{
+  min-width:132px;
+  padding:11px 15px;
+  border-radius:12px;
+  font-size:14px;
+}
+.private-access-card{
+  margin-top:14px;
+  padding:16px;
+  border-radius:18px;
+}
+.private-access-card .portal-access-card{
+  grid-template-columns:54px 1fr auto;
+  padding:14px;
+}
+.private-login-form{
+  gap:10px;
+  margin-top:12px;
+}
+.private-login-form input{
+  padding:12px 14px;
+  border-radius:12px;
+  font-size:14px;
+}
+.private-login-actions{
+  gap:10px;
+  margin-top:2px;
+}
+.owner-pom-access{
+  width:30px;
+  height:30px;
+  font-size:18px;
+  top:12px;
+  right:14px;
+}
+@media(max-width:760px){
+  .portal-access-card,
+  .private-access-card .portal-access-card{
+    grid-template-columns:1fr;
+  }
+}
+
+/* TRENDSETTER_NARROW_UNIFORM_LOGIN */
+.portal-shell{
+  max-width:720px;
+  padding:28px 18px 48px;
+}
+.portal-title{
+  font-size:clamp(30px,4vw,44px);
+}
+.portal-subtitle{
+  font-size:15px;
+  margin:10px auto 18px;
+  max-width:560px;
+}
+.portal-main-card{
+  display:none;
+}
+.portal-access-grid{
+  max-width:720px;
+  margin:0 auto;
+  gap:10px;
+}
+.portal-access-card{
+  grid-template-columns:42px 1fr 118px;
+  gap:12px;
+  padding:12px 14px;
+  border-radius:16px;
+  min-height:68px;
+}
+.portal-access-icon{
+  width:36px;
+  height:36px;
+  border-radius:12px;
+  font-size:18px;
+}
+.portal-access-card h3{
+  font-size:17px;
+  margin:0 0 2px;
+}
+.portal-access-card p{
+  font-size:13px;
+  line-height:1.25;
+}
+.portal-card-action{
+  min-width:108px;
+  padding:9px 12px;
+  border-radius:11px;
+  font-size:13px;
+}
+.private-access-card{
+  max-width:720px;
+  margin:12px auto 0;
+  padding:12px;
+  border-radius:16px;
+}
+.private-access-card .portal-access-card{
+  grid-template-columns:42px 1fr 92px;
+  padding:10px;
+  min-height:58px;
+}
+.private-login-form{
+  gap:8px;
+  margin-top:10px;
+}
+.private-login-form input{
+  padding:10px 12px;
+  border-radius:11px;
+  font-size:13px;
+}
+.private-login-actions{
+  gap:8px;
+}
+.private-login-actions .portal-card-action{
+  min-width:104px;
+}
+@media(max-width:760px){
+  .portal-shell{
+    max-width:100%;
+  }
+  .portal-access-card,
+  .private-access-card .portal-access-card{
+    grid-template-columns:38px 1fr;
+  }
+  .portal-card-action{
+    grid-column:1 / -1;
+    width:100%;
+  }
+}
+
+/* TRENDSETTER_BOX_UNIFORM_LOGIN */
+.portal-shell{
+  max-width:760px;
+  padding:30px 18px 52px;
+}
+.portal-title{
+  font-size:clamp(32px,4.5vw,48px);
+}
+.portal-subtitle{
+  font-size:15px;
+  margin:10px auto 22px;
+  max-width:560px;
+}
+.portal-main-card{
+  display:none;
+}
+.portal-access-grid{
+  max-width:760px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:14px;
+}
+.portal-access-card{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+  min-height:178px;
+  padding:18px;
+  border-radius:20px;
+}
+.portal-access-icon{
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  font-size:21px;
+}
+.portal-access-card h3{
+  font-size:20px;
+  margin:0 0 5px;
+}
+.portal-access-card p{
+  font-size:13.5px;
+  line-height:1.35;
+}
+.portal-card-action{
+  width:100%;
+  min-width:0;
+  padding:11px 14px;
+  border-radius:12px;
+  font-size:14px;
+}
+.private-access-card{
+  max-width:760px;
+  margin:14px auto 0;
+  padding:16px;
+  border-radius:20px;
+}
+.private-access-card .portal-access-card{
+  min-height:auto;
+  display:grid;
+  grid-template-columns:42px 1fr auto;
+  align-items:center;
+  gap:12px;
+  padding:14px;
+}
+.private-login-form{
+  max-width:440px;
+  margin:12px auto 0;
+  gap:9px;
+}
+.private-login-form input{
+  padding:11px 13px;
+  border-radius:12px;
+  font-size:14px;
+}
+.private-login-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+@media(max-width:760px){
+  .portal-access-grid{
+    grid-template-columns:1fr;
+  }
+  .portal-access-card{
+    min-height:150px;
+  }
+  .private-access-card .portal-access-card{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+<a
+  class="owner-pom-access"
+  href="#private-access"
+  aria-label="Private access"
+  title="Private access"
+  rel="noopener"
+>🐕</a>
+<div class="wrap">
+
+<nav class="nav">
+  <a class="brand" href="/">The Trendsetter Agency</a>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/apps/health-logic/">Health Logic</a>
+    <a href="/portal/">Portal</a>
+    <a href="/support.html">Support</a>
+  </div>
+</nav>
+
+<main class="portal-shell">
+  <div class="portal-kicker">Access</div>
+  <h1 class="portal-title">Welcome</h1>
+  <p class="portal-subtitle">Choose the access path assigned to you.</p>
+
+  <section class="portal-main-card">
+    <div class="portal-icon">✨</div>
+    <h2>Access Portal</h2>
+    <p>Choose the access card assigned to you.</p>
+  </section>
+
+  <section class="portal-access-grid">
+    <div class="portal-access-card">
+      <div class="portal-access-icon">🤝</div>
+      <div>
+        <h3>Affiliate Login</h3>
+        <p>Sign in to view referral links, QR codes, orders, commissions, and payout status.</p>
+      </div>
+      <a class="portal-card-action primary" href="https://controltower-production.up.railway.app/affiliate/login">Login →</a>
+    </div>
+
+    <div class="portal-access-card">
+      <div class="portal-access-icon">🧾</div>
+      <div>
+        <h3>Affiliate Sign Up</h3>
+        <p>Create an affiliate or partner account to receive your referral link and QR code.</p>
+      </div>
+      <a class="portal-card-action" href="https://controltower-production.up.railway.app/affiliate/signup">Sign Up →</a>
+    </div>
+
+
+    <div class="portal-access-card">
+      <div class="portal-access-icon">🏢</div>
+      <div>
+        <h3>Client Access</h3>
+        <p>Client dashboard access for approved business, store, and platform accounts.</p>
+      </div>
+      <span class="portal-card-action disabled">Pending →</span>
+    </div>
+    <div class="portal-access-card">
+      <div class="portal-access-icon">👥</div>
+      <div>
+        <h3>Team Login</h3>
+        <p>Team access is owner-approved. Setup pending.</p>
+      </div>
+      <span class="portal-card-action disabled">Pending →</span>
+    </div>
+
+    <div class="portal-access-card">
+      <div class="portal-access-icon">🧪</div>
+      <div>
+        <h3>Demo Access</h3>
+        <p>Demo access setup pending.</p>
+      </div>
+      <span class="portal-card-action disabled">Pending →</span>
+    </div>
+  </section>
+
+  <section id="private-access" class="private-access-card">
+    <div class="portal-access-card" style="box-shadow:none">
+      <div class="portal-access-icon">🐕</div>
+      <div>
+        <h3>Private Access</h3>
+        <p>Enter your assigned credentials.</p>
+      </div>
+      <a class="portal-card-action" href="#top">Close</a>
+    </div>
+
+    <form class="private-login-form" action="#private-access" method="get">
+      <input type="email" name="email" autocomplete="email" placeholder="Email" />
+      <input type="password" name="password" autocomplete="current-password" placeholder="Password" />
+      <div class="private-login-actions">
+        <button class="portal-card-action primary" type="button">Continue →</button>
+        <a class="portal-card-action" href="#top">Cancel</a>
+      </div>
+    </form>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© 2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/security.html">Security</a> · <a href="/data-deletion.html">Data Deletion</a> · <a href="/portal/">Portal</a> · <a href="/support.html">Support</a></p>
+</footer>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

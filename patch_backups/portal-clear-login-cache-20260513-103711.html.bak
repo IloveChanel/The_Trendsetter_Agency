@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Portal | The Trendsetter Agency</title>
+<meta name="description" content="Secure portal for affiliate and partnership sign up, client access, team access, demo access, and platform login." />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://www.thetrendsetteragency.com/portal/" />
+<link rel="stylesheet" href="/assets/trendsetter-design.css" />
+
+<style>
+/* TRENDSETTER_PORTAL_SOURCE_OF_TRUTH */
+.portal-shell{
+  max-width:820px;
+  margin:0 auto;
+  padding:34px 18px 58px;
+}
+.portal-kicker{
+  text-align:center;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+  color:#8fb7ff;
+  font-weight:800;
+  margin-bottom:8px;
+}
+.portal-title{
+  text-align:center;
+  font-size:clamp(34px,5vw,52px);
+  line-height:1;
+  margin:0;
+  color:#f8fbff;
+}
+.portal-subtitle{
+  max-width:560px;
+  margin:12px auto 26px;
+  text-align:center;
+  color:#b9c7df;
+  font-size:15.5px;
+  line-height:1.45;
+}
+.owner-pom-access{
+  position:fixed;
+  top:12px;
+  right:14px;
+  width:30px;
+  height:30px;
+  border-radius:999px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:18px;
+  line-height:1;
+  opacity:.58;
+  z-index:9999;
+  background:rgba(255,244,214,.16);
+  border:1px solid rgba(148,163,184,.16);
+  box-shadow:0 10px 24px rgba(0,0,0,.18);
+}
+.owner-pom-access:hover{opacity:1}
+.portal-access-grid{
+  width:100%;
+  max-width:760px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(240px, 1fr));
+  gap:14px;
+}
+.portal-access-card{
+  min-height:174px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:18px;
+  border-radius:22px;
+  border:1px solid rgba(148,163,184,.20);
+  background:linear-gradient(135deg,rgba(15,23,42,.88),rgba(12,22,39,.96));
+  box-shadow:0 18px 42px rgba(0,0,0,.16);
+}
+.portal-access-icon{
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(59,130,246,.13);
+  font-size:21px;
+}
+.portal-access-card h3{
+  margin:12px 0 5px;
+  font-size:20px;
+  line-height:1.1;
+  color:#fff;
+}
+.portal-access-card p{
+  min-height:38px;
+  margin:0;
+  font-size:13.5px;
+  line-height:1.35;
+  color:#b9c7df;
+}
+.portal-card-action{
+  width:100%;
+  min-width:0;
+  margin-top:14px;
+  padding:11px 14px;
+  border-radius:13px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  border:1px solid rgba(148,163,184,.30);
+  background:rgba(30,41,59,.88);
+  color:#eff6ff;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:900;
+}
+.portal-card-action.primary{
+  background:linear-gradient(90deg,#865cff,#10d7ee);
+  border-color:rgba(255,255,255,.18);
+}
+.portal-card-action.disabled{
+  cursor:not-allowed;
+  opacity:.55;
+  pointer-events:none;
+}
+.portal-login-panels{
+  max-width:460px;
+  margin:16px auto 0;
+}
+.portal-login-panel{
+  display:none;
+  border:1px solid rgba(245,158,11,.28);
+  border-radius:22px;
+  background:linear-gradient(135deg,rgba(17,24,39,.96),rgba(8,18,35,.98));
+  box-shadow:0 20px 48px rgba(0,0,0,.22);
+  padding:20px;
+}
+.portal-login-panel:target{display:block}
+.portal-login-head{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  margin-bottom:14px;
+}
+.portal-login-icon{
+  width:42px;
+  height:42px;
+  flex:0 0 42px;
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(59,130,246,.13);
+  font-size:20px;
+}
+.portal-login-title{
+  margin:0 0 4px;
+  color:#fff;
+  font-size:20px;
+  line-height:1.1;
+}
+.portal-login-text{
+  margin:0;
+  color:#b9c7df;
+  font-size:13.5px;
+  line-height:1.35;
+}
+.portal-login-form{
+  display:grid;
+  gap:10px;
+}
+.portal-login-form input{
+  width:100%;
+  box-sizing:border-box;
+  padding:12px 14px;
+  border-radius:13px;
+  border:1px solid rgba(148,163,184,.22);
+  background:rgba(15,23,42,.78);
+  color:#eff6ff;
+  font-size:14px;
+}
+.portal-login-actions{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:2px;
+}
+.portal-login-actions .portal-card-action{
+  margin-top:0;
+}
+@media(max-width:680px){
+  .portal-access-grid{grid-template-columns:1fr}
+  .portal-access-card{min-height:150px}
+}
+</style>
+</head>
+
+<body>
+<a class="owner-pom-access" href="#private-access" aria-label="Private access" title="Private access" rel="noopener">🐕</a>
+
+<div class="wrap">
+<nav class="nav">
+  <a class="brand" href="/">The Trendsetter Agency</a>
+  <div class="links">
+    <a href="/">Home</a>
+    <a href="/apps/health-logic/">Health Logic</a>
+    <a href="/portal/">Portal</a>
+    <a href="/support.html">Support</a>
+  </div>
+</nav>
+
+<main class="portal-shell">
+  <div class="portal-kicker">Access</div>
+  <h1 class="portal-title">Welcome</h1>
+  <p class="portal-subtitle">Choose the access path assigned to you. Partner, client, team, and demo access are managed by The Trendsetter Agency.</p>
+
+  <section class="portal-access-grid">
+    <div class="portal-access-card">
+      <div>
+        <div class="portal-access-icon">🤝</div>
+        <h3>Affiliate Login</h3>
+        <p>Sign in to view referral links, QR codes, commissions, and payout status.</p>
+      </div>
+      <a class="portal-card-action primary" href="#affiliate-login">Login →</a>
+    </div>
+
+    <div class="portal-access-card">
+      <div>
+        <div class="portal-access-icon">🧾</div>
+        <h3>Affiliate Sign Up</h3>
+        <p>Create an affiliate or partner account to receive your referral link and QR code.</p>
+      </div>
+      <a class="portal-card-action" href="https://controltower-production.up.railway.app/affiliate/signup">Sign Up →</a>
+    </div>
+
+    <div class="portal-access-card">
+      <div>
+        <div class="portal-access-icon">🏢</div>
+        <h3>Client Access</h3>
+        <p>Client dashboard access for approved business, store, and platform accounts.</p>
+      </div>
+      <span class="portal-card-action disabled">Pending →</span>
+    </div>
+
+    <div class="portal-access-card">
+      <div>
+        <div class="portal-access-icon">👥</div>
+        <h3>Team Login</h3>
+        <p>Team access is assigned by The Trendsetter Agency.</p>
+      </div>
+      <span class="portal-card-action disabled">Pending →</span>
+    </div>
+
+    <div class="portal-access-card">
+      <div>
+        <div class="portal-access-icon">🧪</div>
+        <h3>Demo Access</h3>
+        <p>Demo access is available for approved previews and walkthroughs.</p>
+      </div>
+      <span class="portal-card-action disabled">Pending →</span>
+    </div>
+  </section>
+
+  <section class="portal-login-panels">
+    <div id="affiliate-login" class="portal-login-panel">
+      <div class="portal-login-head">
+        <div class="portal-login-icon">🤝</div>
+        <div>
+          <h3 class="portal-login-title">Affiliate Login</h3>
+          <p class="portal-login-text">Enter your affiliate code and password.</p>
+        </div>
+      </div>
+      <form class="portal-login-form" action="#affiliate-login" method="get">
+        <input type="text" name="code" autocomplete="username" placeholder="Affiliate code" />
+        <input type="password" name="password" autocomplete="current-password" placeholder="Password" />
+        <div class="portal-login-actions">
+          <button class="portal-card-action primary" type="button">Continue →</button>
+          <a class="portal-card-action" href="#top">Cancel</a>
+        </div>
+      </form>
+    </div>
+
+    <div id="private-access" class="portal-login-panel">
+      <div class="portal-login-head">
+        <div class="portal-login-icon">🐕</div>
+        <div>
+          <h3 class="portal-login-title">Private Access</h3>
+          <p class="portal-login-text">Enter your assigned email and password.</p>
+        </div>
+      </div>
+      <form class="portal-login-form" action="#private-access" method="get">
+        <input type="email" name="email" autocomplete="email" placeholder="Email" />
+        <input type="password" name="password" autocomplete="current-password" placeholder="Password" />
+        <div class="portal-login-actions">
+          <button class="portal-card-action primary" type="button">Continue →</button>
+          <a class="portal-card-action" href="#top">Cancel</a>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© 2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/security.html">Security</a> · <a href="/data-deletion.html">Data Deletion</a> · <a href="/portal/">Portal</a> · <a href="/support.html">Support</a></p>
+</footer>
+</div>
+</body>
+</html>
