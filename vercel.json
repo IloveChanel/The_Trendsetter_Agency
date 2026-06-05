@@ -1,1 +1,26 @@
-{"$schema":"https://openapi.vercel.sh/vercel.json","cleanUrls":true,"trailingSlash":true,"installCommand":null,"buildCommand":null,"outputDirectory":"."}
+﻿{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "installCommand": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "rewrites": [
+    {
+      "source": "/admin/containers/:path*",
+      "destination": "https://controltower-production.up.railway.app/admin/containers/:path*"
+    },
+    {
+      "source": "/admin/healthlogic/:path*",
+      "destination": "https://controltower-production.up.railway.app/admin/healthlogic/:path*"
+    },
+    {
+      "source": "/api/client/healthlogic/:path*",
+      "destination": "https://controltower-production.up.railway.app/api/client/healthlogic/:path*"
+    },
+    {
+      "source": "/api/owner/:path*",
+      "destination": "https://controltower-production.up.railway.app/api/owner/:path*"
+    }
+  ]
+}
