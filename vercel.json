@@ -7,6 +7,22 @@
   "outputDirectory": ".",
   "rewrites": [
     {
+      "source": "/admin/containers/ingredients/",
+      "destination": "https://controltower-production.up.railway.app/admin/containers/ingredients"
+    },
+    {
+      "source": "/admin/containers/profiles/",
+      "destination": "https://controltower-production.up.railway.app/admin/containers/profiles"
+    },
+    {
+      "source": "/admin/containers/scans/",
+      "destination": "https://controltower-production.up.railway.app/admin/containers/scans"
+    },
+    {
+      "source": "/admin/healthlogic/trace/",
+      "destination": "https://controltower-production.up.railway.app/admin/healthlogic/trace"
+    },
+    {
       "source": "/admin/containers/:path*",
       "destination": "https://controltower-production.up.railway.app/admin/containers/:path*"
     },
