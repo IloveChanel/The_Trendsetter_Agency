@@ -1,43 +1,58 @@
-﻿{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "installCommand": null,
-  "buildCommand": null,
-  "outputDirectory": ".",
-  "rewrites": [
-    {
-      "source": "/admin/containers/ingredients/",
-      "destination": "https://controltower-production.up.railway.app/admin/containers/ingredients"
-    },
-    {
-      "source": "/admin/containers/profiles/",
-      "destination": "https://controltower-production.up.railway.app/admin/containers/profiles"
-    },
-    {
-      "source": "/admin/containers/scans/",
-      "destination": "https://controltower-production.up.railway.app/admin/containers/scans"
-    },
-    {
-      "source": "/admin/healthlogic/trace/",
-      "destination": "https://controltower-production.up.railway.app/admin/healthlogic/trace"
-    },
-    {
-      "source": "/admin/containers/:path*",
-      "destination": "https://controltower-production.up.railway.app/admin/containers/:path*"
-    },
-    {
-      "source": "/admin/healthlogic/:path*",
-      "destination": "https://controltower-production.up.railway.app/admin/healthlogic/:path*"
-    },
-    {
-      "source": "/api/client/healthlogic/:path*",
-      "destination": "https://controltower-production.up.railway.app/api/client/healthlogic/:path*"
-    },
-    {
-      "source": "/api/owner/:path*",
-      "destination": "https://controltower-production.up.railway.app/api/owner/:path*"
-    }
-  ]
+{
+    "cleanUrls":  true,
+    "rewrites":  [
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/containers/ingredients",
+                         "source":  "/admin/containers/ingredients"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/containers/ingredients",
+                         "source":  "/admin/containers/ingredients/"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/containers/profiles",
+                         "source":  "/admin/containers/profiles"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/containers/profiles",
+                         "source":  "/admin/containers/profiles/"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/containers/scans",
+                         "source":  "/admin/containers/scans"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/containers/scans",
+                         "source":  "/admin/containers/scans/"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/healthlogic/trace",
+                         "source":  "/admin/healthlogic/trace"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/healthlogic/trace",
+                         "source":  "/admin/healthlogic/trace/"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/containers/:path*",
+                         "source":  "/admin/containers/:path*"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/admin/healthlogic/:path*",
+                         "source":  "/admin/healthlogic/:path*"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/api/client/healthlogic/:path*",
+                         "source":  "/api/client/healthlogic/:path*"
+                     },
+                     {
+                         "destination":  "https://controltower-production.up.railway.app/api/owner/:path*",
+                         "source":  "/api/owner/:path*"
+                     }
+                 ],
+    "buildCommand":  null,
+    "installCommand":  null,
+    "outputDirectory":  ".",
+    "trailingSlash":  false,
+    "$schema":  "https://openapi.vercel.sh/vercel.json"
 }
-
