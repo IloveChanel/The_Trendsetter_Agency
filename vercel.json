@@ -2,18 +2,6 @@
     "cleanUrls":  true,
     "rewrites":  [
                      {
-                         "destination":  "https://controltower-production.up.railway.app/_next/:path*",
-                         "source":  "/_next/:path*"
-                     },
-                     {
-                         "destination":  "https://controltower-production.up.railway.app/admin/ad-studio",
-                         "source":  "/admin/ad-studio"
-                     },
-                     {
-                         "destination":  "https://controltower-production.up.railway.app/admin/ad-studio",
-                         "source":  "/admin/ad-studio/"
-                     },
-                     {
                          "destination":  "https://controltower-production.up.railway.app/admin/containers/ingredients",
                          "source":  "/admin/containers/ingredients"
                      },
