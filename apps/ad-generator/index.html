@@ -1,0 +1,371 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Trendsetter Ad Generator | The Trendsetter Agency</title>
+  <meta name="description" content="Generate ad copy from short briefs with PayPal checkout, image upload, and premium brand styling from The Trendsetter Agency." />
+  <link rel="canonical" href="https://www.thetrendsetteragency.com/apps/ad-generator/" />
+  <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
+  <style>
+    :root{
+      --bg:#020714;
+      --bg-2:#09101f;
+      --surface:rgba(8,16,34,.74);
+      --surface-2:rgba(13,23,45,.84);
+      --line:rgba(121,192,255,.22);
+      --line-2:rgba(255,255,255,.10);
+      --text:#eef4ff;
+      --muted:#bdd2ff;
+      --soft:#8ca3cb;
+      --cyan:#39d5ff;
+      --blue:#4a7bff;
+      --pink:#ef64ff;
+      --orange:#ff9b3d;
+      --green:#6ff0b0;
+      --radius:28px;
+      --shadow:0 30px 60px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body.tts-image-home{
+      margin:0;color:var(--text);
+      background:
+        radial-gradient(circle at 15% 85%, rgba(0,255,255,.15), transparent 25%),
+        radial-gradient(circle at 85% 25%, rgba(202,83,255,.16), transparent 22%),
+        linear-gradient(180deg, rgba(5,10,28,.82), rgba(3,7,20,.97)),
+        #020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    body.tts-image-home::before{
+      content:"";position:fixed;inset:0;background:linear-gradient(180deg,rgba(2,7,20,.24),rgba(2,7,20,.64));pointer-events:none;z-index:-1;
+    }
+    .tts-page-glow{position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);background-size:40px 40px;mask-image:linear-gradient(to bottom, rgba(0,0,0,.5), transparent 90%);opacity:.28;z-index:0}
+    .tts-shell{position:relative;z-index:1;max-width:1320px;margin:0 auto;padding:0 24px 72px}
+    .tts-nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;gap:20px;flex-wrap:wrap}
+    .tts-brand{display:flex;align-items:center;gap:14px;color:var(--text);text-decoration:none}
+    .tts-brand-mark{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-weight:800;background:linear-gradient(180deg,rgba(57,213,255,.18),rgba(57,213,255,.06));border:1px solid rgba(57,213,255,.55);box-shadow:0 0 24px rgba(57,213,255,.18)}
+    .tts-brand-copy{display:flex;flex-direction:column;gap:2px}
+    .tts-brand-copy strong{font-size:1.1rem}
+    .tts-brand-copy em{font-style:normal;color:var(--muted);font-size:.92rem}
+    .tts-links{display:flex;gap:24px;flex-wrap:wrap}
+    .tts-links a{color:var(--text);text-decoration:none;font-weight:600;opacity:.9}
+    .tts-links a:hover{color:var(--cyan)}
+    .hero{display:grid;grid-template-columns:1.06fr .94fr;gap:28px;align-items:stretch;margin-top:18px}
+    .panel{background:var(--surface);border:1px solid var(--line);border-radius:34px;backdrop-filter:blur(18px);box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .panel::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(57,213,255,.06),transparent 36%,rgba(239,100,255,.05) 72%,transparent);pointer-events:none}
+    .hero-copy{padding:34px 34px 36px}
+    .kicker{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border:1px solid rgba(90,218,255,.48);border-radius:999px;color:var(--text);font-size:.9rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;background:rgba(9,18,39,.52)}
+    .kicker span{color:#ff86cb}
+    h1{font-size:clamp(2.8rem,5vw,5.9rem);line-height:.95;letter-spacing:-.05em;margin:28px 0 20px;max-width:11ch}
+    .hot{color:var(--orange)} .pink{color:var(--pink)} .cyan{color:var(--cyan)}
+    .lead{font-size:1.08rem;line-height:1.7;color:var(--muted);max-width:58ch}
+    .price-strip{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+    .price-pill{padding:14px 18px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09)}
+    .price-pill strong{display:block;font-size:1.4rem}
+    .price-pill span{font-size:.9rem;color:var(--soft)}
+    .hero-card{padding:24px;display:flex;flex-direction:column;justify-content:space-between;min-height:690px}
+    .hero-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px}
+    .hero-badge{padding:10px 14px;border-radius:16px;background:rgba(57,213,255,.12);border:1px solid rgba(57,213,255,.22);font-size:.84rem;color:var(--muted)}
+    .hero-stat{padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);text-align:right}
+    .hero-stat strong{display:block;font-size:1.3rem}
+    .hero-stat span{font-size:.82rem;color:var(--soft)}
+    .feature-stack{display:grid;gap:14px;margin-top:30px}
+    .feature-box{padding:18px 18px 16px;border-radius:22px;background:rgba(3,8,24,.54);border:1px solid rgba(255,255,255,.08)}
+    .feature-box strong{display:block;font-size:1.02rem;margin-bottom:6px}
+    .feature-box p{margin:0;color:var(--muted);line-height:1.6}
+    .floating-upload{display:grid;place-items:center;min-height:230px;border-radius:28px;border:1.5px dashed rgba(111,240,176,.42);background:linear-gradient(180deg,rgba(10,18,40,.75),rgba(5,11,25,.5));text-align:center;padding:26px}
+    .floating-upload strong{font-size:1.08rem}
+    .floating-upload p{margin:8px 0 0;color:var(--muted);max-width:30ch;line-height:1.6}
+    .section{margin-top:34px}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+    .section-head h2{margin:0;font-size:clamp(1.75rem,3vw,3rem);letter-spacing:-.04em}
+    .section-head p{margin:0;color:var(--muted);max-width:58ch;line-height:1.7}
+    .tool-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px}
+    .tool-panel{padding:28px}
+    .tool-panel h3{margin:0 0 18px;font-size:1.45rem;letter-spacing:-.03em}
+    .field-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field.full{grid-column:1/-1}
+    label{display:block;font-size:.84rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-bottom:10px}
+    input,select,textarea{width:100%;border-radius:18px;border:1px solid var(--line-2);background:rgba(255,255,255,.05);padding:16px 16px;color:var(--text);font:inherit;outline:none}
+    textarea{min-height:118px;resize:vertical}
+    input:focus,select:focus,textarea:focus{border-color:rgba(57,213,255,.6);box-shadow:0 0 0 4px rgba(57,213,255,.12)}
+    .dropzone{border:1.5px dashed rgba(57,213,255,.48);border-radius:24px;padding:28px;background:rgba(8,16,34,.5);text-align:center;transition:.2s ease}
+    .dropzone.drag{transform:translateY(-2px);border-color:rgba(111,240,176,.8);box-shadow:0 0 0 5px rgba(111,240,176,.10)}
+    .dropzone strong{display:block;font-size:1.05rem;margin-bottom:6px}
+    .dropzone p{margin:0;color:var(--muted);line-height:1.6}
+    .upload-preview{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .upload-preview span{padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.07);font-size:.88rem;color:var(--muted)}
+    .button-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:20px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 20px;border-radius:18px;font-weight:800;text-decoration:none;border:1px solid transparent;cursor:pointer}
+    .btn-primary{background:linear-gradient(135deg,var(--cyan),var(--blue));color:#03101f;box-shadow:0 14px 35px rgba(57,213,255,.28)}
+    .btn-secondary{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);color:var(--text)}
+    .btn-paypal{background:linear-gradient(135deg,#ffc439,#ffb703);color:#111827}
+    .mini-note{margin-top:12px;color:var(--soft);font-size:.92rem;line-height:1.6}
+    .cost-boxes{display:grid;gap:14px}
+    .cost-card{padding:18px 18px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+    .cost-card strong{display:block;font-size:1.05rem;margin-bottom:4px}
+    .cost-card p{margin:0;color:var(--muted);line-height:1.65}
+    .highlight{color:var(--green);font-weight:800}
+    .locked-output{padding:22px;border-radius:24px;background:linear-gradient(180deg,rgba(6,12,28,.86),rgba(5,10,22,.64));border:1px solid rgba(239,100,255,.18)}
+    .output-box{padding:18px;border-radius:20px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);min-height:180px;line-height:1.7;color:var(--muted)}
+    .pay-note{margin-top:18px;padding:16px 18px;border-radius:18px;background:rgba(255,196,57,.08);border:1px solid rgba(255,196,57,.26);color:#ffe7a9}
+    .spec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:18px}
+    .spec-card{padding:20px;border-radius:22px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08)}
+    .spec-card strong{display:block;font-size:1rem;margin-bottom:7px}
+    .spec-card p{margin:0;color:var(--muted);line-height:1.65}
+    .footer{margin-top:44px;padding:26px 0;border-top:1px solid rgba(255,255,255,.08);color:var(--soft)}
+    .footer a{color:var(--muted)}
+    @media (max-width:1100px){
+      .hero,.tool-grid{grid-template-columns:1fr}
+      h1{max-width:none}
+      .hero-card{min-height:auto}
+      .spec-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:720px){
+      .tts-shell{padding:0 16px 48px}
+      .field-grid,.spec-grid{grid-template-columns:1fr}
+      .hero-copy,.tool-panel,.hero-card{padding:22px}
+      .tts-links{gap:14px}
+      .price-strip{flex-direction:column}
+    }
+  </style>
+</head>
+<body class="tts-image-home">
+  <div class="tts-page-glow"></div>
+  <main class="tts-shell">
+    <nav class="tts-nav">
+      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+        <span class="tts-brand-mark">T</span>
+        <span class="tts-brand-copy">
+          <strong>The Trendsetter Agency</strong>
+          <em>Passion-led mobile apps • built to truly help people</em>
+        </span>
+      </a>
+      <div class="tts-links">
+        <a href="/apps/health-logic/">Health Logic</a>
+        <a href="/apps/toppick-resume/">TopPick Resume</a>
+        <a href="/apps/my-muse/">My Muse</a>
+        <a href="/apps/ad-generator/" aria-current="page">Ad Generator</a>
+        <a href="/about/">About</a>
+        <a href="/portal/">Portal</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="panel hero-copy">
+        <span class="kicker"><span>✦</span> Low-cost AI ad generation • built to help you post faster</span>
+        <h1>Create better ads from a short brief — then scale later with <span class="hot">automation</span>, <span class="pink">scheduling</span>, and <span class="cyan">brand consistency</span>.</h1>
+        <p class="lead">This new Trendsetter tool lets clients drop in a few details, upload an image, pay with PayPal, and unlock ad-ready copy for social posts, captions, offers, and promotional creative.</p>
+        <div class="price-strip">
+          <div class="price-pill"><strong>$2.99</strong><span>per generation</span></div>
+          <div class="price-pill"><strong>PayPal</strong><span>simple checkout</span></div>
+          <div class="price-pill"><strong>Later upgrade</strong><span>auto posting & scheduling</span></div>
+        </div>
+      </div>
+
+      <div class="panel hero-card">
+        <div class="hero-card-top">
+          <div class="hero-badge">New service tab for your website</div>
+          <div class="hero-stat"><strong>3 fields + upload</strong><span>easy first version</span></div>
+        </div>
+        <div class="feature-stack">
+          <div class="feature-box">
+            <strong>Short brief in. Ad-ready content out.</strong>
+            <p>Users can enter a business, offer, audience, and tone, then get copy that feels fast, clean, and premium.</p>
+          </div>
+          <div class="feature-box">
+            <strong>Pay before generate.</strong>
+            <p>The call to action stays locked until they complete checkout, which makes the flow simple and protects the service.</p>
+          </div>
+          <div class="feature-box">
+            <strong>Built for future upsells.</strong>
+            <p>Add weekly posting later, then charge more for automation, posting frequency, and scheduling.</p>
+          </div>
+        </div>
+        <div class="floating-upload">
+          <strong>Drag & drop image upload</strong>
+          <p>Upload product photos, promo images, or offer graphics so the generator can pair copy with the client’s visual.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="generator">
+      <div class="section-head">
+        <h2>Ad generator page</h2>
+        <p>This page is designed to fit your existing site structure and adds a dedicated service tab for AI-powered ad creation with a simple PayPal checkout flow.</p>
+      </div>
+
+      <div class="tool-grid">
+        <div class="panel tool-panel">
+          <h3>Fill out the brief</h3>
+          <div class="field-grid">
+            <div class="field">
+              <label for="business">Business or product</label>
+              <input id="business" type="text" placeholder="Ex: Handmade candles, cleaning service, local spa" />
+            </div>
+            <div class="field">
+              <label for="type">Ad type</label>
+              <select id="type">
+                <option>Instagram caption</option>
+                <option>Facebook ad</option>
+                <option>Google ad</option>
+                <option>Promo text</option>
+                <option>Email promo</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="brief">Brief description</label>
+              <textarea id="brief" placeholder="Tell us what you are selling, who it is for, the offer, and the style you want."></textarea>
+            </div>
+            <div class="field">
+              <label for="audience">Target audience</label>
+              <input id="audience" type="text" placeholder="Ex: busy moms, local homeowners, boutique shoppers" />
+            </div>
+            <div class="field">
+              <label for="tone">Tone</label>
+              <select id="tone">
+                <option>Professional</option>
+                <option>Confident</option>
+                <option>Friendly</option>
+                <option>Luxury</option>
+                <option>Urgent</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="weekly">Future posting frequency</label>
+              <select id="weekly">
+                <option>1 time per week</option>
+                <option>2 times per week</option>
+                <option>3 times per week</option>
+                <option>5 times per week</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="cta">Call to action</label>
+              <input id="cta" type="text" placeholder="Ex: Book now, Shop today, Learn more" />
+            </div>
+            <div class="field full">
+              <label>Upload image</label>
+              <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload image by dragging and dropping or browsing">
+                <strong>Drop image here</strong>
+                <p>Drag and drop a file, or click to choose an image for the ad request.</p>
+                <input id="fileInput" type="file" accept="image/*" hidden />
+              </div>
+              <div class="upload-preview" id="uploadPreview"></div>
+            </div>
+          </div>
+
+          <div class="button-row">
+            <button class="btn btn-paypal" id="paypalBtn" type="button">Pay $2.99 with PayPal</button>
+            <button class="btn btn-secondary" id="generateBtn" type="button" disabled>Generate after payment</button>
+          </div>
+          <p class="mini-note">Use your real PayPal button or payment link here. Once payment succeeds, flip the generate button to active and send the form data to your AI endpoint.</p>
+        </div>
+
+        <div class="panel tool-panel">
+          <h3>Pricing and rollout</h3>
+          <div class="cost-boxes">
+            <div class="cost-card">
+              <strong>Launch price: $2.99</strong>
+              <p>This keeps the barrier low so people can try the service fast and see the value of what you do.</p>
+            </div>
+            <div class="cost-card">
+              <strong>Simple payment flow</strong>
+              <p>Use a single PayPal button now, then connect the real success return to unlock generation automatically.</p>
+            </div>
+            <div class="cost-card">
+              <strong>AI cost is low</strong>
+              <p>Basic text generation from a short form is usually inexpensive compared with what you can charge, especially before image analysis or scheduling is added.</p>
+            </div>
+            <div class="cost-card">
+              <strong>Upsell path later</strong>
+              <p>Add auto posting, posting frequency, and scheduling later as the <span class="highlight">higher-priced recurring tier</span>.</p>
+            </div>
+          </div>
+
+          <div class="locked-output" style="margin-top:18px">
+            <strong style="display:block;font-size:1.04rem;margin-bottom:12px">Preview output area</strong>
+            <div class="output-box" id="outputBox">Your generated ad copy will appear here after payment and generation. Right now this page is wired with a starter flow so you can plug in PayPal and then connect your AI endpoint.</div>
+            <div class="pay-note">Recommended wiring: PayPal payment button → success return or callback → enable Generate → POST the form values and uploaded asset metadata to your generation endpoint.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>What this page shows</h2>
+        <p>It gives visitors a clear picture of what your agency can do now, while also setting up the next paid upgrade for content scheduling and automatic posting.</p>
+      </div>
+      <div class="spec-grid">
+        <article class="spec-card"><strong>Brand-matched design</strong><p>Uses the same dark, glowing, high-impact visual direction as your current Trendsetter homepage.</p></article>
+        <article class="spec-card"><strong>PayPal only</strong><p>Keeps checkout easier for launch and avoids unnecessary payment setup complexity.</p></article>
+        <article class="spec-card"><strong>Image upload support</strong><p>Includes a drag-and-drop zone for clients who want to attach a product image or promo visual.</p></article>
+        <article class="spec-card"><strong>Future automation hook</strong><p>Includes the weekly posting selector now so the later scheduler feels like a natural upgrade.</p></article>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/security.html">Security</a> · <a href="/data-deletion.html">Data Deletion</a> · <a href="/portal/">Portal</a> · <a href="/support.html">Support</a></p>
+    </footer>
+  </main>
+
+  <script>
+    const paypalBtn = document.getElementById('paypalBtn');
+    const generateBtn = document.getElementById('generateBtn');
+    const outputBox = document.getElementById('outputBox');
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('fileInput');
+    const uploadPreview = document.getElementById('uploadPreview');
+    let paid = false;
+
+    function renderFiles(files){
+      uploadPreview.innerHTML = '';
+      [...files].forEach(file => {
+        const tag = document.createElement('span');
+        tag.textContent = file.name;
+        uploadPreview.appendChild(tag);
+      });
+    }
+
+    dropzone.addEventListener('click', () => fileInput.click());
+    dropzone.addEventListener('keydown', (e) => {
+      if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); fileInput.click(); }
+    });
+    fileInput.addEventListener('change', e => renderFiles(e.target.files));
+    ['dragenter','dragover'].forEach(evt => dropzone.addEventListener(evt, e => { e.preventDefault(); dropzone.classList.add('drag'); }));
+    ['dragleave','drop'].forEach(evt => dropzone.addEventListener(evt, e => { e.preventDefault(); dropzone.classList.remove('drag'); }));
+    dropzone.addEventListener('drop', e => {
+      const files = e.dataTransfer.files;
+      fileInput.files = files;
+      renderFiles(files);
+    });
+
+    paypalBtn.addEventListener('click', () => {
+      paid = true;
+      generateBtn.disabled = false;
+      paypalBtn.textContent = 'Payment completed';
+      paypalBtn.style.opacity = '.78';
+      outputBox.textContent = 'Payment confirmed in demo mode. Replace this button action with your live PayPal link or embedded button, then unlock generation on successful return.';
+    });
+
+    generateBtn.addEventListener('click', () => {
+      if(!paid) return;
+      const business = document.getElementById('business').value || 'Your business';
+      const type = document.getElementById('type').value;
+      const brief = document.getElementById('brief').value || 'A premium offer with a helpful, clear message.';
+      const audience = document.getElementById('audience').value || 'your target audience';
+      const tone = document.getElementById('tone').value;
+      const cta = document.getElementById('cta').value || 'Learn more';
+      outputBox.innerHTML = '<strong style=\"display:block;color:#fff;margin-bottom:10px\">Generated preview</strong>' +
+        `${business} — ${type}<br><br>` +
+        `For ${audience}, this ${tone.toLowerCase()} ad highlights: ${brief}<br><br>` +
+        `CTA: ${cta}<br><br>` +
+        `Next wiring step: send this payload to your AI route and return 3 ad variants after PayPal success.`;
+    });
+  </script>
+</body>
+</html>
