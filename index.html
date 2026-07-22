@@ -7,6 +7,22 @@
   <meta name="description" content="The Trendsetter Agency builds independent mobile apps designed to help people live better, work smarter, and make better decisions." />
   <link rel="canonical" href="https://www.thetrendsetteragency.com/" />
   <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
+<style>
+  body.tts-image-home{
+    background:#020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat;
+  }
+  body.tts-image-home::before{
+    content:"";position:fixed;inset:0;background:rgba(2,7,20,.28);pointer-events:none;z-index:-1;
+  }
+  .tts-hl-board{
+    background-image:url('/assets/healthlogic-front.jpg') !important;
+    background-size:cover !important;
+    background-position:center !important;
+    min-height:680px;
+    overflow:hidden;
+  }
+  .tts-hl-board > *{display:none !important}
+</style>
 </head>
 
 <body class="tts-image-home">

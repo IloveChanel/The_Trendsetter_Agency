@@ -718,3 +718,41 @@ body.tts-image-home:after{
   .tts-image-home .grid{grid-template-columns:1fr}
   .tts-image-home .card{grid-column:auto}
 }
+
+/* Health Logic visual refinement */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+body.tts-image-home{
+  font-family:'Manrope',Inter,ui-sans-serif,system-ui,sans-serif;
+  letter-spacing:-.01em;
+}
+.tts-image-home h1,
+.tts-image-home h2,
+.tts-image-home h3,
+.tts-brand-copy strong,
+.tts-hl-title,
+.tts-hl-center strong,
+.tts-aff-card strong{
+  font-family:'Space Grotesk',Manrope,ui-sans-serif,sans-serif;
+}
+.tts-nav{
+  border-bottom-color:rgba(120,220,255,.18);
+  background:linear-gradient(180deg,rgba(3,10,29,.76),rgba(3,10,29,.08));
+}
+.tts-brand-copy strong{font-weight:700;letter-spacing:-.045em}
+.tts-brand-copy em{color:#b8d6e8;letter-spacing:.01em}
+.tts-links a{color:#dff8ff;text-shadow:0 0 18px rgba(69,211,255,.35);font-weight:700}
+.tts-kicker{color:#e7f9ff;border-color:rgba(91,224,255,.72);background:rgba(5,15,39,.68);box-shadow:0 0 34px rgba(54,206,255,.2)}
+.tts-hero-copy h1{font-weight:700;letter-spacing:-.075em;text-shadow:0 10px 45px rgba(0,0,0,.35)}
+.tts-hero-copy p{color:#d6e9f4}
+.tts-btn-primary{background:linear-gradient(105deg,#20d9ff 0%,#31f0b1 48%,#b86cff 100%);color:#03121b;box-shadow:0 0 42px rgba(32,217,255,.28),0 18px 58px rgba(0,0,0,.25)}
+.tts-btn-secondary{border-color:rgba(49,240,177,.5);background:rgba(3,14,36,.68);color:#e8fbff}
+.tts-affiliate,.tts-purpose-card,.tts-image-home .card{border-color:rgba(74,211,255,.24);background:linear-gradient(145deg,rgba(5,20,48,.8),rgba(4,8,28,.92))}
+.tts-affiliate-copy h2,.tts-purpose h2,.tts-image-home .section>h2{font-weight:700;letter-spacing:-.06em}
+.tts-affiliate-copy h2 span,.tts-purpose h2 span{background:linear-gradient(110deg,#55e7ff,#57f3bf 45%,#d28bff);-webkit-background-clip:text;background-clip:text}
+.tts-aff-card{border-color:rgba(112,220,255,.18);background:rgba(4,13,35,.62)}
+.tts-aff-card i{color:#61eaff;text-shadow:0 0 22px rgba(62,225,255,.72)}
+.tts-image-home .card h3{color:#e8fbff;font-weight:700}
+.tts-image-home .card p,.tts-aff-card span{color:#b9d1df}
+.tts-image-home .card a{color:#5de9ff}
+.tts-purpose-card i{background:rgba(8,30,58,.5)}
