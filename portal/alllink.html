@@ -1,0 +1,237 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AllLink | The Trendsetter Agency</title>
+  <meta name="description" content="AllLink is one dashboard for every service, platform, chat assistant, bank account, and investment you use. Connect everything, get notified, and never juggle tabs again." />
+  <link rel="canonical" href="https://www.thetrendsetteragency.com/portal/alllink.html" />
+  <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
+<style>
+  .al-preview {
+    position: relative;
+    border-radius: 26px;
+    border: 1px solid rgba(74,211,255,.5);
+    box-shadow: 0 40px 140px rgba(0,0,0,.65), 0 0 80px rgba(34,211,238,.18);
+    overflow: hidden;
+    pointer-events: none;
+    user-select: none;
+    min-height: 640px;
+  }
+  .al-chrome {
+    display:flex; align-items:center; gap:8px; padding:10px 14px;
+    background: rgba(4,9,26,.95); border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+  .al-dot { width:10px; height:10px; border-radius:50%; }
+  .al-body {
+    display:grid; grid-template-columns: 240px minmax(0,1fr); gap:16px; padding:16px;
+    background:
+      radial-gradient(circle at 4% 0%, rgba(236,72,153,.22), transparent 34%),
+      radial-gradient(circle at 96% 100%, rgba(34,211,238,.22), transparent 34%),
+      linear-gradient(160deg, rgba(6,11,30,.98), rgba(2,5,16,1));
+  }
+  .al-sidebar { border-radius:18px; border:1px solid rgba(74,211,255,.32); background: linear-gradient(180deg, rgba(6,15,42,.95), rgba(3,9,28,.98)); padding:14px 12px; }
+  .al-badge { display:inline-flex; align-items:center; gap:8px; padding:5px 10px; border-radius:999px; border:1px solid rgba(91,224,255,.7); background: rgba(5,15,39,.72); font-size:10px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#e7f9ff; margin-bottom:10px; }
+  .al-hello { margin-bottom:12px; border-radius:14px; border:1px solid rgba(139,92,246,.5); background: radial-gradient(circle at 0% 0%, rgba(236,72,153,.4), transparent 40%), radial-gradient(circle at 100% 100%, rgba(34,211,238,.35), transparent 40%), linear-gradient(135deg, rgba(6,12,36,.92), rgba(3,6,22,.98)); padding:10px 12px 12px; }
+  .al-hello .l1 { font-size:11px; color:#d6e9f4; margin-bottom:3px; }
+  .al-hello .l2 { font-size:13px; font-weight:800; color:#fff; }
+  .al-hello .l3 { font-size:11px; color:#cdd8ee; margin-top:4px; }
+  .al-cat { font-size:10px; text-transform:uppercase; letter-spacing:.1em; color:#9fb0cf; margin:10px 0 5px; }
+  .al-plat { display:flex; align-items:center; justify-content:space-between; gap:6px; padding:6px 8px; border-radius:10px; background: rgba(5,13,36,.9); border:1px solid rgba(148,163,184,.32); margin-bottom:3px; }
+  .al-plat-left { display:flex; align-items:center; gap:6px; }
+  .al-ico { width:20px; height:20px; border-radius:7px; border:1px solid rgba(74,211,255,.4); background: rgba(2,6,23,.8); display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:800; color:#5de9ff; }
+  .al-plat-name { font-size:10px; color:#e8fbff; font-weight:600; }
+  .al-plat-status { font-size:9px; color:#cbd5f5; }
+  .al-addbtn { width:100%; min-height:34px; border-radius:999px; border:1px solid rgba(59,130,246,.6); background: linear-gradient(135deg, #20d9ff 0%, #31f0b1 48%, #b86cff 100%); color:#03121b; font-weight:800; font-size:11px; margin-top:10px; }
+  .al-main { border-radius:18px; border:1px solid rgba(74,211,255,.28); padding:16px; background: radial-gradient(circle at 4% 0%, rgba(236,72,153,.24), transparent 34%), radial-gradient(circle at 96% 100%, rgba(34,211,238,.24), transparent 34%), linear-gradient(150deg, rgba(8,13,32,.92), rgba(2,6,18,.98)); }
+  .al-eyebrow { font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:#9aa8d8; margin-bottom:4px; }
+  .al-h3 { font-size:19px; color:#fff; margin:0 0 10px; }
+  .al-h3 span { background: linear-gradient(110deg,#55e7ff,#57f3bf 45%,#d28bff); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .al-tiles { display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:8px; margin-bottom:12px; }
+  .al-tile { border-radius:12px; border:1px solid rgba(148,163,184,.45); background: linear-gradient(135deg, rgba(15,23,42,.9), rgba(3,7,20,.96)); padding:8px; font-size:10px; color:#dbeafe; }
+  .al-tile-top { display:flex; justify-content:space-between; margin-bottom:4px; }
+  .al-tile-name { font-weight:700; font-size:10px; }
+  .al-tile-add { border-radius:999px; padding:1px 6px; font-size:8px; border:1px solid rgba(74,211,255,.5); background: rgba(8,13,32,.9); }
+  .al-tile-sub { font-size:9px; color:#b9c7df; }
+  .al-notify { border-radius:14px; border:1px solid rgba(148,163,184,.5); background: rgba(3,10,32,.92); padding:10px; margin-bottom: 10px;}
+  .al-notify-title { font-size:10px; font-weight:700; color:#e8fbff; margin-bottom:4px; }
+  .al-notify-item { font-size:9px; color:#cfd3ff; margin-bottom:2px; }
+  .al-chat { border-radius:14px; border:1px solid rgba(59,130,246,.5); background: linear-gradient(135deg, rgba(8,20,44,.95), rgba(3,9,26,.98)); padding:10px; }
+  .al-chat-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; }
+  .al-chat-title { font-size:10px; font-weight:800; color:#fff; }
+  .al-chat-badge { font-size:8px; padding:2px 6px; border-radius:999px; background: rgba(34,211,238,.2); color:#67e8f9; border:1px solid rgba(34,211,238,.4); }
+  .al-chat-line { font-size:9px; color:#cdd8ee; margin-bottom:3px; }
+  .al-chat-input { margin-top:6px; border-radius:999px; border:1px solid rgba(148,163,184,.4); background: rgba(4,9,26,.9); padding:6px 10px; font-size:9px; color:#9fb0cf; }
+  .al-pricing-form { margin-top:16px; display:grid; gap:10px; max-width:360px; }
+  .al-pricing-form input { padding:12px 14px; border-radius:10px; border:1px solid rgba(255,255,255,.18); background: rgba(4,7,26,.86); color:#f9f9ff; font-size:14px; }
+  .al-pricing-form button { padding:12px 16px; border-radius:999px; border:none; background: linear-gradient(135deg, #01c2ff, #00d6c8); color:#020714; font-weight:800; font-size:14px; cursor:pointer; box-shadow: 0 0 26px rgba(0,214,200,.35); }
+  @media (max-width: 900px) {
+    .al-body { grid-template-columns: 1fr; }
+    .al-tiles { grid-template-columns: repeat(2, minmax(0,1fr)); }
+  }
+</style>
+</head>
+
+<body class="tts-image-home">
+  <div class="tts-page-glow"></div>
+
+  <main class="tts-shell">
+    <nav class="tts-nav">
+      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+        <span class="tts-brand-mark">T</span>
+        <span class="tts-brand-copy">
+          <strong>The Trendsetter Agency</strong>
+          <em>Passion-led mobile apps • built to truly help people</em>
+        </span>
+      </a>
+
+      <div class="tts-links">
+        <a href="/apps/health-logic/">Health Logic</a>
+        <a href="/apps/toppick-resume/">TopPick Resume</a>
+        <a href="/apps/my-muse/">My Muse</a>
+        <a href="/portal/alllink.html">AllLink</a>
+        <a href="/apps/ad-generator/">Ad Generator</a>
+        <a href="/apps/auto-posting/">Auto Posting</a>
+        <a href="/about/">About</a>
+        <a href="/portal/">Portal</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </nav>
+
+    <header class="tts-hero">
+      <section class="tts-hero-copy">
+        <span class="tts-kicker"><span>♡</span> Passion-led dashboard • AllLink</span>
+
+        <h1>AllLink puts <span class="hot">every service</span>, <span class="pink">every platform</span>, and <span class="cyan">every notification</span> on one screen.</h1>
+
+        <p>Email, socials, dev tools, ads, banking, investing, stocks, CRMs, booking, and your own AI chat assistant — link them once and run your whole world from one command center.</p>
+
+        <div class="tts-actions">
+          <a class="tts-btn tts-btn-primary" href="#pricing">Purchase now to download →</a>
+          <a class="tts-btn tts-btn-secondary" href="#preview">▷ See it in action</a>
+        </div>
+      </section>
+
+      <div id="preview" class="al-preview">
+        <div class="al-chrome">
+          <span class="al-dot" style="background:#fb7185"></span>
+          <span class="al-dot" style="background:#f59e0b"></span>
+          <span class="al-dot" style="background:#34d399"></span>
+          <span style="margin-left:10px;font-size:11px;color:#9fb0cf">alllink.app/dashboard</span>
+        </div>
+
+        <div class="al-body">
+          <aside class="al-sidebar">
+            <div class="al-badge">AllLink · Your platforms</div>
+
+            <div class="al-hello">
+              <div class="l1">Hello, Visionary —</div>
+              <div class="l2">Welcome to your command center.</div>
+              <div class="l3">What are we building today?</div>
+            </div>
+
+            <div class="al-cat">Communication</div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">G</div><div class="al-plat-name">Gmail</div></div><span class="al-plat-status">Linked</span></div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">O</div><div class="al-plat-name">Outlook</div></div><span class="al-plat-status">Linked</span></div>
+
+            <div class="al-cat">Social</div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">I</div><div class="al-plat-name">Instagram</div></div><span class="al-plat-status">Linked</span></div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">T</div><div class="al-plat-name">TikTok</div></div><span class="al-plat-status">Linked</span></div>
+
+            <div class="al-cat">Dev & Infra</div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">G</div><div class="al-plat-name">GitHub</div></div><span class="al-plat-status">Linked</span></div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">R</div><div class="al-plat-name">Railway</div></div><span class="al-plat-status">Linked</span></div>
+
+            <div class="al-cat">Finance & Investing</div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">C</div><div class="al-plat-name">Chase</div></div><span class="al-plat-status">Linked</span></div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">R</div><div class="al-plat-name">Robinhood</div></div><span class="al-plat-status">Linked</span></div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">F</div><div class="al-plat-name">Fidelity</div></div><span class="al-plat-status">Linked</span></div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">V</div><div class="al-plat-name">Vanguard</div></div><span class="al-plat-status">Linked</span></div>
+            <div class="al-plat"><div class="al-plat-left"><div class="al-ico">C</div><div class="al-plat-name">Coinbase</div></div><span class="al-plat-status">Linked</span></div>
+
+            <button class="al-addbtn">+ Add platform / service</button>
+          </aside>
+
+          <section class="al-main">
+            <p class="al-eyebrow">The Trendsetter Agency · AllLink dashboard</p>
+            <h3 class="al-h3">Hello, Visionary — <span>what are we building today?</span></h3>
+
+            <div class="al-tiles">
+              <div class="al-tile"><div class="al-tile-top"><span class="al-tile-name">Google</span><span class="al-tile-add">Add</span></div><div class="al-tile-sub">Search & research</div></div>
+              <div class="al-tile"><div class="al-tile-top"><span class="al-tile-name">Chat</span><span class="al-tile-add">Add</span></div><div class="al-tile-sub">AI assistant</div></div>
+              <div class="al-tile"><div class="al-tile-top"><span class="al-tile-name">Email</span><span class="al-tile-add">Add</span></div><div class="al-tile-sub">Combined inbox</div></div>
+              <div class="al-tile"><div class="al-tile-top"><span class="al-tile-name">Social</span><span class="al-tile-add">Add</span></div><div class="al-tile-sub">IG / TikTok / LinkedIn</div></div>
+              <div class="al-tile"><div class="al-tile-top"><span class="al-tile-name">Stocks</span><span class="al-tile-add">Add</span></div><div class="al-tile-sub">Portfolio tracking</div></div>
+              <div class="al-tile"><div class="al-tile-top"><span class="al-tile-name">Investing</span><span class="al-tile-add">Add</span></div><div class="al-tile-sub">Fidelity / Vanguard</div></div>
+              <div class="al-tile"><div class="al-tile-top"><span class="al-tile-name">Banking</span><span class="al-tile-add">Add</span></div><div class="al-tile-sub">Chase / Wells Fargo</div></div>
+              <div class="al-tile"><div class="al-tile-top"><span class="al-tile-name">Crypto</span><span class="al-tile-add">Add</span></div><div class="al-tile-sub">Coinbase holdings</div></div>
+            </div>
+
+            <div class="al-notify">
+              <div class="al-notify-title">Recent notifications</div>
+              <div class="al-notify-item"><strong style="color:#22c55e">Task completed:</strong> New client workspace provisioned.</div>
+              <div class="al-notify-item"><strong style="color:#fb7185">Banking:</strong> Chase balance synced · recap ready.</div>
+              <div class="al-notify-item"><strong style="color:#8b5cf6">Investing:</strong> Portfolio updated across 3 accounts.</div>
+            </div>
+
+            <div class="al-chat">
+              <div class="al-chat-head">
+                <span class="al-chat-title">AllLink Assistant</span>
+                <span class="al-chat-badge">AI connected</span>
+              </div>
+              <div class="al-chat-line">Ask me to summarize today's notifications or check a balance.</div>
+              <div class="al-chat-line">"Show me this week's deploys and payouts."</div>
+              <div class="al-chat-input">Type a message to your AI assistant…</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <h2>How AllLink runs and operates as your one dashboard.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Add your platforms</h3>
+          <p>Pick a category, type in your account info, and AllLink stores it with a launch button and live status. Email, social, dev, ads, CRM — add anything.</p>
+        </div>
+        <div class="card">
+          <h3>Banking, investing & stocks together</h3>
+          <p>Link Chase, Wells Fargo, Robinhood, Fidelity, Vanguard, Coinbase, PayPal, and Venmo so your balances, portfolio, and cash flow show up next to your business tools.</p>
+        </div>
+        <div class="card">
+          <h3>Your own AI chat assistant</h3>
+          <p>Connect Gemini, ChatGPT, or your assistant of choice right inside the dashboard. Ask questions, summarize notifications, and check balances without leaving the page.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pricing">
+      <h2>Purchase AllLink and download your dashboard.</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>AllLink subscription</h3>
+          <p><strong>$8.88 / month</strong> — cancel anytime. One flat price for a downloadable AllLink dashboard shell you host and connect to your own accounts, platforms, chat assistant, and financial tools.</p>
+          <p>After purchase you're redirected to a download page and emailed your AllLink file — ready to open and start linking everything.</p>
+          <form class="al-pricing-form" onsubmit="event.preventDefault(); alert('Checkout coming soon — this will connect to Stripe.');">
+            <input type="email" required placeholder="you@example.com" />
+            <button type="submit">Purchase now to download — $8.88/month</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>What's included</h3>
+          <p>Sidebar platform linking, banking & investing widgets, notification feed, built-in AI chat assistant slot, and free updates as AllLink improves.</p>
+        </div>
+        <div class="card">
+          <h3>Built for everyone</h3>
+          <p>Developers link GitHub, deploys, and logs. Business owners link socials, CRMs, and ad accounts. Anyone can link banks, brokerages, and crypto — all in one view.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/security.html">Security</a> · <a href="/data-deletion.html">Data Deletion</a> · <a href="/portal/">Portal</a> · <a href="/support.html">Support</a></p>
+    </footer>
+  </main>
+</body>
+</html>
