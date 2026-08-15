@@ -22,7 +22,11 @@
     overflow:hidden;
   }
   .tts-hl-board > *{display:none !important}
-</style>
+  .tts-soon{position:relative}
+  .tts-soon summary{cursor:pointer;color:#fff;font-weight:800;list-style:none}
+  .tts-soon-menu{position:absolute;top:30px;display:grid;min-width:210px;padding:10px;background:#071126;border:1px solid #20d9ff;border-radius:12px;z-index:50}
+  .tts-soon:not([open]) .tts-soon-menu{display:none}
+  .tts-soon-menu a{padding:8px 10px;white-space:nowrap}</style>
 </head>
 
 <body class="tts-image-home">
@@ -40,11 +44,16 @@
 
       <div class="tts-links">
         <a href="/apps/health-logic/">Health Logic</a>
-        <a href="/apps/toppick-resume/">TopPick Resume</a>
-        <a href="/apps/my-muse/">My Muse</a>
+        <details class="tts-soon">
+          <summary>Coming Soon ▾</summary>
+          <div class="tts-soon-menu">
+            <a href="/apps/toppick-resume/">TopPick Resume</a>
+            <a href="/apps/my-muse/">My Muse</a>
+            <a href="/apps/ad-generator/">Ad Generator</a>
+            <a href="/apps/auto-posting/">Auto Posting</a>
+          </div>
+        </details>
         <a href="/portal/alllink.html">AllLink</a>
-        <a href="/apps/ad-generator/">Ad Generator</a>
-        <a href="/apps/auto-posting/">Auto Posting</a>
         <a href="/about/">About</a>
         <a href="/portal/social-dashboard.html">Dashboard</a>
         <a href="/portal/">Portal</a>
@@ -211,6 +220,8 @@
   </main>
 </body>
 </html>
+
+
 
 
 
