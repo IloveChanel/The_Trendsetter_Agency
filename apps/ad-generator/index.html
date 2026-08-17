@@ -1,4 +1,4 @@
-
+﻿
 <!doctype html>
 <html lang="en">
 <head>
@@ -131,11 +131,25 @@
       .price-strip{flex-direction:column}
     }
   </style>
-</head>
+  <style data-healthlogic-background="true">
+    html,body{min-height:100%}
+    body{
+      background:#020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat !important;
+    }
+  </style>
+<style data-tts-healthlogic-page-background="true">
+html {
+  background: #020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat;
+}
+body {
+  min-height: 100vh;
+  background: transparent !important;
+}
+</style></head>
 <body class="tts-image-home">
   <div class="tts-page-glow"></div>
   <main class="tts-shell">
-    <nav class="tts-nav">
+    <nav class="tts-nav" data-tts-canonical-navigation="true">
       <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
         <span class="tts-brand-mark">T</span>
         <span class="tts-brand-copy">
@@ -143,12 +157,22 @@
           <em>Passion-led mobile apps • built to truly help people</em>
         </span>
       </a>
+
       <div class="tts-links">
         <a href="/apps/health-logic/">Health Logic</a>
-        <a href="/apps/toppick-resume/">TopPick Resume</a>
-        <a href="/apps/my-muse/">My Muse</a>
-        <a href="/apps/ad-generator/" aria-current="page">Ad Generator</a>
+        <details class="tts-soon">
+  <summary>Studio Projects ▾</summary>
+  <div class="tts-soon-menu">
+    <a href="/portal/alllink.html">AllLink</a>
+    <a href="/apps/toppick-resume/">TopPick Resume</a>
+    <a href="/apps/my-muse/">My Muse</a>
+    <a href="/apps/ad-generator/">Ad Generator</a>
+    <a href="/apps/auto-posting/">Auto Posting</a>
+  </div>
+</details>
+<a href="/healthlogic/">Ingredient Guides</a>
         <a href="/about/">About</a>
+        <a href="/portal/social-dashboard.html">Dashboard</a>
         <a href="/portal/">Portal</a>
         <a href="/support.html">Support</a>
       </div>
@@ -156,8 +180,8 @@
 
     <section class="hero">
       <div class="panel hero-copy">
-        <span class="kicker"><span>✦</span> Low-cost AI ad generation • built to help you post faster</span>
-        <h1>Create better ads from a short brief — then scale later with <span class="hot">automation</span>, <span class="pink">scheduling</span>, and <span class="cyan">brand consistency</span>.</h1>
+        <span class="kicker"><span>âœ¦</span> Low-cost AI ad generation â€¢ built to help you post faster</span>
+        <h1>Create better ads from a short brief â€” then scale later with <span class="hot">automation</span>, <span class="pink">scheduling</span>, and <span class="cyan">brand consistency</span>.</h1>
         <p class="lead">This new Trendsetter tool lets clients drop in a few details, upload an image, pay with PayPal, and unlock ad-ready copy for social posts, captions, offers, and promotional creative.</p>
         <div class="price-strip">
           <div class="price-pill"><strong>$2.99</strong><span>per generation</span></div>
@@ -187,7 +211,7 @@
         </div>
         <div class="floating-upload">
           <strong>Drag & drop image upload</strong>
-          <p>Upload product photos, promo images, or offer graphics so the generator can pair copy with the client’s visual.</p>
+          <p>Upload product photos, promo images, or offer graphics so the generator can pair copy with the clientâ€™s visual.</p>
         </div>
       </div>
     </section>
@@ -289,7 +313,7 @@
           <div class="locked-output" style="margin-top:18px">
             <strong style="display:block;font-size:1.04rem;margin-bottom:12px">Preview output area</strong>
             <div class="output-box" id="outputBox">Your generated ad copy will appear here after payment and generation. Right now this page is wired with a starter flow so you can plug in PayPal and then connect your AI endpoint.</div>
-            <div class="pay-note">Recommended wiring: PayPal payment button → success return or callback → enable Generate → POST the form values and uploaded asset metadata to your generation endpoint.</div>
+            <div class="pay-note">Recommended wiring: PayPal payment button â†’ success return or callback â†’ enable Generate â†’ POST the form values and uploaded asset metadata to your generation endpoint.</div>
           </div>
         </div>
       </div>
@@ -309,7 +333,7 @@
     </section>
 
     <footer class="footer">
-      <p>© 2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/security.html">Security</a> · <a href="/data-deletion.html">Data Deletion</a> · <a href="/portal/">Portal</a> · <a href="/support.html">Support</a></p>
+      <p>Â© 2026 The Trendsetter Agency LLC Â· <a href="/privacy.html">Privacy</a> Â· <a href="/terms.html">Terms</a> Â· <a href="/security.html">Security</a> Â· <a href="/data-deletion.html">Data Deletion</a> Â· <a href="/portal/">Portal</a> Â· <a href="/support.html">Support</a></p>
     </footer>
   </main>
 
@@ -361,7 +385,7 @@
       const tone = document.getElementById('tone').value;
       const cta = document.getElementById('cta').value || 'Learn more';
       outputBox.innerHTML = '<strong style=\"display:block;color:#fff;margin-bottom:10px\">Generated preview</strong>' +
-        `${business} — ${type}<br><br>` +
+        `${business} â€” ${type}<br><br>` +
         `For ${audience}, this ${tone.toLowerCase()} ad highlights: ${brief}<br><br>` +
         `CTA: ${cta}<br><br>` +
         `Next wiring step: send this payload to your AI route and return 3 ad variants after PayPal success.`;
@@ -369,3 +393,5 @@
   </script>
 </body>
 </html>
+
+

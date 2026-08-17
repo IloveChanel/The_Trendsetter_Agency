@@ -60,78 +60,40 @@ body {
   min-height: 100vh;
   background: transparent !important;
 }
-</style><style data-healthlogic-card-images="true">
-.guide-card {
+</style>
+<style data-healthlogic-card-sizing="true">
+.guide-card,
+main .card,
+.video-card {
   overflow: hidden;
-  padding: 0 !important;
-  display: flex;
-  flex-direction: column;
-  min-height: 390px;
+  min-height: 0;
 }
-.guide-card-image {
+
+.guide-card-image,
+main .card .guide-card-image,
+.video-card .video-thumb {
   display: block;
   width: 100%;
-  height: 190px;
-  object-fit: cover;
-  border-bottom: 1px solid rgba(32,217,255,.35);
-}
-.guide-card-body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 24px;
-}
-.guide-card-body h3 {
-  margin-top: 0;
-}
-.guide-card-body h3 a {
-  color: #20d9ff;
-  text-decoration: none;
-}
-.guide-card-body p {
-  flex: 1;
-}
-.guide-card-link {
-  display: inline-block;
-  margin-top: 16px;
-  color: #31f0b1;
-  font-weight: 800;
-  text-decoration: none;
-}
-</style>
-<style data-healthlogic-card-credits="true">
-.guide-card-credit {
-  display:block;
-  margin-top:10px;
-  color:#94a3b8;
-  font-size:.75rem;
-}
-</style>
-<style data-healthlogic-card-backgrounds="true">
-.guide-card-image {
-  display:block;
-  width:100%;
-  height:190px;
-  background-color:#0b1733;
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-  border-bottom:1px solid rgba(32,217,255,.35);
-}
-</style>
-<style data-healthlogic-card-image-sizing="true">
-.guide-card {
-  overflow: hidden;
-}
-.guide-card-image {
-  display: block;
-  width: 100%;
-  height: 180px;
+  height: 150px;
+  flex: 0 0 150px;
   object-fit: cover;
   object-position: center;
   background: #050b20;
 }
-</head>
+
+.guide-card-body,
+main .card .card-body,
+.video-card .card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.video-card .video-thumb {
+  border-radius: 0;
+}
+</style></head>
 <body class="tts-image-home tts-public-page">
   <div class="shell">
     <nav class="tts-nav" data-tts-canonical-navigation="true">
@@ -169,6 +131,7 @@ body {
     <a href="/about/">About</a>
     <a href="/support.html">Support</a>
   </div>
+  <a href="/portal/">Portal</a>
 </nav>
 
     <section class="hero">
@@ -289,22 +252,3 @@ body {
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
