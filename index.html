@@ -26,7 +26,24 @@
   .tts-soon summary{cursor:pointer;color:#fff;font-weight:800;list-style:none}
   .tts-soon-menu{position:absolute;top:30px;display:grid;min-width:210px;padding:10px;background:#071126;border:1px solid #20d9ff;border-radius:12px;z-index:50}
   .tts-soon:not([open]) .tts-soon-menu{display:none}
-  .tts-soon-menu a{padding:8px 10px;white-space:nowrap}</style>
+  .tts-soon-menu a{padding:8px 10px;white-space:nowrap}  .tts-hl-homecards{padding:62px 0}
+  .tts-hl-homecards-intro{max-width:900px;margin-bottom:42px}
+  .tts-hl-homecards-intro h2,.tts-hl-section-title{font-size:clamp(2rem,4vw,3.8rem);line-height:1.05;margin:0 0 16px}
+  .tts-hl-homecards-intro p{max-width:760px;color:#c9d5e8;font-size:1.08rem;line-height:1.7}
+  .tts-hl-section-title{margin-top:48px}
+  .tts-hl-card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .tts-hl-card{min-height:205px;padding:25px;border:1px solid rgba(32,217,255,.42);border-radius:22px;background:linear-gradient(145deg,rgba(5,17,43,.94),rgba(12,10,48,.84));display:flex;flex-direction:column}
+  .tts-hl-card span{color:#20d9ff;font-size:.72rem;font-weight:800;letter-spacing:.08em}
+  .tts-hl-card h3{margin:12px 0;font-size:1.28rem}
+  .tts-hl-card p{margin:0;color:#c9d5e8;line-height:1.55;flex:1}
+  .tts-hl-card a{margin-top:18px;color:#20d9ff;font-weight:800}
+  .tts-partner-strip{margin:56px 0 34px;padding:22px 28px;border:1px solid rgba(32,217,255,.35);border-radius:20px;background:rgba(5,17,43,.82);display:flex;justify-content:space-between;gap:20px;align-items:center}
+  .tts-partner-strip strong{display:block;font-size:1.2rem}
+  .tts-partner-strip span{display:block;margin-top:5px;color:#c9d5e8}
+  .tts-partner-strip a{color:#20d9ff;font-weight:800;margin-left:18px}
+  @media(max-width:900px){.tts-hl-card-grid{grid-template-columns:1fr 1fr}.tts-partner-strip{align-items:flex-start;flex-direction:column}.tts-partner-strip a{margin:0 18px 0 0}}
+  @media(max-width:620px){.tts-hl-card-grid{grid-template-columns:1fr}}
+</style>
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="application-name" content="Health Logic">
   <meta name="apple-itunes-app" content="app-id=6767145352">
@@ -57,15 +74,16 @@
       <div class="tts-links">
         <a href="/apps/health-logic/">Health Logic</a>
         <details class="tts-soon">
-          <summary>Coming Soon ▾</summary>
-          <div class="tts-soon-menu">
-            <a href="/apps/toppick-resume/">TopPick Resume</a>
-            <a href="/apps/my-muse/">My Muse</a>
-            <a href="/apps/ad-generator/">Ad Generator</a>
-            <a href="/apps/auto-posting/">Auto Posting</a>
-          </div>
-        </details>
-        <a href="/portal/alllink.html">AllLink</a>
+  <summary>Studio Projects ▾</summary>
+  <div class="tts-soon-menu">
+    <a href="/portal/alllink.html">AllLink</a>
+    <a href="/apps/toppick-resume/">TopPick Resume</a>
+    <a href="/apps/my-muse/">My Muse</a>
+    <a href="/apps/ad-generator/">Ad Generator</a>
+    <a href="/apps/auto-posting/">Auto Posting</a>
+  </div>
+</details>
+<a href="/healthlogic/">Ingredient Guides</a>
         <a href="/about/">About</a>
         <a href="/portal/social-dashboard.html">Dashboard</a>
         <a href="/portal/">Portal</a>
@@ -77,7 +95,7 @@
       <section class="tts-hero-copy">
         <span class="tts-kicker"><span>♡</span> Passion-led mobile apps • built to truly help people</span>
 
-        <h1>We build powerful software with passion — technology made to help you <span class="hot">live better</span>, <span class="pink">work smarter</span>, and <span class="cyan">reach your goals</span>.</h1>
+        <h1>Explore the conversations shaping how we <span class="hot">read labels</span>, <span class="pink">question ingredients</span>, and <span class="cyan">protect our health</span>.</h1>
 
         <p>The Trendsetter Agency is a technology and software company building premium digital products across health, careers, creativity, and everyday life.</p>
 
@@ -137,24 +155,154 @@
       </a>
     </header>
 
-    <section class="tts-affiliate" id="affiliate-program">
-      <div class="tts-affiliate-copy">
-        <h2>Become a <span>Trendsetter Partner</span></h2>
-        <h3>Grow with passion. Earn with impact.</h3>
-        <p>Join a community that believes in helping people and building something meaningful — together.</p>
+    <section class="tts-hl-homecards" id="healthlogic-resources">
+  <div class="tts-hl-homecards-intro">
+    <h2>HealthLogic resource center</h2>
+    <p>Watch, learn and explore clear ingredient information in one place.</p>
+    <div class="tts-actions">
+      <a class="tts-btn tts-btn-primary" href="/apps/health-logic/">Download HealthLogic -></a>
+      <a class="tts-btn tts-btn-secondary" href="/healthlogic/videos">Open video library -></a>
+    </div>
+  </div>
 
-        <div class="tts-actions">
-          <a class="tts-btn tts-btn-primary" href="https://controltower-production.up.railway.app/affiliate/signup">Learn About the Program →</a>
-          <a class="tts-btn tts-btn-secondary" href="/portal/">♙ Affiliate Portal</a>
-        </div>
-      </div>
+  <h2 class="tts-hl-section-title">Featured videos</h2>
+<div class="tts-hl-card-grid tts-hl-video-grid">
+  <article class="tts-hl-card tts-hl-video-card">
+    <span>WATCH NOW</span>
+    <h3>FDA Food Allergy Labels</h3>
+    <p>Official guidance about food-allergy label information.</p>
+    <a href="https://www.youtube.com/watch?v=BUmfLyiLCqQ" target="_blank" rel="noopener noreferrer">Watch video -></a>
+  </article>
 
-      <div class="tts-aff-card"><i>♙</i><strong>Join our<br>team</strong><span>Be part of a mission that matters.</span></div>
-      <div class="tts-aff-card"><i>▥</i><strong>10%<br>residual income</strong><span>Earn recurring commission on qualified referrals.</span></div>
-      <div class="tts-aff-card"><i>♢</i><strong>True<br>partnership</strong><span>We grow when you grow. We win together.</span></div>
-      <div class="tts-aff-card"><i>∞</i><strong>Recurring<br>earning potential</strong><span>Not a one-time deal — built for long-term growth.</span></div>
-      <div class="tts-aff-card"><i>⌁</i><strong>Built for<br>long-term growth</strong><span>Sustainable income. Real impact. Your future, on your terms.</span></div>
-    </section>
+  <article class="tts-hl-card tts-hl-video-card">
+    <span>WATCH NOW</span>
+    <h3>FDA and Pet Food</h3>
+    <p>Official pet-food label and product-safety guidance.</p>
+    <a href="https://www.youtube.com/watch?v=IQ293BzxNvg" target="_blank" rel="noopener noreferrer">Watch video -></a>
+  </article>
+
+  <article class="tts-hl-card tts-hl-video-card tts-hl-placeholder">
+    <span>FEATURED TOPIC</span>
+    <h3>Food Dyes</h3>
+    <p>Food-color labels, regulation and product context.</p>
+    <a href="/healthlogic/artificial-food-dyes">Open resource -></a>
+  </article>
+
+  <article class="tts-hl-card tts-hl-video-card tts-hl-placeholder">
+    <span>FEATURED TOPIC</span>
+    <h3>Ultra-Processed Foods</h3>
+    <p>Ingredient patterns, evidence and practical comparisons.</p>
+    <a href="/healthlogic/ultra-processed-foods">Open resource -></a>
+  </article>
+
+  <article class="tts-hl-card tts-hl-video-card tts-hl-placeholder">
+    <span>FEATURED TOPIC</span>
+    <h3>Beauty Ingredients</h3>
+    <p>Personal-care labels, fragrance and product questions.</p>
+    <a href="/healthlogic/beauty-products">Open resource -></a>
+  </article>
+
+  <article class="tts-hl-card tts-hl-video-card tts-hl-placeholder">
+    <span>FEATURED TOPIC</span>
+    <h3>Heavy Metals and Baby Food</h3>
+    <p>Heavy-metal questions, product context and label education.</p>
+    <a href="/healthlogic/heavy-metals-baby-food-supplements">Open resource -></a>
+  </article>
+</div>
+<h2 class="tts-hl-section-title">Explore HealthLogic guides</h2>
+  <div class="tts-hl-card-grid">
+      <article class="tts-hl-card">
+        <h3>Artificial Food Dyes: Labels, Safety &amp; Regulation</h3>
+        <p>Learn how artificial food dyes appear on labels, why they are used, current FDA regulation, safety questions and what barcode scanners can reveal.</p>
+        <a href="/healthlogic/artificial-food-dyes">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Beauty &amp; Personal-Care Ingredient Labels</h3>
+        <p>Learn how to read beauty and personal-care labels, including fragrance, preservatives, allergens, active ingredients and contaminants.</p>
+        <a href="/healthlogic/beauty-products">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Children and Food Dyes: Labels and Practical Questions</h3>
+        <p>Learn how food dyes appear on labels, what evidence can and cannot show and how to discuss concerns with a clinician.</p>
+        <a href="/healthlogic/children-food-dyes">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Food Allergy Labels &amp; Cross-Contact Warnings</h3>
+        <p>Learn how to read food-allergy labels, identify the nine major allergens and understand Contains and cross-contact warnings.</p>
+        <a href="/healthlogic/food-allergies">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Food Chemicals &amp; Chronic Disease: What Evidence Shows</h3>
+        <p>Can food chemicals contribute to chronic disease? Learn how diet, exposure, genetics and lifestyle interact—and what evidence can actually prove.</p>
+        <a href="/healthlogic/food-chemicals-chronic-disease">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>How to Read Food Ingredient Labels</h3>
+        <p>Learn how to read food ingredient labels, identify allergens, understand additives and recognize what a barcode scanner can and cannot reveal.</p>
+        <a href="/healthlogic/food-ingredients">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Food Marketing Claims: Natural, Healthy and Clean Labels</h3>
+        <p>Learn how to look past food marketing claims by reading ingredients, nutrition and evidence.</p>
+        <a href="/healthlogic/food-marketing-claims">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Fragrance in Beauty Products: Ingredient Labels</h3>
+        <p>Learn what fragrance can mean on beauty labels and how to evaluate personal-care ingredients.</p>
+        <a href="/healthlogic/fragrance-personal-care">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Heavy Metals in Food, Cosmetics &amp; Pet Products</h3>
+        <p>Learn about lead, arsenic, cadmium and mercury in food, cosmetics, supplements and pet products—and why labels cannot detect them.</p>
+        <a href="/healthlogic/heavy-metals">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Heavy Metals in Baby Food and Supplements</h3>
+        <p>Understand heavy metals in baby food and supplements, why labels cannot test contaminants and where to find official guidance.</p>
+        <a href="/healthlogic/heavy-metals-baby-food-supplements">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Natural Flavors: What Food Labels Do and Do Not Reveal</h3>
+        <p>Learn what natural flavors mean on food labels, why the term can cover mixtures and how to ask better ingredient questions.</p>
+        <a href="/healthlogic/natural-flavors">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Pesticide Residues on Produce: Washing and Labels</h3>
+        <p>Learn what washing produce can and cannot do, how pesticide residues are regulated and how to make practical food choices.</p>
+        <a href="/healthlogic/pesticide-residues-washing-produce">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Pesticides in Food: Residues, Risks &amp; Labels</h3>
+        <p>Learn about pesticide residues in food, EPA tolerances, washing produce, organic claims and what barcode scanners cannot detect.</p>
+        <a href="/healthlogic/pesticides-in-food">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Pet Food Recalls and Labels: Ingredients and Safety</h3>
+        <p>Learn how to read pet-food labels, monitor recalls and understand lot codes.</p>
+        <a href="/healthlogic/pet-food-recalls-labels">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Pet Food Ingredients, Contaminants &amp; Recalls</h3>
+        <p>Understand pet-food ingredients, nutrition, allergens, pathogens, mycotoxins, chemical contaminants and official product recalls.</p>
+        <a href="/healthlogic/pet-products">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Titanium Dioxide in Food: Labels, Color Additives and Questions</h3>
+        <p>A practical guide to titanium dioxide in food, color-additive regulation, label reading and consumer questions.</p>
+        <a href="/healthlogic/titanium-dioxide-food">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Ultra-Processed Foods: Ingredients, Health &amp; Labels</h3>
+        <p>Learn what ultra-processed food means, common ingredient patterns, what controlled research found and how HealthLogic supports informed label comparisons.</p>
+        <a href="/healthlogic/ultra-processed-foods">Read guide -></a>
+      </article>
+      <article class="tts-hl-card">
+        <h3>Food Additives Banned in Europe vs. the U.S.</h3>
+        <p>Are food ingredients banned in Europe but allowed in the U.S.? Learn the difference between bans, restrictions, warning labels and regulatory limits.</p>
+        <a href="/healthlogic/us-vs-eu-food-additives">Read guide -></a>
+      </article>
+  </div>
+</section>
 
     <section class="tts-purpose" id="signature-system">
       <h2>Beautiful products. Real purpose. Built to <span>make a difference.</span></h2>
@@ -186,45 +334,16 @@
       </div>
     </section>
 
-    <section class="section" id="apps">
-      <h2>Independent app projects with dedicated pages and policies.</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Health Logic</h3>
-          <p>An intelligent wellness and ingredient insights platform focused on profiles, transparency, and informed decision support.</p>
-          <p><a href="/apps/health-logic/">Open Health Logic</a> · <a href="/healthlogic/">Explore Ingredient Guides</a></p>
-        </div>
-
-        <div class="card">
-          <h3>TopPick Resume</h3>
-          <p>An intelligent resume assistant built for sharper applications, stronger positioning, and clearer professional presentation.</p>
-          <p><a href="/apps/toppick-resume/">Open TopPick Resume</a></p>
-        </div>
-
-        <div class="card">
-          <h3>My Muse</h3>
-          <p>A guided creativity and inspiration platform designed to support ideas, reflection, and creative momentum.</p>
-          <p><a href="/apps/my-muse/">Open My Muse</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>Search-ready resources.</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>Resume Guides</h3>
-          <p><a href="/blog/best-ats-resume-format/">Best ATS resume format</a></p>
-          <p><a href="/blog/resume-mistakes-that-cost-interviews/">Resume mistakes that reduce professional impact</a></p>
-        </div>
-
-        <div class="card">
-          <h3>Glossary</h3>
-          <p><a href="/glossary/what-is-a-resume-assistant/">What is a resume assistant?</a></p>
-          <p><a href="/glossary/what-is-an-ats-friendly-resume/">What is an ATS-friendly resume?</a></p>
-        </div>
-      </div>
-    </section>
+    <section class="tts-partner-strip" id="affiliate-program">
+  <div>
+    <strong>Become a Trendsetter Partner</strong>
+    <span>Share meaningful technology. Earn on qualified referrals.</span>
+  </div>
+  <div>
+    <a href="https://controltower-production.up.railway.app/affiliate/signup">Partner Program -></a>
+    <a href="/portal/">Affiliate Portal -></a>
+  </div>
+</section>
 
     <footer class="footer">
       <p>© 2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a> · <a href="/security.html">Security</a> · <a href="/data-deletion.html">Data Deletion</a> · <a href="/portal/">Portal</a> · <a href="/support.html">Support</a></p>
@@ -232,6 +351,11 @@
   </main>
 </body>
 </html>
+
+
+
+
+
 
 
 

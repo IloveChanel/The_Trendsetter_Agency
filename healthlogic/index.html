@@ -20,52 +20,82 @@
     .id{font-family:ui-monospace,monospace;color:var(--green);word-break:break-all}
     footer{text-align:center;padding:28px;color:var(--muted)}
     @media(max-width:650px){.download{grid-template-columns:1fr;text-align:center}.qr{max-width:240px;margin:auto}}
+      .healthlogic-logo-frame{width:min(310px,78vw);margin:0 auto 22px;padding:10px;border:1px solid rgba(32,217,255,.72);border-radius:20px;background:linear-gradient(135deg,rgba(7,17,44,.96),rgba(25,15,61,.92));box-shadow:0 0 26px rgba(32,217,255,.2),0 0 34px rgba(189,108,255,.16)}
+    .healthlogic-logo-frame img{display:block;width:100%;height:auto;border-radius:12px}
+    .healthlogic-qr-grid{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:28px}
+    .healthlogic-qr-card{width:190px;padding:12px;border:1px solid rgba(32,217,255,.48);border-radius:18px;background:rgba(5,9,29,.58);color:var(--ink);text-decoration:none}
+    .healthlogic-qr-card img{display:block;width:166px;height:166px;max-width:100%;margin:0 auto 10px;background:#fff;padding:8px;border-radius:12px}
+    .healthlogic-qr-card span{display:block;font-weight:800;font-size:.92rem}
+      .healthlogic-qr-grid{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:28px}
+    .healthlogic-qr-card{width:190px;padding:12px;border:1px solid rgba(32,217,255,.48);border-radius:18px;background:rgba(5,9,29,.58);color:#fff;text-decoration:none}
+    .healthlogic-qr-card img{display:block;width:166px;height:166px;max-width:100%;margin:0 auto 10px;background:#fff;padding:8px;border-radius:12px}
+    .healthlogic-qr-card span{display:block;font-weight:800;font-size:.92rem}
+      .healthlogic-store-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;margin-top:24px}
+    .healthlogic-store-actions .btn{min-width:190px;text-align:center}
+    .healthlogic-qr-grid{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-top:28px}
+    .healthlogic-qr-card{width:190px;padding:12px;border:1px solid rgba(32,217,255,.48);border-radius:18px;background:rgba(5,9,29,.58);color:#fff;text-decoration:none}
+    .healthlogic-qr-card img{display:block;width:166px;height:166px;max-width:100%;margin:0 auto 10px;background:#fff;padding:8px;border-radius:12px}
+    .healthlogic-qr-card span{display:block;font-weight:800;font-size:.92rem}
   </style>
   <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"CollectionPage","name":"HealthLogic Learning Center","url":"https://www.thetrendsetteragency.com/healthlogic","description":"Educational guides about ingredients, food, beauty products, pet products and health."}
 </script>
-</head>
+  <style data-healthlogic-background="true">
+    html,body{min-height:100%}
+    body{
+      background:#020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat !important;
+    }
+  </style>
+<style data-tts-healthlogic-page-background="true">
+html {
+  background: #020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat;
+}
+body {
+  min-height: 100vh;
+  background: transparent !important;
+}
+</style></head>
 <body class="tts-image-home tts-public-page">
   <div class="shell">
-    <nav class="nav">
-      <a class="brand" href="/">The Trendsetter Agency</a>
-      <div class="links">
-        <a href="/">Home</a>
-        <div class="dropdown">
-          <a href="/apps/toppick-resume/">TopPick Resume â–¼</a>
-          <div class="menu">
-            <a href="/apps/toppick-resume/">Overview</a>
-            <a href="/apps/toppick-resume/privacy/">Privacy Policy</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="/apps/my-muse/">My Muse â–¼</a>
-          <div class="menu">
-            <a href="/apps/my-muse/">Overview</a>
-            <a href="/apps/my-muse/privacy/">Privacy Policy</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="/apps/health-logic/">Health Logic â–¼</a>
-          <div class="menu">
-            <a href="/apps/health-logic/">Overview</a>
-            <a href="/apps/health-logic/privacy/">Privacy Policy</a>
-          </div>
-        </div>
-        <a href="/about/">About Us</a>
-        <a href="/privacy">Privacy</a>
-        <a href="/support">Support</a>
+    <nav class="tts-nav" data-tts-canonical-navigation="true">
+      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+        <span class="tts-brand-mark">T</span>
+        <span class="tts-brand-copy">
+          <strong>The Trendsetter Agency</strong>
+          <em>Passion-led mobile apps • built to truly help people</em>
+        </span>
+      </a>
+
+      <div class="tts-links">
+        <a href="/apps/health-logic/">Health Logic</a>
+        <details class="tts-soon">
+  <summary>Studio Projects ▾</summary>
+  <div class="tts-soon-menu">
+    <a href="/portal/alllink.html">AllLink</a>
+    <a href="/apps/toppick-resume/">TopPick Resume</a>
+    <a href="/apps/my-muse/">My Muse</a>
+    <a href="/apps/ad-generator/">Ad Generator</a>
+    <a href="/apps/auto-posting/">Auto Posting</a>
+  </div>
+</details>
+<a href="/healthlogic/">Ingredient Guides</a>
+        <a href="/about/">About</a>
+        <a href="/portal/social-dashboard.html">Dashboard</a>
+        <a href="/portal/">Portal</a>
+        <a href="/support.html">Support</a>
       </div>
     </nav>
 
     <section class="hero">
-      <img src="/assets/healthlogic-logo.svg" alt="HealthLogic logo" style="width:min(280px,75vw);height:auto;margin-bottom:22px;" />
+            <div class="healthlogic-logo-frame">
+        <img src="/assets/logo_hl.png" alt="HealthLogic logo" />
+      </div>
       <div class="kicker">Ingredient Safety Learning Center</div>
-      <h1>Understand what is really inside everyday products.</h1>
-      <p>Explore food, beauty and pet-product ingredients, pesticides, metals, additives, allergens, vitamins and minerals.</p>
+      <h1>Read beyond the marketing. Know what is in your food.</h1>
+      <p>HealthLogic turns ingredient lists into clear, practical context so you can question marketing, compare products and make informed choices.</p>
 
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:24px;">
+      <div class="healthlogic-store-actions">
         <a class="btn" href="https://apps.apple.com/us/app/health-logic/id6767145352" target="_blank" rel="noopener noreferrer">
           Download on the App Store
         </a>
@@ -74,12 +104,15 @@
           Get it on Google Play
         </a>
       </div>
-
-      <div style="margin-top:28px;">
-        <a href="https://play.google.com/store/apps/details?id=com.healthlogic.app" target="_blank" rel="noopener noreferrer" aria-label="Download Health Logic on Google Play">
-          <img src="/assets/healthlogic-google-play-qr.png" alt="Google Play QR code for Health Logic" style="width:180px;height:180px;max-width:100%;" />
+      <div class="healthlogic-qr-grid" aria-label="Download HealthLogic">
+        <a class="healthlogic-qr-card" href="https://apps.apple.com/us/app/health-logic/id6767145352" target="_blank" rel="noopener noreferrer">
+          <img src="/assets/healthlogic-apple-app-store-qr.png" alt="App Store QR code for HealthLogic" />
+          <span>Scan to download on iPhone</span>
         </a>
-        <p style="margin-top:10px;">Scan to download on Android</p>
+        <a class="healthlogic-qr-card" href="https://play.google.com/store/apps/details?id=com.healthlogic.app" target="_blank" rel="noopener noreferrer">
+          <img src="/assets/healthlogic-google-play-qr.png" alt="Google Play QR code for HealthLogic" />
+          <span>Scan to download on Android</span>
+        </a>
       </div>
     </section>
     <section class="section">
@@ -102,6 +135,13 @@
   </div>
 </body>
 </html>
+
+
+
+
+
+
+
 
 
 

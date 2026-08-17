@@ -56,11 +56,25 @@
   .tts-soon-menu{position:absolute;top:30px;display:grid;min-width:210px;padding:10px;background:#071126;border:1px solid #20d9ff;border-radius:12px;z-index:50}
   .tts-soon:not([open]) .tts-soon-menu{display:none}
   .tts-soon-menu a{padding:8px 10px;white-space:nowrap}</style>
-</head>
+  <style data-healthlogic-background="true">
+    html,body{min-height:100%}
+    body{
+      background:#020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat !important;
+    }
+  </style>
+<style data-tts-healthlogic-page-background="true">
+html {
+  background: #020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat;
+}
+body {
+  min-height: 100vh;
+  background: transparent !important;
+}
+</style></head>
 <body class="tts-image-home">
   <div class="tts-page-glow"></div>
   <div class="tts-shell">
-    <nav class="tts-nav">
+    <nav class="tts-nav" data-tts-canonical-navigation="true">
       <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
         <span class="tts-brand-mark">T</span>
         <span class="tts-brand-copy">
@@ -72,15 +86,16 @@
       <div class="tts-links">
         <a href="/apps/health-logic/">Health Logic</a>
         <details class="tts-soon">
-          <summary>Coming Soon ▾</summary>
-          <div class="tts-soon-menu">
-            <a href="/apps/toppick-resume/">TopPick Resume</a>
-            <a href="/apps/my-muse/">My Muse</a>
-            <a href="/apps/ad-generator/">Ad Generator</a>
-            <a href="/apps/auto-posting/">Auto Posting</a>
-          </div>
-        </details>
-        <a href="/portal/alllink.html">AllLink</a>
+  <summary>Studio Projects ▾</summary>
+  <div class="tts-soon-menu">
+    <a href="/portal/alllink.html">AllLink</a>
+    <a href="/apps/toppick-resume/">TopPick Resume</a>
+    <a href="/apps/my-muse/">My Muse</a>
+    <a href="/apps/ad-generator/">Ad Generator</a>
+    <a href="/apps/auto-posting/">Auto Posting</a>
+  </div>
+</details>
+<a href="/healthlogic/">Ingredient Guides</a>
         <a href="/about/">About</a>
         <a href="/portal/social-dashboard.html">Dashboard</a>
         <a href="/portal/">Portal</a>
@@ -179,6 +194,9 @@
   </div>
 </body>
 </html>
+
+
+
 
 
 
