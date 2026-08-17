@@ -1,10 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HealthLogic Learning Center | Ingredient Safety Guides</title>
   <meta name="description" content="HealthLogic guides to food ingredients, additives, pesticides, heavy metals, allergies, beauty products, pet products and wellness.">
+<meta property="og:title" content="HealthLogic Ingredient Safety Learning Center">
+<meta property="og:description" content="Explore practical guides about food ingredients, additives, pesticides, heavy metals, allergies, beauty products, and pet products.">
+<meta property="og:image" content="https://www.thetrendsetteragency.com/assets/healthlogic-food-transparency.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.thetrendsetteragency.com/healthlogic/">
   <link rel="canonical" href="https://www.thetrendsetteragency.com/healthlogic">
   <style>
     :root{--bg:#05091d;--panel:#111936;--ink:#f8fafc;--muted:#cbd5e1;--cyan:#20d9ff;--green:#31f0b1;--purple:#bd6cff}
@@ -55,37 +60,116 @@ body {
   min-height: 100vh;
   background: transparent !important;
 }
-</style></head>
+</style><style data-healthlogic-card-images="true">
+.guide-card {
+  overflow: hidden;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  min-height: 390px;
+}
+.guide-card-image {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(32,217,255,.35);
+}
+.guide-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 24px;
+}
+.guide-card-body h3 {
+  margin-top: 0;
+}
+.guide-card-body h3 a {
+  color: #20d9ff;
+  text-decoration: none;
+}
+.guide-card-body p {
+  flex: 1;
+}
+.guide-card-link {
+  display: inline-block;
+  margin-top: 16px;
+  color: #31f0b1;
+  font-weight: 800;
+  text-decoration: none;
+}
+</style>
+<style data-healthlogic-card-credits="true">
+.guide-card-credit {
+  display:block;
+  margin-top:10px;
+  color:#94a3b8;
+  font-size:.75rem;
+}
+</style>
+<style data-healthlogic-card-backgrounds="true">
+.guide-card-image {
+  display:block;
+  width:100%;
+  height:190px;
+  background-color:#0b1733;
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  border-bottom:1px solid rgba(32,217,255,.35);
+}
+</style>
+<style data-healthlogic-card-image-sizing="true">
+.guide-card {
+  overflow: hidden;
+}
+.guide-card-image {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  background: #050b20;
+}
+</head>
 <body class="tts-image-home tts-public-page">
   <div class="shell">
     <nav class="tts-nav" data-tts-canonical-navigation="true">
-      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
-        <span class="tts-brand-mark">T</span>
-        <span class="tts-brand-copy">
-          <strong>The Trendsetter Agency</strong>
-          <em>Passion-led mobile apps • built to truly help people</em>
-        </span>
-      </a>
+  <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+    <span class="tts-brand-mark">T</span>
+    <span class="tts-brand-copy">
+      <strong>The Trendsetter Agency</strong>
+      <em>Passion-led mobile apps built to truly help people</em>
+    </span>
+  </a>
 
-      <div class="tts-links">
-        <a href="/apps/health-logic/">Health Logic</a>
-        <details class="tts-soon">
-  <summary>Studio Projects ▾</summary>
-  <div class="tts-soon-menu">
-    <a href="/portal/alllink.html">AllLink</a>
-    <a href="/apps/toppick-resume/">TopPick Resume</a>
-    <a href="/apps/my-muse/">My Muse</a>
-    <a href="/apps/ad-generator/">Ad Generator</a>
-    <a href="/apps/auto-posting/">Auto Posting</a>
-  </div>
-</details>
-<a href="/healthlogic/">Ingredient Guides</a>
-        <a href="/about/">About</a>
-        <a href="/portal/social-dashboard.html">Dashboard</a>
-        <a href="/portal/">Portal</a>
-        <a href="/support.html">Support</a>
+  <div class="tts-links">
+    <details class="tts-soon">
+      <summary>HealthLogic</summary>
+      <div class="tts-soon-menu">
+        <a href="/apps/health-logic/">HealthLogic App</a>
+        <a href="/healthlogic/">Ingredient Guides</a>
+        <a href="/healthlogic/videos/">Video Library</a>
+        <a href="/healthlogic/featured/">Featured Articles</a>
+        <a href="/healthlogic/about-healthlogic/">About HealthLogic</a>
+        <a href="/healthlogic/methodology/">Methodology</a>
       </div>
-    </nav>
+    </details>
+
+    <details class="tts-soon">
+      <summary>Studio Projects</summary>
+      <div class="tts-soon-menu">
+        <a href="/apps/toppick-resume/">TopPick Resume</a>
+        <a href="/apps/my-muse/">My Muse</a>
+        <a href="/apps/ad-generator/">Ad Generator</a>
+        <a href="/apps/auto-posting/">Auto Posting</a>
+      </div>
+    </details>
+
+    <a href="/about/">About</a>
+    <a href="/support.html">Support</a>
+  </div>
+</nav>
 
     <section class="hero">
             <div class="healthlogic-logo-frame">
@@ -118,16 +202,86 @@ body {
     <section class="section">
   <h2>HealthLogic Ingredient & Product Safety Guides</h2>
   <div class="grid">
-    <div class="card"><h3><a href="/healthlogic/ingredient-intelligence">More Than a Product Score</a></h3><p>See how HealthLogic helps people explore ingredient details, product context and profile-aware information.</p></div>
-<div class="card"><h3><a href="/healthlogic/methodology">HealthLogic Trust Center</a></h3><p>Learn our methodology, editorial standards, medical boundaries and how to report a correction.</p></div>
-<div class="card"><h3><a href="/healthlogic/videos">HealthLogic Video Library</a></h3><p>Official food, allergy and pet-safety videos with original HealthLogic learning guides.</p></div>
-    <div class="card"><h3><a href="/healthlogic/featured">Featured Articles & Videos</a></h3><p>Trusted food and health resources with original HealthLogic educational context.</p></div>
-    <div class="card"><h3><a href="/healthlogic/food-ingredients">Food Ingredients</a></h3><p>Additives, preservatives, colors, sweeteners and label transparency.</p></div>
-    <div class="card"><h3><a href="/healthlogic/pesticides-in-food">Pesticides in Food</a></h3><p>Residues, exposure, regulation and what labels cannot reveal.</p></div>
-    <div class="card"><h3><a href="/healthlogic/heavy-metals">Heavy Metals</a></h3><p>Lead, arsenic, cadmium and mercury in everyday products.</p></div>
-    <div class="card"><h3><a href="/healthlogic/food-allergies">Food Allergies</a></h3><p>Allergen names, cross-contact warnings and safer label reading.</p></div>
-    <div class="card"><h3><a href="/healthlogic/beauty-products">Beauty Products</a></h3><p>Cosmetics, personal-care ingredients and contaminant questions.</p></div>
-    <div class="card"><h3><a href="/healthlogic/pet-products">Pet Products</a></h3><p>Pet-food ingredients, contaminants, nutrition and recalls.</p></div>
+    <div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/food-label.jpg" alt="Food labels and ingredient information" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/ingredient-intelligence">More Than a Product Score</a></h3>
+    <p>See how HealthLogic helps people explore ingredient details, product context and profile-aware information.</p>
+    <a class="guide-card-link" href="/healthlogic/ingredient-intelligence">Read the guide -&gt;</a>
+  </div>
+</div>
+<div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/laboratory.jpg" alt="Laboratory research supporting HealthLogic methodology" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/methodology">HealthLogic Trust Center</a></h3>
+    <p>Learn our methodology, editorial standards, medical boundaries and how to report a correction.</p>
+    <a class="guide-card-link" href="/healthlogic/methodology">Read the guide -&gt;</a>
+  </div>
+</div>
+<div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/food-dyes.jpg" alt="Food dyes and ingredient education videos" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/videos">HealthLogic Video Library</a></h3>
+    <p>Official food, allergy and pet-safety videos with original HealthLogic learning guides.</p>
+    <a class="guide-card-link" href="/healthlogic/videos">Read the guide -&gt;</a>
+  </div>
+</div>
+    <div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/produce.jpg" alt="Fresh produce and food safety education" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/featured">Featured Articles & Videos</a></h3>
+    <p>Trusted food and health resources with original HealthLogic educational context.</p>
+    <a class="guide-card-link" href="/healthlogic/featured">Read the guide -&gt;</a>
+  </div>
+</div>
+    <div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/food-label.jpg" alt="Food ingredient labels and product information" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/food-ingredients">Food Ingredients</a></h3>
+    <p>Additives, preservatives, colors, sweeteners and label transparency.</p>
+    <a class="guide-card-link" href="/healthlogic/food-ingredients">Read the guide -&gt;</a>
+  </div>
+</div>
+    <div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/b-udaykiran-1JsVrsGCAlY-unsplash.jpg" alt="Pesticide application in a food crop" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/pesticides-in-food">Pesticides in Food</a></h3>
+    <p>Residues, exposure, regulation and what labels cannot reveal.</p>
+    <a class="guide-card-link" href="/healthlogic/pesticides-in-food">Read the guide -&gt;</a>
+  </div>
+</div>
+    <div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/bernd-dittrich-EZYtJO5RWXM-unsplash.jpg" alt="Laboratory testing for contaminants in food" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/heavy-metals">Heavy Metals</a></h3>
+    <p>Lead, arsenic, cadmium and mercury in everyday products.</p>
+    <a class="guide-card-link" href="/healthlogic/heavy-metals">Read the guide -&gt;</a>
+  </div>
+</div>
+    <div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/afterave-essentials-oIrMd0lvHhE-unsplash.jpg" alt="Product containers and allergen label awareness" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/food-allergies">Food Allergies</a></h3>
+    <p>Allergen names, cross-contact warnings and safer label reading.</p>
+    <a class="guide-card-link" href="/healthlogic/food-allergies">Read the guide -&gt;</a>
+  </div>
+</div>
+    <div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/cosmetics.jpg" alt="Beauty and cosmetic product containers" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/beauty-products">Beauty Products</a></h3>
+    <p>Cosmetics, personal-care ingredients and contaminant questions.</p>
+    <a class="guide-card-link" href="/healthlogic/beauty-products">Read the guide -&gt;</a>
+  </div>
+</div>
+    <div class="card guide-card">
+  <img class="guide-card-image" src="/assets/healthlogic-cards/pet-food.jpg" alt="Pet food and product label education" loading="lazy">
+  <div class="guide-card-body">
+    <h3><a href="/healthlogic/pet-products">Pet Products</a></h3>
+    <p>Pet-food ingredients, contaminants, nutrition and recalls.</p>
+    <a class="guide-card-link" href="/healthlogic/pet-products">Read the guide -&gt;</a>
+  </div>
+</div>
   </div>
 </section>
 
