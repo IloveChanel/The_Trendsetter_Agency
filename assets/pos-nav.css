@@ -1,1 +1,3 @@
-.tts-pos-nav{display:inline-flex!important;align-items:center;background:#e31c23!important;color:#fff!important;font-weight:800!important;letter-spacing:.06em;padding:8px 14px!important;border-radius:999px!important;margin:0 8px;text-decoration:none!important;animation:pospulse 1.8s ease-in-out infinite}.tts-pos-nav:hover{background:#c8102e!important}#keyframes pospulse{50%{box-shadow:0 0 0 8px rgba(227,28,35,.28)}}
+.tts-pos-nav{display:inline-flex!important;align-items:center;background:#e31c23!important;color:#fff!important;font-weight:800!important;letter-spacing:.06em;padding:8px 14px!important;border-radius:999px!important;margin:0 8px;text-decoration:none!important;animation:pospulse 1.8s ease-in-out infinite}
+.tts-pos-nav:hover{background:#c8102e!important}
+@keyframes pospulse{50%{box-shadow:0 0 0 8px rgba(227,28,35,.28)}}
