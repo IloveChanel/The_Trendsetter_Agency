@@ -16,14 +16,14 @@
 <meta property="og:site_name" content="The Trendsetter Agency" />
 <meta property="og:locale" content="en_US" />
 <meta property="og:url" content="https://www.thetrendsetteragency.com/custom-ai-agents/" />
-<meta property="og:image" content="https://www.thetrendsetteragency.com/assets/custom-ai-agents/custom-ai-agents-hero.jpg" />
-<meta property="og:image:width" content="1800" />
-<meta property="og:image:height" content="670" />
-<meta property="og:image:alt" content="The Trendsetter Agency — AI strategy, automation, and business growth" />
+<meta property="og:image" content="https://www.thetrendsetteragency.com/assets/custom-ai-agents/custom-ai-agents-ai-bot.jpg" />
+<meta property="og:image:width" content="1000" />
+<meta property="og:image:height" content="1000" />
+<meta property="og:image:alt" content="An AI agent that can think, plan, automate, and solve — a digital teammate for repetitive business workflows" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Custom AI Agents for Business | The Trendsetter Agency" />
 <meta name="twitter:description" content="Custom AI agents built around your specific workflow — not a one-size-fits-all product. Book a consultation." />
-<meta name="twitter:image" content="https://www.thetrendsetteragency.com/assets/custom-ai-agents/custom-ai-agents-hero.jpg" />
+<meta name="twitter:image" content="https://www.thetrendsetteragency.com/assets/custom-ai-agents/custom-ai-agents-ai-bot.jpg" />
 <meta name="theme-color" content="#020617" />
 
 <link rel="canonical" href="https://www.thetrendsetteragency.com/custom-ai-agents/" />
@@ -130,7 +130,7 @@
   .ai-crumbs span{opacity:.55}
   .ai-kicker{display:inline-flex;align-items:center;gap:8px;margin-bottom:16px}
   .ai-kicker:before{content:"";width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,#f97316,#ec4899,#8b5cf6);box-shadow:0 0 12px rgba(236,72,153,.6)}
-  .ai-hero{grid-template-columns:1fr;padding-top:20px}
+  .ai-hero{grid-template-columns:1.15fr .85fr;padding-top:20px}
   .ai-hero:after{content:none}
   .ai-hero h1 .hot,.ai-hero h1 .pink,.ai-hero h1 .cyan{-webkit-background-clip:text;background-clip:text;color:transparent}
   .ai-hero h1 .hot{background-image:linear-gradient(135deg,#f59e0b,#fb7185)}
@@ -138,14 +138,21 @@
   .ai-hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-top:26px}
   .ai-hero-contact{margin-top:18px;font-size:15px;color:var(--muted)}
   .ai-hero-contact a{color:#a9d8ff}
-  .ai-figure{margin:36px 0 0;padding:0;border:1px solid rgba(236,72,153,.4);border-radius:28px;overflow:hidden;box-shadow:0 0 60px rgba(139,92,246,.22),0 26px 90px rgba(0,0,0,.34);background:#fff}
-  .ai-figure img{display:block;width:100%;height:auto}
+  .ai-hero-figure{position:relative;border:1px solid rgba(236,72,153,.5);border-radius:28px;overflow:hidden;box-shadow:0 0 60px rgba(139,92,246,.24),0 26px 90px rgba(0,0,0,.34)}
+  .ai-hero-figure img{display:block;width:100%;height:auto}
   .ai-split{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
   .ai-split-figure{border:1px solid rgba(34,211,238,.5);border-radius:28px;overflow:hidden;box-shadow:0 0 60px rgba(34,211,238,.18),0 26px 90px rgba(0,0,0,.34)}
   .ai-split-figure img{display:block;width:100%;height:auto}
-  .ai-list{margin:18px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:10px 22px}
-  .ai-list li{position:relative;padding-left:22px;color:var(--muted);line-height:1.6}
-  .ai-list li:before{content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--violet),var(--cyan))}
+  .ai-capability-panel{position:relative;padding:34px 30px;border:1px solid rgba(34,211,238,.4);border-radius:28px;overflow:hidden;background:linear-gradient(160deg,rgba(20,27,48,.92),rgba(8,13,27,.95));box-shadow:0 0 60px rgba(34,211,238,.14),0 26px 90px rgba(0,0,0,.34)}
+  .ai-capability-panel:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:26px 26px;mask-image:radial-gradient(circle at center,black,transparent 78%)}
+  .ai-capability-panel-head{position:relative;z-index:1;display:flex;align-items:center;gap:14px;margin-bottom:22px}
+  .ai-capability-panel-head .ai-icon-badge{margin-bottom:0;width:46px;height:46px}
+  .ai-capability-panel-head strong{display:block;color:#fff;font-size:17px}
+  .ai-capability-panel-head span{display:block;color:var(--muted);font-size:13px}
+  .ai-capability-grid{position:relative;z-index:1;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .ai-capability-grid div{display:flex;flex-direction:column;align-items:center;gap:8px;padding:14px 6px;border-radius:16px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);text-align:center}
+  .ai-capability-grid .ai-icon-badge{width:38px;height:38px;margin-bottom:0;border-radius:12px}
+  .ai-capability-grid span{font-size:12px;color:var(--muted);line-height:1.3}
   .ai-note{margin-top:22px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--muted);font-size:15px}
   .ai-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
 
@@ -158,11 +165,11 @@
   .ai-icon-badge{position:relative;z-index:1;display:grid;place-items:center;width:52px;height:52px;border-radius:16px;margin-bottom:16px;color:#fff;background:var(--ai-wave);border:1px solid rgba(255,255,255,.18);box-shadow:0 0 26px var(--ai-glow)}
   .ai-card h3{position:relative;z-index:1;margin:0 0 8px;font-size:17px;letter-spacing:-.01em}
   .ai-card p{position:relative;z-index:1;margin:0;color:var(--muted);font-size:14.5px;line-height:1.55}
-  .ai-card.c1,.ai-step.c1{--ai-wave:linear-gradient(135deg,#8b5cf6,#6366f1);--ai-glow:rgba(139,92,246,.4)}
-  .ai-card.c2,.ai-step.c2{--ai-wave:linear-gradient(135deg,#22d3ee,#0ea5e9);--ai-glow:rgba(34,211,238,.4)}
-  .ai-card.c3,.ai-step.c3{--ai-wave:linear-gradient(135deg,#ec4899,#d946ef);--ai-glow:rgba(236,72,153,.4)}
-  .ai-card.c4,.ai-step.c4{--ai-wave:linear-gradient(135deg,#f97316,#f59e0b);--ai-glow:rgba(249,115,22,.4)}
-  .ai-card.c5,.ai-step.c5{--ai-wave:linear-gradient(135deg,#22c55e,#16a34a);--ai-glow:rgba(34,197,94,.4)}
+  .ai-card.c1,.ai-step.c1,.ai-icon-badge.c1{--ai-wave:linear-gradient(135deg,#8b5cf6,#6366f1);--ai-glow:rgba(139,92,246,.4)}
+  .ai-card.c2,.ai-step.c2,.ai-icon-badge.c2{--ai-wave:linear-gradient(135deg,#22d3ee,#0ea5e9);--ai-glow:rgba(34,211,238,.4)}
+  .ai-card.c3,.ai-step.c3,.ai-icon-badge.c3{--ai-wave:linear-gradient(135deg,#ec4899,#d946ef);--ai-glow:rgba(236,72,153,.4)}
+  .ai-card.c4,.ai-step.c4,.ai-icon-badge.c4{--ai-wave:linear-gradient(135deg,#f97316,#f59e0b);--ai-glow:rgba(249,115,22,.4)}
+  .ai-card.c5,.ai-step.c5,.ai-icon-badge.c5{--ai-wave:linear-gradient(135deg,#22c55e,#16a34a);--ai-glow:rgba(34,197,94,.4)}
 
   .ai-tagline{text-align:center;margin:44px 0 0;font-size:clamp(24px,3vw,34px);font-weight:900;letter-spacing:-.03em}
   .ai-tagline span{background:linear-gradient(135deg,#fb7185,#d946ef,#22d3ee);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -182,13 +189,16 @@
   .ai-contact-card p{margin:6px 0}
   .ai-contact-card a{color:#a9d8ff;font-weight:700}
   .ai-internal-links{margin-top:8px}
+  @media(max-width:1100px){
+    .ai-hero{grid-template-columns:1fr}
+  }
   @media(max-width:900px){
     .ai-split{grid-template-columns:1fr}
-    .ai-list{grid-template-columns:1fr}
     .ai-card-grid{grid-template-columns:1fr 1fr}
     .ai-steps{grid-template-columns:1fr 1fr}
     .ai-consult{grid-template-columns:1fr}
     .ai-contact-grid{grid-template-columns:1fr}
+    .ai-capability-grid{grid-template-columns:1fr 1fr}
   }
   @media(max-width:600px){
     .ai-card-grid{grid-template-columns:1fr}
@@ -260,11 +270,10 @@
       <a href="https://www.thetrendsetteragency.com">www.thetrendsetteragency.com</a>
     </p>
   </div>
+  <div class="ai-hero-figure">
+    <img src="/assets/custom-ai-agents/custom-ai-agents-ai-bot.jpg" width="1000" height="1000" loading="eager" alt="Illustration of an AI agent that can think, plan, automate, and solve — a digital teammate for repetitive business workflows" />
+  </div>
 </header>
-
-<figure class="ai-figure">
-  <img src="/assets/custom-ai-agents/custom-ai-agents-hero.jpg" width="1800" height="670" loading="eager" alt="The Trendsetter Agency — AI strategy, automation, and business growth. Contact michelletrendsetters@gmail.com or www.thetrendsetteragency.com" />
-</figure>
 
 <section class="section" id="what-is-a-custom-ai-agent">
   <div class="ai-split">
@@ -273,25 +282,30 @@
       <h2>What Is a Custom AI Agent?</h2>
       <p>A custom AI agent is not a chatbot, and it isn't a one-size-fits-all piece of software. Think of it as a digital assistant or automated workflow built around one specific part of your business — the tasks that eat up your time but don't need your full attention every single time.</p>
       <p><strong>I can build you a custom AI agent for your specific business needs.</strong> The right solution depends on what is taking up your time. Tell me what you are doing manually, and I will help you determine what can be automated.</p>
-      <p>Depending on your workflow, a custom AI agent may be able to:</p>
-      <ul class="ai-list">
-        <li>Read and organize information</li>
-        <li>Extract information from documents</li>
-        <li>Create or update spreadsheets</li>
-        <li>Sort and summarize emails</li>
-        <li>Research websites and leads</li>
-        <li>Prepare reports</li>
-        <li>Send routine follow-ups</li>
-        <li>Organize applications and forms</li>
-        <li>Track inventory or business information</li>
-        <li>Help manage appointment requests</li>
-        <li>Gather information from multiple sources</li>
-        <li>Turn scattered information into organized results</li>
-      </ul>
       <p class="ai-note">The exact capabilities depend on your workflow, the systems you already use, the permissions you're able to grant, and your specific business requirements. Every agent is scoped around what you actually need — not a fixed feature list.</p>
     </div>
-    <div class="ai-split-figure">
-      <img src="/assets/custom-ai-agents/custom-ai-agents-ai-bot.jpg" width="1000" height="1000" loading="lazy" alt="Illustration of an AI agent that can think, plan, automate, and solve — a digital teammate for repetitive business workflows" />
+    <div class="ai-capability-panel">
+      <div class="ai-capability-panel-head">
+        <div class="ai-icon-badge c1"><svg class="ai-icon"><use href="#i-target"/></svg></div>
+        <div>
+          <strong>What it may be able to do</strong>
+          <span>Depending on your workflow, tools, and permissions</span>
+        </div>
+      </div>
+      <div class="ai-capability-grid">
+        <div><div class="ai-icon-badge c1"><svg class="ai-icon"><use href="#i-document"/></svg></div><span>Read &amp; organize info</span></div>
+        <div><div class="ai-icon-badge c2"><svg class="ai-icon"><use href="#i-clipboard"/></svg></div><span>Extract from documents</span></div>
+        <div><div class="ai-icon-badge c3"><svg class="ai-icon"><use href="#i-table"/></svg></div><span>Update spreadsheets</span></div>
+        <div><div class="ai-icon-badge c4"><svg class="ai-icon"><use href="#i-mail"/></svg></div><span>Sort &amp; summarize email</span></div>
+        <div><div class="ai-icon-badge c5"><svg class="ai-icon"><use href="#i-search"/></svg></div><span>Research leads</span></div>
+        <div><div class="ai-icon-badge c1"><svg class="ai-icon"><use href="#i-receipt"/></svg></div><span>Prepare reports</span></div>
+        <div><div class="ai-icon-badge c2"><svg class="ai-icon"><use href="#i-bell"/></svg></div><span>Send follow-ups</span></div>
+        <div><div class="ai-icon-badge c3"><svg class="ai-icon"><use href="#i-folder"/></svg></div><span>Organize forms</span></div>
+        <div><div class="ai-icon-badge c4"><svg class="ai-icon"><use href="#i-boxes"/></svg></div><span>Track inventory</span></div>
+        <div><div class="ai-icon-badge c5"><svg class="ai-icon"><use href="#i-calendar"/></svg></div><span>Manage appointments</span></div>
+        <div><div class="ai-icon-badge c1"><svg class="ai-icon"><use href="#i-link"/></svg></div><span>Gather multi-source data</span></div>
+        <div><div class="ai-icon-badge c2"><svg class="ai-icon"><use href="#i-sparkle"/></svg></div><span>Organize the results</span></div>
+      </div>
     </div>
   </div>
 </section>
