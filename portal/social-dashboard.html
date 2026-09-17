@@ -6,6 +6,7 @@
   <title>The Trendsetter Agency | Social Dashboard</title>
   <meta name="description" content="The Trendsetter Agency social dashboard for scheduling, smart rotation, queue control, and platform settings." />
   <link rel="canonical" href="https://www.thetrendsetteragency.com/portal/social-dashboard" />
+  <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
   <style>
     :root{--bg:#020714;--surface:#07111f;--surface-2:#0c1730;--border:rgba(102,182,255,.18);--text:#f5f7ff;--muted:#aeb7d8;--primary:#35d6c9;--blue:#50a8ff;--pink:#cf62ff;--orange:#ff9c43;--shadow:0 16px 44px rgba(0,0,0,.34);--radius:24px;--radius-sm:16px;--pill:999px;--space-2:.5rem;--space-3:.75rem;--space-4:1rem;--space-5:1.25rem;--space-6:1.5rem;--space-8:2rem;--space-10:2.5rem;--space-12:3rem;--max:1280px;}
     *{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:Inter,system-ui,sans-serif;background:#020714;color:var(--text);background-image:radial-gradient(circle at 86% 15%, rgba(80,168,255,.18), transparent 18%),radial-gradient(circle at 72% 48%, rgba(207,98,255,.12), transparent 20%),linear-gradient(180deg, rgba(4,10,24,.92), rgba(2,7,20,1));}
@@ -32,27 +33,38 @@
     .timeline,.queue{display:grid;gap:var(--space-3)} .item{display:flex;justify-content:space-between;gap:var(--space-4);align-items:flex-start;padding:1rem 1rem;border-radius:18px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06)} .item strong{display:block}.item small{display:block;color:var(--muted)} .badge{padding:.42rem .7rem;border-radius:var(--pill);font-size:.78rem;background:rgba(80,168,255,.14);color:#ddebff;border:1px solid rgba(80,168,255,.28)}
     .mini{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-4)}
     .footer{padding-top:var(--space-10);color:var(--muted);font-size:.94rem}
-    @media (max-width:980px){.hero,.shell,.grid2,.stats,.mini{grid-template-columns:1fr}.links{display:none}h1{max-width:unset}}
+    @media (max-width:980px){.hero,.shell,.grid2,.stats,.mini{grid-template-columns:1fr}h1{max-width:unset}}
   </style>
 </head>
 <body>
   <main class="page">
-    <nav class="nav">
-      <a class="brand" href="/" aria-label="The Trendsetter Agency home">
-        <span class="mark">T</span>
-        <span class="copy">
+    <nav class="tts-nav" data-tts-canonical-navigation="true">
+      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+        <span class="tts-brand-mark">T</span>
+        <span class="tts-brand-copy">
           <strong>The Trendsetter Agency</strong>
           <em>Passion-led mobile apps • built to truly help people</em>
         </span>
       </a>
-      <div class="links">
-        <a href="/apps/health-logic/">Health Logic</a>
-        <a href="/apps/toppick-resume/">TopPick Resume</a>
-        <a href="/apps/my-muse/">My Muse</a>
-        <a href="/about/">About</a>
-        <a href="/portal/">Portal</a>
-        <a href="/support.html">Support</a>
+
+      <div class="tts-links">
+        <details class="tts-soon">
+          <summary>Health Logic ▾</summary>
+          <div class="tts-soon-menu">
+            <a href="/apps/health-logic/">HealthLogic App</a>
+            <a href="/healthlogic/">Ingredient Guides</a>
+            <a href="/healthlogic/videos/">Video Library</a>
+            <a href="/healthlogic/featured/">Featured Articles</a>
+            <a href="/healthlogic/about-healthlogic/">About HealthLogic</a>
+            <a href="/healthlogic/methodology/">Methodology</a>
+            <a href="/apps/health-logic/privacy/">Privacy Policy</a>
+          </div>
+        </details>
+        <a class="tts-pos-nav" href="/pos/">NEW POS SYSTEM</a>
+        <a href="/healthlogic/">Ingredient Guides</a>
+        <a href="/custom-ai-agents/">Custom AI Agents</a>
       </div>
+      <a href="/portal/">Portal</a>
     </nav>
 
     <section class="hero">
