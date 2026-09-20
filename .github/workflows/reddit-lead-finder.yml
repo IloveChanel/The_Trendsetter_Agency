@@ -1,0 +1,38 @@
+name: Reddit Lead Finder
+
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  issues: write
+
+jobs:
+  find-leads:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache seen-item state
+        uses: actions/cache@v4
+        with:
+          path: tools/reddit-lead-finder/state
+          key: reddit-lead-finder-state-${{ github.run_id }}
+          restore-keys: |
+            reddit-lead-finder-state-
+
+      - name: Install dependencies
+        run: pip install -r tools/reddit-lead-finder/requirements.txt
+
+      - name: Run lead finder
+        env:
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT: "trendsetter-lead-finder/1.0 by u/thetrendsetteragency"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python tools/reddit-lead-finder/reddit_lead_finder.py

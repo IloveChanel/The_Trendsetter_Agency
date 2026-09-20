@@ -1,0 +1,33 @@
+# Subreddits to watch (no "r/" prefix) and phrases that usually signal
+# someone is actively looking to hire a developer / agency / AI builder.
+# Edit freely — no code changes needed.
+
+subreddits:
+  - SaaS
+  - automation
+  - webdev
+  - Entrepreneur
+  - smallbusiness
+  - artificial
+  - nocode
+  - AI_Agents
+
+keywords:
+  - "looking for a developer"
+  - "need a developer"
+  - "need help building"
+  - "looking for an agency"
+  - "need an app built"
+  - "looking for someone to build"
+  - "need a freelancer"
+  - "need a backend fix"
+  - "looking for a co-founder"
+  - "build me an app"
+  - "need an ai agent"
+  - "looking for an ai developer"
+  - "who can build this"
+  - "hire a developer"
+
+# How many of the most recent posts/comments to scan per subreddit each run.
+post_limit: 25
+comment_limit: 50

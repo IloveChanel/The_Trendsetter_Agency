@@ -7,3 +7,6 @@ _quarantine/
 .env*.local
 .vercel/
 .env.local
+tools/reddit-lead-finder/state/
+__pycache__/
+*.pyc
