@@ -766,3 +766,6 @@ body.tts-image-home{
 .tts-image-home .card p,.tts-aff-card span{color:#b9d1df}
 .tts-image-home .card a{color:#5de9ff}
 .tts-purpose-card i{background:rgba(8,30,58,.5)}
+a.tts-verifyly-nav{display:inline-flex;align-items:center;gap:6px;background:#1e5c45;color:#fff!important;font-weight:800;letter-spacing:.04em;padding:8px 14px;border-radius:999px;text-decoration:none;text-shadow:none;margin:0 4px}
+a.tts-verifyly-nav:hover{background:#14221c;color:#fff!important}
+a.tts-verifyly-nav::before{content:"✓";font-weight:900}
