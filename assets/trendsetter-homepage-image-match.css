@@ -769,3 +769,7 @@ body.tts-image-home{
 a.tts-verifyly-nav{display:inline-flex;align-items:center;gap:6px;background:#1e5c45;color:#fff!important;font-weight:800;letter-spacing:.04em;padding:8px 14px;border-radius:999px;text-decoration:none;text-shadow:none;margin:0 4px}
 a.tts-verifyly-nav:hover{background:#14221c;color:#fff!important}
 a.tts-verifyly-nav::before{content:"✓";font-weight:900}
+
+a.tts-chef-nav{display:inline-flex;align-items:center;gap:6px;background:#e2b15a;color:#14110e!important;font-weight:800;letter-spacing:.04em;padding:8px 14px;border-radius:999px;text-decoration:none;text-shadow:none;margin:0 4px}
+a.tts-chef-nav:hover{background:#f3d08a;color:#14110e!important}
+a.tts-chef-nav::before{content:"🍳"}

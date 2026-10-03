@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ChefMaster | Cook with what you already have | The Trendsetter Agency</title>
+<meta name="description" content="ChefMaster photographs your fridge, pantry, and spices and writes a recipe from the AI account you connect. Privacy policy, terms, and support for the App Store and Google Play." />
+<link rel="canonical" href="https://www.thetrendsetteragency.com/apps/chefmaster/" />
+<meta name="theme-color" content="#14110e" />
+<link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
+<style>
+:root{--bg:#14110e;--card:#221c17;--line:#3a3128;--gold:#e2b15a;--ink:#14110e;--text:#f4efe6;--muted:#d9d0c5;--label:#b7aa9c;--danger:#ffb4a8}
+*{box-sizing:border-box}
+html,body.chef-site{margin:0;background:#14110e!important;background-image:none!important;color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+body.chef-site::before,body.chef-site::after{display:none!important}
+a{color:var(--gold)}
+.chef-wrap{max-width:1120px;margin:0 auto;padding:28px 20px 72px}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center;margin-top:12px}
+.kicker{color:var(--gold);letter-spacing:.14em;text-transform:uppercase;font-size:12px;font-weight:800;margin:0 0 10px}
+h1{font-size:clamp(2.4rem,5vw,4.2rem);line-height:.98;letter-spacing:-.04em;margin:0 0 14px}
+.lede{font-size:1.15rem;line-height:1.55;color:var(--muted);max-width:40rem}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--gold);color:var(--ink);text-decoration:none;font-weight:800;border-radius:999px;padding:12px 16px}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line)}
+.phones{display:flex;gap:16px;overflow-x:auto;padding:8px 2px 22px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.phone{flex:0 0 280px;scroll-snap-align:start;background:#0c0a08;border:1px solid var(--line);border-radius:32px;padding:12px 12px 16px;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+.phone figcaption{color:var(--label);font-size:12px;text-align:center;margin-top:10px}
+.notch{width:96px;height:8px;border-radius:99px;background:#2a241e;margin:2px auto 12px}
+.screen{background:var(--bg);border-radius:20px;min-height:470px;padding:16px;display:flex;flex-direction:column;gap:10px}
+.screen h2{font-size:28px;line-height:1.12;margin:0;letter-spacing:-.03em}
+.screen p{margin:0;color:var(--muted);font-size:15px;line-height:1.4}
+.gold,.ghost-btn,.snap{border-radius:14px;padding:13px 12px;font-weight:800;text-align:center}
+.gold{background:var(--gold);color:var(--ink)}
+.ghost-btn{border:1px solid var(--line);color:var(--text)}
+.snap{background:var(--gold);color:var(--ink);border-radius:16px;padding:34px 12px;font-size:18px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12px;color:var(--text)}
+.chip.on{background:var(--gold);color:var(--ink);border-color:var(--gold);font-weight:800}
+.mini{color:var(--label);font-size:12px;line-height:1.4}
+.card{background:var(--card);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:6px}
+.card strong{font-size:16px}
+.row-label{color:var(--gold);font-weight:800;font-size:13px}
+.section{margin-top:54px}
+.section h2{font-size:clamp(1.7rem,3vw,2.4rem);letter-spacing:-.03em;margin:0 0 10px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.panel h3{margin:0 0 8px;font-size:1.05rem}
+.panel p,.panel li{color:var(--muted);line-height:1.55}
+.steps{display:grid;gap:12px}
+.step{display:grid;grid-template-columns:52px 1fr;gap:12px;align-items:start;background:var(--card);border-radius:16px;padding:14px;border:1px solid var(--line)}
+.num{width:52px;height:52px;border-radius:14px;background:var(--gold);color:var(--ink);display:grid;place-items:center;font-weight:900}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--gold);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.legal h2{margin-top:28px}
+.legal h3{margin:18px 0 6px}
+.legal p,.legal li{color:var(--muted);line-height:1.6}
+.contact{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.contact a{font-weight:700}
+footer.chef-foot{margin-top:40px;color:var(--label);font-size:14px}
+.jump{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0}
+.jump a{color:var(--text);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:13px}
+@media(max-width:860px){
+  .hero,.grid,.contact{grid-template-columns:1fr}
+  .tts-nav{flex-wrap:wrap}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","name":"The Trendsetter Agency LLC","url":"https://www.thetrendsetteragency.com/","email":"MichelleTrendsetters@gmail.com","telephone":"+1-248-321-9121"},
+{"@type":"MobileApplication","name":"ChefMaster","applicationCategory":"FoodApplication","operatingSystem":"iOS, Android","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Organization","name":"The Trendsetter Agency LLC"},"description":"Photograph food you already have and get three recipes from the AI account you connect.","privacyPolicy":"https://www.thetrendsetteragency.com/apps/chefmaster/privacy/"}
+]}
+</script>
+</head>
+<body class="chef-site">
+<nav class="tts-nav" data-tts-canonical-navigation="true">
+      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+        <span class="tts-brand-mark">T</span>
+        <span class="tts-brand-copy">
+          <strong>The Trendsetter Agency</strong>
+          <em>Passion-led mobile apps • built to truly help people</em>
+        </span>
+      </a>
+
+      <div class="tts-links">
+        <details class="tts-soon">
+          <summary>Health Logic ▾</summary>
+          <div class="tts-soon-menu">
+            <a href="/apps/health-logic/">HealthLogic App</a>
+            <a href="/healthlogic/">Ingredient Guides</a>
+            <a href="/healthlogic/videos/">Video Library</a>
+            <a href="/healthlogic/featured/">Featured Articles</a>
+            <a href="/healthlogic/about-healthlogic/">About HealthLogic</a>
+            <a href="/healthlogic/methodology/">Methodology</a>
+            <a href="/apps/health-logic/privacy/">Privacy Policy</a>
+          </div>
+        </details>
+        <a class="tts-pos-nav" href="/pos/">NEW POS SYSTEM</a>
+        <a class="tts-verifyly-nav" href="/apps/verifyly/">Verifyly</a>
+        <a class="tts-chef-nav" href="/apps/chefmaster/" aria-current="page">ChefMaster</a>
+        <a href="/healthlogic/">Ingredient Guides</a>
+        <a href="/custom-ai-agents/">Custom AI Agents</a>
+      </div>
+      <a href="/portal/">Portal</a>
+    </nav>
+<main class="chef-wrap">
+
+<section class="hero">
+  <div>
+    <p class="kicker">ChefMaster · by The Trendsetter Agency</p>
+    <h1>Cook with what you already have.</h1>
+    <p class="lede">Snap the fridge, pantry, spices, and extras. ChefMaster asks your own AI account for three recipes, then writes the one you pick. Nothing to retype. No grocery cart.</p>
+    <div class="actions">
+      <a class="btn" href="#the-app">See the app</a>
+      <a class="btn ghost" href="#privacy">Privacy policy</a>
+      <a class="btn ghost" href="/apps/chefmaster/support/">Support</a>
+    </div>
+    <div class="jump">
+      <a href="#how">How it works</a>
+      <a href="#rules">Food rules</a>
+      <a href="#account">Account</a>
+      <a href="#stores">App stores</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#terms">Terms</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+  <div class="phone" style="margin-inline:auto">
+    <div class="notch"></div>
+    <div class="screen">
+      <p class="kicker">What's for dinner?</p>
+      <h2>Cook with what you already have.</h2>
+      <p>Snap your fridge, pantry, spices, and extras. Skip any you like. We'll give you 3 recipes to choose from.</p>
+      <div class="gold">📸 Snap & Cook</div>
+      <div class="ghost-btn">My saved recipes</div>
+      <div class="ghost-btn">Settings</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="the-app">
+  <p class="kicker">The screens</p>
+  <h2>It looks like this on the phone.</h2>
+  <p class="lede">Same colors, same words, same steps as the app: warm black, gold buttons, one question at a time.</p>
+  <div class="phones" aria-label="ChefMaster screens">
+    <figure class="phone"><div class="notch"></div><div class="screen">
+      <p class="kicker">Setup</p>
+      <h2>Connect an AI account.</h2>
+      <p>No API key to copy. Sign in to a provider you already use, or start the free model with no account.</p>
+      <div class="gold">Connect with Google</div>
+      <div class="ghost-btn">Continue with ChatGPT</div>
+      <div class="ghost-btn">Use Free Open-Source AI</div>
+      <p class="mini">Free uses Llama 3.3. It reads text only. Photos need Google or ChatGPT.</p>
+    </div><figcaption>Connect</figcaption></figure>
+    <figure class="phone"><div class="notch"></div><div class="screen">
+      <p class="kicker">Any food rules?</p>
+      <h2>We'll remember it on this phone.</h2>
+      <p class="mini">These are cooking constraints. Recipes are not medical advice.</p>
+      <div class="row-label">Diet</div>
+      <div class="chips"><span class="chip on">No restriction</span><span class="chip">Vegetarian</span><span class="chip">Vegan</span><span class="chip">Halal</span><span class="chip">Kosher</span><span class="chip">Gluten free</span></div>
+      <div class="row-label">Allergies</div>
+      <div class="chips"><span class="chip on">None</span><span class="chip">Peanuts</span><span class="chip">Milk</span><span class="chip">Shellfish</span><span class="chip">Sesame</span></div>
+      <div class="gold">Next: snap your food</div>
+    </div><figcaption>Food rules</figcaption></figure>
+    <figure class="phone"><div class="notch"></div><div class="screen">
+      <p style="font-size:42px;margin:0">🧊</p>
+      <h2>What's in your fridge?</h2>
+      <p>Open the fridge and snap a photo. Anything about to expire is perfect.</p>
+      <p class="mini">Optional. Skip it if you don't have any.</p>
+      <div class="snap">📸 Take a photo</div>
+      <div class="ghost-btn">Choose from my photos</div>
+      <div class="ghost-btn">Skip</div>
+    </div><figcaption>Fridge</figcaption></figure>
+    <figure class="phone"><div class="notch"></div><div class="screen">
+      <p class="kicker">Ready to cook</p>
+      <h2>Show me 3 recipes</h2>
+      <div class="card"><span class="row-label">Option 1 · Quick & Easy</span><strong>Skillet eggs and greens</strong><span class="mini">Under 20 minutes</span></div>
+      <div class="card"><span class="row-label">Option 2 · Hearty comfort</span><strong>Pantry tomato beans</strong><span class="mini">Uses the can on the shelf</span></div>
+      <div class="card"><span class="row-label">Option 3 · Chef's pick</span><strong>Garlic pasta from leftovers</strong><span class="mini">Tap for the full recipe</span></div>
+      <p class="mini">Sample of the result screen. Your photos decide the real recipes.</p>
+    </div><figcaption>Three choices</figcaption></figure>
+  </div>
+</section>
+
+<section class="section" id="how">
+  <p class="kicker">How it works</p>
+  <h2>One step at a time.</h2>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><div><h3>Make an account</h3><p>Email and a password of at least 8 characters. Sign in again on the same phone later. There is no separate Apple, Google, or Microsoft login for the ChefMaster account.</p></div></div>
+    <div class="step"><div class="num">2</div><div><h3>Connect the model that will cook</h3><p>Connect Google for Gemini, continue with ChatGPT, or use the free Llama 3.3 model. The key stays encrypted on the server. The phone never stores it. Claude or a custom OpenAI-compatible endpoint can be turned on for an account when that provider is configured. Buttons that cannot finish a login are hidden, because stores reject dead buttons.</p></div></div>
+    <div class="step"><div class="num">3</div><div><h3>Say how you want recipes</h3><p>Daily plan or only when you ask. One to fourteen days. Save on this phone, or email you. You can still share any recipe from the result.</p></div></div>
+    <div class="step"><div class="num">4</div><div><h3>Set food rules</h3><p>Diet, allergies, and conditions to cook around. A search box can add another tag, such as keto, when the tag list is available. The phone copy of your answers wins over the account copy.</p></div></div>
+    <div class="step"><div class="num">5</div><div><h3>Photograph four places. Skip any.</h3><p>Fridge, pantry, spices, then sauces, oils, and extras. One big Take a photo button, or a picture you already took. At least one photo is required.</p></div></div>
+    <div class="step"><div class="num">6</div><div><h3>Pick one of three, then save or share</h3><p>Quick and easy under 20 minutes, hearty comfort food, or a creative chef’s pick. The full card lists ingredients, steps, prep, cook time, and servings, and says it is not medical advice. Save to the phone, or share a note with a link to try the app.</p></div></div>
+  </div>
+</section>
+
+<section class="section" id="rules">
+  <p class="kicker">What you can tell it</p>
+  <h2>Food rules, not a medical chart.</h2>
+  <div class="grid">
+    <article class="panel"><h3>Diet</h3><p>No restriction, vegetarian, vegan, pescatarian, halal, kosher, low carb, low sugar, gluten free.</p></article>
+    <article class="panel"><h3>Allergies</h3><p>None, peanuts, tree nuts, milk, eggs, soy, wheat, shellfish, fish, sesame. The model is told to keep that ingredient out, including likely cross-contact sources.</p></article>
+    <article class="panel"><h3>Conditions to cook around</h3><p>None, diabetes, high blood pressure, kidney disease, celiac, heart disease. Optional. Used only as a cooking limit. The screen says this does not replace a clinician.</p></article>
+  </div>
+</section>
+
+<section class="section" id="account">
+  <p class="kicker">Your account</p>
+  <h2>What stays, and what you can erase.</h2>
+  <div class="grid">
+    <article class="panel"><h3>On the phone</h3><p>Saved recipes and the food rules you picked. Find them under My saved recipes. Remove one there, or clear the app’s data.</p></article>
+    <article class="panel"><h3>On the server</h3><p>Email, hashed password, optional name, diet and condition choices saved to the account, and the encrypted token for the AI you connected. Photos are not kept as files.</p></article>
+    <article class="panel"><h3>Delete</h3><p>Settings, then Delete account. That removes the server account and related recipes, pantry text, and keys. You can also email us from the account address. Apple requires this, and it is in the app.</p></article>
+  </div>
+</section>
+
+<section class="section" id="stores">
+  <p class="kicker">App stores</p>
+  <h2>What a reviewer needs on one page.</h2>
+  <div class="panel">
+    <ul>
+      <li><strong>Name:</strong> ChefMaster</li>
+      <li><strong>Seller:</strong> The Trendsetter Agency LLC</li>
+      <li><strong>Bundle id and Android package:</strong> com.trendsetters.chefmaster</li>
+      <li><strong>Category:</strong> Food & Drink</li>
+      <li><strong>Age:</strong> 4+ / Everyone. No medical claims. Not directed at children under 13.</li>
+      <li><strong>Price:</strong> No in-app purchase and no card collection in the shipping app.</li>
+      <li><strong>Privacy policy URL:</strong> <a href="https://www.thetrendsetteragency.com/apps/chefmaster/privacy/">https://www.thetrendsetteragency.com/apps/chefmaster/privacy/</a></li>
+      <li><strong>Terms URL:</strong> <a href="https://www.thetrendsetteragency.com/apps/chefmaster/terms/">https://www.thetrendsetteragency.com/apps/chefmaster/terms/</a></li>
+      <li><strong>Support URL:</strong> <a href="https://www.thetrendsetteragency.com/apps/chefmaster/support/">https://www.thetrendsetteragency.com/apps/chefmaster/support/</a></li>
+      <li><strong>Permissions:</strong> camera, and photos you choose. The system asks first.</li>
+      <li><strong>Not in this version:</strong> grocery ordering, a cart, and social login for the ChefMaster account. Those stay out until they actually work.</li>
+    </ul>
+    <p>The app is not yet on the public store shelves. This website is the listing, privacy policy, and support page to paste into App Store Connect and Play Console when you submit the build.</p>
+  </div>
+</section>
+
+<section class="section legal" id="privacy">
+
+<p class="kicker">Privacy policy</p>
+<h2 id="privacy-title">ChefMaster Privacy Policy</h2>
+<p>Effective date: October 3, 2026. Last updated: October 3, 2026.</p>
+<p>This is the public privacy policy for the ChefMaster mobile application on iOS and Android, published by <strong>The Trendsetter Agency LLC</strong> (“we,” “us”). It is written for people using the app and for Apple App Store and Google Play review.</p>
+<p>ChefMaster is a personal kitchen helper. You photograph food you already have, and the app asks the AI account you connect to suggest recipes. It is not a doctor, dietitian, grocery store, or medical device.</p>
+
+<h3>1. Who to contact</h3>
+<ul>
+<li><strong>Developer:</strong> The Trendsetter Agency LLC</li>
+<li><strong>App:</strong> ChefMaster</li>
+<li><strong>Website:</strong> <a href="https://www.thetrendsetteragency.com/">https://www.thetrendsetteragency.com/</a></li>
+<li><strong>Privacy policy URL:</strong> <a href="https://www.thetrendsetteragency.com/apps/chefmaster/privacy/">https://www.thetrendsetteragency.com/apps/chefmaster/privacy/</a></li>
+<li><strong>Support URL:</strong> <a href="https://www.thetrendsetteragency.com/apps/chefmaster/support/">https://www.thetrendsetteragency.com/apps/chefmaster/support/</a></li>
+<li><strong>Email:</strong> <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a> and <a href="mailto:support@thetrendsetteragency.com">support@thetrendsetteragency.com</a></li>
+<li><strong>Phone:</strong> <a href="tel:+12483219121">(248) 321-9121</a></li>
+<li><strong>Appointments:</strong> <a href="https://calendly.com/michelletrendsetters/30min">calendly.com/michelletrendsetters/30min</a></li>
+</ul>
+
+<h3>2. Information the app handles</h3>
+<table>
+<thead><tr><th>Data</th><th>Do we collect it?</th><th>Linked to you?</th><th>Used to track you?</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Email address and password</td><td>Yes. Password is stored only as a bcrypt hash.</td><td>Yes</td><td>No</td><td>Create and sign in to your account.</td></tr>
+<tr><td>Name, if you enter one</td><td>Optional</td><td>Yes</td><td>No</td><td>Label saved recipes, such as “Alex’s ChefMaster Recipes.”</td></tr>
+<tr><td>Diet, allergies, and optional health conditions</td><td>Only if you select them</td><td>Yes</td><td>No</td><td>Cooking constraints. Not a medical record and not used to diagnose or treat you.</td></tr>
+<tr><td>Photos of your fridge, pantry, spices, or extras</td><td>Sent when you take or choose a photo. We do not keep the image file.</td><td>Sent with the recipe request</td><td>No</td><td>So your AI provider can see what you have.</td></tr>
+<tr><td>Recipes, meal preferences, and pantry text</td><td>Yes, when you generate or save them</td><td>Yes</td><td>No</td><td>Show, save, and share recipes you asked for.</td></tr>
+<tr><td>AI sign-in token for the provider you connect</td><td>Yes, encrypted</td><td>Yes</td><td>No</td><td>Call that provider as you. We never see that provider’s password.</td></tr>
+<tr><td>Precise location, contacts, microphone, advertising ID, payment card</td><td>No</td><td>—</td><td>No</td><td>Not used by this app.</td></tr>
+</tbody>
+</table>
+
+<h3>3. Camera and photo library</h3>
+<p>iOS and Android ask before the app uses the camera or photo library. The permission text in the app is: “ChefMaster uses the camera to photograph food in your fridge, freezer, and pantry so it can suggest a recipe,” and “ChefMaster reads photos you choose of your kitchen so it can suggest a recipe from what you have.” You can say no. The app cannot invent a photo recipe without at least one picture.</p>
+<p>Photos are resized on your phone and sent over HTTPS with the recipe request. ChefMaster does not build a photo library of your kitchen. The image is not written into our database. The AI provider you chose receives it under that provider’s own terms, except the free model, which never receives photos.</p>
+
+<h3>4. Health and diet information</h3>
+<p>You may pick diet styles (including vegetarian, vegan, pescatarian, halal, kosher, low carb, low sugar, gluten free), allergies (including peanuts, tree nuts, milk, eggs, soy, wheat, shellfish, fish, sesame), and conditions to cook around (including diabetes, high blood pressure, kidney disease, celiac, heart disease). You can leave every group on “none.”</p>
+<p>These choices are cooking limits only. Recipe text in the app says it is not medical advice. We do not use this information for advertising, insurance, credit, or sale. If you generate a recipe, the limits you picked are included in the request to your AI provider so the recipe can respect them.</p>
+
+<h3>5. AI providers</h3>
+<p>You bring the model. The phone does not hold an API key. If you connect an account, the sign-in token is encrypted on our server with AES-256-GCM. Calls go to the provider you pick:</p>
+<ul>
+<li><strong>Google Gemini</strong>, if you connect Google. Photos can be sent. <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</li>
+<li><strong>OpenAI ChatGPT</strong>, if you connect ChatGPT. Photos can be sent. Recipe requests to the OpenAI Responses API are sent with storage turned off on our side. <a href="https://openai.com/policies/privacy-policy">OpenAI Privacy Policy</a>.</li>
+<li><strong>Anthropic Claude</strong>, if that provider is switched on for your account. Photos can be sent. <a href="https://www.anthropic.com/legal/privacy">Anthropic Privacy Policy</a>.</li>
+<li><strong>Free model:</strong> Llama 3.3, hosted by OVHcloud AI Endpoints. Text only. No photo. No account on that provider. It is rate limited. <a href="https://www.ovhcloud.com/en/terms-and-conditions/privacy-policy">OVHcloud Privacy Policy</a>.</li>
+</ul>
+<p>We do not use your photos, recipes, or keys to train a ChefMaster model. Provider charges, if any, are between you and that provider.</p>
+
+<h3>6. What we do not do</h3>
+<ul>
+<li>We do not sell or rent personal information.</li>
+<li>We do not show ads and we do not use advertising identifiers.</li>
+<li>We do not track you across other companies’ apps or websites.</li>
+<li>We do not use Apple or Google account login for the ChefMaster account itself. The account is email and password. “Connect with Google” and “Continue with ChatGPT” are only for the AI that writes the recipe.</li>
+<li>Grocery ordering is not in the app. There is no cart and no store login.</li>
+</ul>
+
+<h3>7. Where data is stored</h3>
+<ul>
+<li><strong>On your phone:</strong> recipes you tap “Save to my phone,” plus the food rules you picked, using the device’s local storage. Uninstalling the app or clearing its data removes that copy.</li>
+<li><strong>On our server:</strong> account, hashed password, optional name, diet and condition choices you save to the account, encrypted AI tokens, and recipes the server creates for you. Hosted with Railway and PostgreSQL. <a href="https://railway.com/legal/privacy">Railway privacy policy</a>.</li>
+<li><strong>Email:</strong> if you choose email delivery and a mail key is configured, a recipe can be sent through Resend to the address you typed. <a href="https://resend.com/legal/privacy-policy">Resend privacy policy</a>. Otherwise share uses your phone’s own share sheet.</li>
+</ul>
+<p>All traffic between the app and our server uses HTTPS. We keep account data while the account exists. We do not keep a separate photo archive.</p>
+
+<h3>8. Deletion</h3>
+<p>In the app, open Settings and tap <strong>Delete account</strong>. That deletes the user and the related account data stored on our server, including pantry text, recipes, and encrypted AI tokens. It cannot be undone.</p>
+<p>You can also email <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a> or <a href="mailto:support@thetrendsetteragency.com">support@thetrendsetteragency.com</a> from the account email and ask us to delete it. We will delete the server account. Recipes saved only on the phone stay on the phone until you remove them or delete the app.</p>
+<p>A public deletion note for all Trendsetter apps is also at <a href="https://www.thetrendsetteragency.com/data-deletion.html">thetrendsetteragency.com/data-deletion</a>.</p>
+
+<h3>9. Your choices and rights</h3>
+<p>You can decline the camera, skip any photo, leave diet and health questions blank, sign out, and delete the account.</p>
+<p><strong>California (CCPA/CPRA):</strong> you can ask what we collected, ask us to delete it, and ask us to correct it. We do not sell or share personal information for cross-context behavioral advertising. We will not discriminate against you for asking.</p>
+<p><strong>EEA, UK, and similar laws (GDPR):</strong> you can ask for access, correction, deletion, a copy, or a limit on processing, and you can object. The legal bases we rely on are: performing the account you asked us to create, the steps you request (making a recipe), and our legitimate interest in keeping the service secure. Health notes are used only because you chose them as cooking limits.</p>
+<p>To use any of these rights, email us. You may also complain to your local data protection authority.</p>
+
+<h3>10. Children</h3>
+<p>ChefMaster is not directed at children under 13, and we do not knowingly create accounts for them. The store age rating is 4+ / Everyone because the content is cooking, not because we want children’s accounts. If you believe a child under 13 gave us personal information, email us and we will delete it.</p>
+
+<h3>11. International transfers</h3>
+<p>We are in the United States. The app, Railway, and the AI providers above may process information in the United States and other countries where those providers operate. By creating an account you understand the information will be processed there.</p>
+
+<h3>12. Security</h3>
+<p>We use HTTPS, bcrypt password hashes, and AES-256-GCM for connected AI tokens. No method of sending data is perfectly secure. Do not use ChefMaster for emergency medical decisions.</p>
+
+<h3>13. Changes</h3>
+<p>If this policy changes, we will update the date at the top of this page. The URL stays the same so the App Store and Play Console listing can keep pointing here. Continued use after the update means you accept the new policy for new activity. If a change is about how we use health information, we will not expand that use without asking you in the app.</p>
+
+<h3>14. Store disclosure summary</h3>
+<p>Use this page as the privacy policy URL in App Store Connect and Google Play Console.</p>
+<ul>
+<li><strong>Apple App Privacy:</strong> Contact Info (email, optional name), Health (optional conditions), User Content (photos and recipes). All linked to the user. None used for tracking. Photos are not kept by us.</li>
+<li><strong>Google Play Data safety:</strong> data is encrypted in transit, users can request deletion, data is not sold. Collected: email, optional name, optional health info, photos (processed, shared with the user’s AI provider, not stored by us), app content you create (recipes and food rules).</li>
+<li><strong>Permissions:</strong> Camera, and photo library / read images. No location, contacts, microphone, or tracking permission.</li>
+<li><strong>Bundle id / package:</strong> com.trendsetters.chefmaster</li>
+<li><strong>Export:</strong> standard HTTPS only. The app does not use non-exempt encryption of its own.</li>
+</ul>
+
+</section>
+
+<section class="section legal" id="terms">
+
+<p class="kicker">Terms</p>
+<h2>ChefMaster Terms of Use</h2>
+<p>Effective date: October 3, 2026. Last updated: October 3, 2026.</p>
+<p>These terms cover the ChefMaster app from The Trendsetter Agency LLC. The agency’s general site terms also live at <a href="/terms.html">thetrendsetteragency.com/terms</a>. If they conflict about ChefMaster, these ChefMaster terms win.</p>
+<ul>
+<li>You need an account with your email and a password of at least 8 characters. You are responsible for that password.</li>
+<li>Recipes are suggestions from the AI account you connect. They are not medical, nutrition, or allergy advice. They do not replace a clinician.</li>
+<li>You are responsible for checking ingredients and allergens before you cook or serve food, including to children or anyone with an allergy or medical condition.</li>
+<li>You may only photograph kitchens and food you are allowed to photograph.</li>
+<li>If you connect Google, ChatGPT, Claude, or another provider, that provider’s terms and prices apply to you. ChefMaster does not sell credits or take a card in the app.</li>
+<li>The free Llama option is text-only and may be limited or unavailable.</li>
+<li>Do not misuse the service, probe it, or try to read another person’s account.</li>
+<li>We can suspend an account that breaks these terms. You can delete yours at any time in Settings.</li>
+<li>The app is provided as available. We do not promise that a recipe will be accurate, complete, or safe for your body.</li>
+<li>To the extent the law allows, The Trendsetter Agency LLC is not liable for cooking outcomes, provider outages, or lost local recipes on a phone you reset. The law where you live may give you rights these terms cannot waive.</li>
+</ul>
+<p>Questions: <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a>, <a href="mailto:support@thetrendsetteragency.com">support@thetrendsetteragency.com</a>, or <a href="tel:+12483219121">(248) 321-9121</a>.</p>
+
+</section>
+
+<section class="section">
+
+<div class="contact" id="contact">
+  <div class="panel">
+    <p class="kicker">Contact</p>
+    <h2>The Trendsetter Agency LLC</h2>
+    <p>ChefMaster is published by the same studio as the rest of this website. Michelle Vance is the account holder.</p>
+    <p><strong>Email</strong><br><a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a><br><a href="mailto:support@thetrendsetteragency.com">support@thetrendsetteragency.com</a></p>
+    <p><strong>Phone</strong><br><a href="tel:+12483219121">(248) 321-9121</a></p>
+    <p><strong>Book a call</strong><br><a href="https://calendly.com/michelletrendsetters/30min">calendly.com/michelletrendsetters/30min</a></p>
+    <p><strong>Website</strong><br><a href="https://www.thetrendsetteragency.com/">www.thetrendsetteragency.com</a></p>
+  </div>
+  <div class="panel">
+    <h3>For a store reviewer</h3>
+    <p>Privacy policy URL:<br><a href="https://www.thetrendsetteragency.com/apps/chefmaster/privacy/">thetrendsetteragency.com/apps/chefmaster/privacy/</a></p>
+    <p>Support URL:<br><a href="https://www.thetrendsetteragency.com/apps/chefmaster/support/">thetrendsetteragency.com/apps/chefmaster/support/</a></p>
+    <p>Account deletion is inside the app under Settings, and by email from the account address.</p>
+  </div>
+</div>
+
+</section>
+
+<footer class="chef-foot">© 2026 The Trendsetter Agency LLC · <a href="/apps/chefmaster/">ChefMaster</a> · <a href="/apps/chefmaster/privacy/">Privacy</a> · <a href="/apps/chefmaster/terms/">Terms</a> · <a href="/apps/chefmaster/support/">Support</a> · <a href="/">Home</a></footer>
+</main>
+</body>
+</html>
