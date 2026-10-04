@@ -1024,3 +1024,34 @@ a.tts-pipeline-nav:focus-visible{
 @media(prefers-reduced-motion:reduce){
   a.tts-pipeline-nav,.eco-card,.pipe-form button{transition:none}
 }
+
+.eco-own{--glow:rgba(96,165,250,.55);--chip:#93c5fd}
+.pipe-home{margin-top:10px;padding-bottom:18px}
+.pipe-status{
+  position:relative;
+  display:block;
+  margin-top:12px;
+  color:#fde68a;
+  font-size:13px;
+  font-weight:750;
+  letter-spacing:.01em;
+}
+.pipe-home-link{margin:22px 0 0}
+.pipe-home-link a{color:#9aefff;font-weight:800;text-decoration:none}
+.pipe-home-link a:hover{color:#fff}
+.pipe-products{margin:8px 0 36px}
+.pipe-products h2{max-width:22ch;font-size:clamp(28px,3vw,42px)}
+.pipe-product-links{position:relative;display:flex;flex-wrap:wrap;gap:10px 14px;margin-top:14px;font-size:14px;font-weight:750}
+.pipe-product-links a{color:#9aefff;text-decoration:none}
+.pipe-product-links a:hover{color:#fff}
+.status-banner{
+  margin:0 0 16px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(253,230,138,.45);
+  background:rgba(120,80,10,.28);
+  color:#fde68a;
+  font-size:13px;
+  font-weight:750;
+  letter-spacing:.02em;
+}
