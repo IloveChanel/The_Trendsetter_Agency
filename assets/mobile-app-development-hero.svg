@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#071126"/><stop offset="1" stop-color="#101d3d"/></linearGradient><linearGradient id="a" x1="0" x2="1"><stop stop-color="#20d9ff"/><stop offset="1" stop-color="#ff4fa3"/></linearGradient><filter id="s"><feDropShadow dx="0" dy="24" stdDeviation="25" flood-opacity=".35"/></filter></defs>
+<rect width="1600" height="900" fill="url(#g)"/><circle cx="1350" cy="150" r="260" fill="#20d9ff" opacity=".08"/><circle cx="200" cy="760" r="300" fill="#ff4fa3" opacity=".06"/>
+<text x="110" y="145" fill="#7ee7ff" font-family="Arial,sans-serif" font-size="30" font-weight="700" letter-spacing="5">THE TRENDSETTER AGENCY</text>
+<text x="110" y="225" fill="white" font-family="Arial,sans-serif" font-size="76" font-weight="800">I BUILD MOBILE APPS.</text>
+<text x="110" y="290" fill="#b9c8e6" font-family="Arial,sans-serif" font-size="31">From an idea and a problem to a working digital product.</text>
+<rect x="112" y="350" width="470" height="118" rx="28" fill="#0d1830" stroke="#20d9ff" stroke-width="2"/>
+<text x="145" y="400" fill="white" font-family="Arial,sans-serif" font-size="27" font-weight="700">Concept → Architecture → Build</text><text x="145" y="440" fill="#9fb0d2" font-family="Arial,sans-serif" font-size="22">Mobile • AI • APIs • Data • Platforms</text>
+<g filter="url(#s)">
+<rect x="820" y="105" width="310" height="650" rx="42" fill="#030814" stroke="#60719b" stroke-width="8"/>
+<rect x="846" y="155" width="258" height="550" rx="25" fill="#081a28"/>
+<circle cx="975" cy="185" r="7" fill="#dce7ff"/>
+<text x="975" y="275" text-anchor="middle" fill="#7ee7ff" font-family="Arial,sans-serif" font-size="20" font-weight="700">HEALTH LOGIC</text><text x="975" y="330" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="31" font-weight="800">SCAN</text>
+<rect x="890" y="370" width="170" height="170" rx="22" fill="#0d2b3b" stroke="#20d9ff" stroke-width="3"/><path d="M915 420h35v-25h20v25h35v20h-35v35h-20v-35h-35z" fill="#20d9ff"/>
+<text x="975" y="610" text-anchor="middle" fill="#c8d7ef" font-family="Arial,sans-serif" font-size="19">Real product. Real users.</text>
+</g>
+<g filter="url(#s)"><rect x="1170" y="205" width="260" height="550" rx="38" fill="#030814" stroke="#60719b" stroke-width="8"/><rect x="1192" y="250" width="216" height="465" rx="20" fill="#17261f"/><text x="1300" y="330" text-anchor="middle" fill="#dfffe9" font-family="Arial,sans-serif" font-size="22" font-weight="800">VERIFYLY</text><circle cx="1300" cy="465" r="72" fill="#9be6b3" opacity=".18" stroke="#9be6b3" stroke-width="4"/><path d="M1265 465l25 25 50-60" fill="none" stroke="#9be6b3" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><text x="1300" y="610" text-anchor="middle" fill="#c9dccf" font-family="Arial,sans-serif" font-size="17">Check before you trust.</text></g>
+<rect x="110" y="800" width="1380" height="3" fill="url(#a)" opacity=".8"/>
+</svg>
