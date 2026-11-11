@@ -3,36 +3,156 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>ShipDesk | Windows Desktop Workspace for App Releases | The Trendsetter Agency</title>
-  <meta name="description" content="ShipDesk is a Windows desktop workspace for developers preparing and maintaining mobile app releases. Connect App Store Connect and Google Play, inspect subscriptions, offer codes, screenshots, compare with your local project, and get optional AI explanations using your own API key. Runs locally on your computer." />
-  <meta name="keywords" content="ShipDesk, App Store Connect, Google Play, mobile app releases, screenshot studio, subscription audit, desktop developer tool" />
-  <meta name="robots" content="index, follow" />
+  <title>ShipDesk — Set up App Store Connect and Google Play from one desk</title>
+  <meta name="description" content="Looking for something that helps you set up the App Store? ShipDesk is a Windows desktop workspace. It checks subscriptions, offer codes, screenshots, and Google Play listings against your project. Runs on your computer. $39 a year." />
+  <meta name="keywords" content="App Store Connect setup, help setting up App Store, Google Play listing audit, subscription ID checker, offer codes, screenshot dimensions, mobile app release tool, ShipDesk" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="author" content="The Trendsetter Agency LLC" />
-  <meta name="theme-color" content="#020714" />
+  <meta name="theme-color" content="#070708" />
   <link rel="canonical" href="https://www.thetrendsetteragency.com/shipdesk/" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="ShipDesk | Desktop Workspace for Mobile App Releases" />
-  <meta property="og:description" content="Inspect releases, subscriptions, offer codes, and screenshots. Compare with your local project. Optional AI with your own key. Runs on your computer." />
+  <meta property="og:site_name" content="The Trendsetter Agency" />
+  <meta property="og:title" content="ShipDesk — Set up App Store Connect and Google Play from one desk" />
+  <meta property="og:description" content="The Windows desk that checks App Store subscriptions, offer codes, screenshot sizes, and Google Play listings. $39 a year." />
   <meta property="og:url" content="https://www.thetrendsetteragency.com/shipdesk/" />
-  <meta property="og:image" content="https://www.thetrendsetteragency.com/assets/healthlogic-front.jpg" />
+  <meta property="og:image" content="https://www.thetrendsetteragency.com/shipdesk/shots/desk.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ShipDesk — Set up the stores. ShipDesk checks the rest." />
+  <meta name="twitter:description" content="Windows desktop workspace for App Store Connect and Google Play. $39 a year." />
+  <meta name="twitter:image" content="https://www.thetrendsetteragency.com/shipdesk/shots/desk.png" />
   <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ShipDesk",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Windows",
+    "url": "https://www.thetrendsetteragency.com/shipdesk/",
+    "description": "Desktop workspace that helps developers set up and check App Store Connect and Google Play: releases, subscription prices, offer codes, screenshot sizes, and listing text.",
+    "offers": {
+      "@type": "Offer",
+      "price": "39.00",
+      "priceCurrency": "USD",
+      "url": "https://www.thetrendsetteragency.com/shipdesk/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "The Trendsetter Agency LLC",
+      "url": "https://www.thetrendsetteragency.com/"
+    }
+  }
+  </script>
   <style>
-    body.tts-image-home { background: #020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat; }
-    body.tts-image-home::before { content: ""; position: fixed; inset: 0; background: rgba(2,7,20,.32); pointer-events: none; z-index: -1; }
-    .shipdesk-hero { padding: 54px 0 38px; }
-    .shipdesk-hero h1 { font-size: clamp(48px, 5vw, 72px); line-height: .98; letter-spacing: -.067em; }
-    .shipdesk-section { margin-top: 48px; padding: 36px; border: 1px solid rgba(255,255,255,.14); border-radius: 28px; background: linear-gradient(135deg, rgba(10,18,42,.84), rgba(2,6,18,.96)); box-shadow: 0 24px 90px rgba(0,0,0,.34); }
-    .shipdesk-section h2 { margin-top: 0; }
-    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 24px; }
-    .feature-card { padding: 24px; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; background: rgba(8,13,32,.6); }
-    .feature-card h3 { margin: 0 0 12px; color: #e8fbff; }
-    button, .tts-btn { cursor: pointer; border: none; }
-    #license { width: min(100%, 42rem); padding: .7rem; box-sizing: border-box; background: rgba(8,13,32,.8); color: #fff; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; font-family: ui-monospace, monospace; }
+    body.sd {
+      margin: 0;
+      background: #070708;
+      color: #f4f4f5;
+      font-family: Outfit, ui-sans-serif, system-ui, sans-serif;
+    }
+    body.sd .tts-page-glow { display: none; }
+    body.sd .tts-shell { max-width: none; padding: 0; }
+    body.sd .tts-nav {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      max-width: 72rem;
+      margin: 0 auto;
+      padding: 14px 16px 10px;
+    }
+    .sd-bar {
+      position: sticky;
+      top: 72px;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      height: 56px;
+      padding: 0 16px;
+      border-top: 1px solid #2c2c31;
+      border-bottom: 1px solid #2c2c31;
+      background: rgba(7, 7, 8, 0.92);
+      backdrop-filter: blur(10px);
+    }
+    .sd-brand { display: flex; align-items: center; gap: 10px; color: #f4f4f5; text-decoration: none; font-weight: 600; }
+    .sd-mark {
+      display: grid; place-items: center; width: 32px; height: 32px; border-radius: 8px;
+      background: #ff6a1a; color: #1a0902; font-weight: 700;
+    }
+    .sd-links { display: none; gap: 24px; }
+    .sd-links a { color: #a1a1aa; text-decoration: none; font-size: 14px; }
+    .sd-links a:hover { color: #f4f4f5; }
+    .sd-buy, .sd-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      border: 0; cursor: pointer; text-decoration: none; font-weight: 600;
+      background: #ff6a1a; color: #1a0902;
+    }
+    .sd-buy { height: 44px; padding: 0 16px; border-radius: 999px; font-size: 14px; }
+    .sd-btn { height: 48px; padding: 0 20px; border-radius: 12px; font-size: 16px; }
+    .sd-btn.ghost { background: #121214; color: #f4f4f5; border: 1px solid #2c2c31; }
+    .sd-wrap { max-width: 72rem; margin: 0 auto; padding: 48px 16px; }
+    .sd-hero { display: grid; gap: 40px; align-items: center; }
+    .sd-kicker {
+      display: inline-flex; margin: 0 0 16px; padding: 4px 12px; border-radius: 999px;
+      border: 1px solid #2c2c31; background: #121214; color: #ff6a1a;
+      font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    }
+    .sd h1 { margin: 0; font-size: clamp(36px, 5vw, 52px); line-height: 1; letter-spacing: -0.03em; }
+    .sd h1 span { display: block; margin-top: 8px; color: #ff6a1a; }
+    .sd h2 { margin: 8px 0 0; font-size: 30px; letter-spacing: -0.02em; }
+    .sd-lead { max-width: 28rem; margin: 20px 0 0; color: #a1a1aa; font-size: 18px; line-height: 1.35; }
+    .sd-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .sd-checks { margin: 32px 0 0; padding: 0; list-style: none; color: #a1a1aa; font-size: 14px; }
+    .sd-checks li { margin: 8px 0; }
+    .sd-checks li::before { content: "✓ "; color: #ff6a1a; font-weight: 700; }
+    .sd-frame { overflow: hidden; border: 1px solid #2c2c31; border-radius: 20px; background: #121214; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+    .sd-frame header { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid #2c2c31; color: #a1a1aa; font-size: 12px; }
+    .sd-dot { width: 10px; height: 10px; border-radius: 999px; background: #ff6a1a; }
+    .sd-frame img, .sd-shot { display: block; width: 100%; }
+    .sd-shot { border: 1px solid #2c2c31; border-radius: 20px; }
+    .sd-band { border-top: 1px solid #2c2c31; border-bottom: 1px solid #2c2c31; background: #121214; }
+    .sd-grid3, .sd-split, .sd-desk { display: grid; gap: 16px; }
+    .sd-card, .sd-step { border: 1px solid #2c2c31; border-radius: 16px; padding: 20px; }
+    .sd-card { background: #070708; }
+    .sd-step { background: #121214; }
+    .sd-card h3, .sd-step h3 { margin: 0; font-size: 18px; }
+    .sd-card p, .sd-step p, .sd-muted { color: #a1a1aa; }
+    .sd-card p, .sd-step p { margin: 8px 0 0; font-size: 14px; line-height: 1.5; }
+    .sd-label { margin: 0; color: #ff6a1a; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+    .sd-head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 32px; }
+    .sd-link { color: #ff6a1a; font-size: 14px; font-weight: 600; text-decoration: none; background: none; border: 0; padding: 0; cursor: pointer; }
+    .sd-num {
+      display: grid; place-items: center; width: 28px; height: 28px; border-radius: 6px;
+      background: #ff6a1a; color: #1a0902; font-weight: 700;
+    }
+    .sd-price {
+      overflow: hidden; border: 1px solid rgba(255,106,26,.4); border-radius: 20px; background: #121214;
+    }
+    .sd-price-grid { display: grid; gap: 32px; padding: 32px; }
+    .sd-price h2 { font-size: 40px; margin: 8px 0 0; }
+    .sd-price ul { margin: 0; padding: 0; list-style: none; font-size: 14px; }
+    .sd-price li { margin: 10px 0; }
+    .sd-price li::before { content: "✓ "; color: #ff6a1a; font-weight: 700; }
+    .sd-foot { margin: 24px 0 0; text-align: center; color: #71717a; font-size: 12px; }
+    .sd-foot a { color: #a1a1aa; }
+    #delivery { max-width: 72rem; margin: 24px auto; padding: 24px; border: 1px solid #2c2c31; border-radius: 20px; background: #121214; }
+    #license { width: min(100%, 42rem); padding: 12px; box-sizing: border-box; background: #070708; color: #f4f4f5; border: 1px solid #2c2c31; border-radius: 8px; font-family: ui-monospace, monospace; }
+    @media (min-width: 760px) {
+      .sd-links { display: flex; }
+      .sd-grid3 { grid-template-columns: repeat(3, 1fr); }
+      .sd-price-grid { grid-template-columns: 1.2fr 0.8fr; padding: 48px; }
+    }
+    @media (min-width: 980px) {
+      .sd-hero { grid-template-columns: 0.85fr 1.15fr; padding-top: 64px; padding-bottom: 64px; }
+      .sd-desk { grid-template-columns: 1.4fr 0.6fr; }
+      .sd-split { grid-template-columns: 0.7fr 1.3fr; align-items: center; gap: 32px; }
+    }
   </style>
   <script defer src="./checkout.js"></script>
 </head>
-<body class="tts-image-home">
-  <div class="tts-page-glow"></div>
+<body class="tts-image-home sd">
   <main class="tts-shell">
     <nav class="tts-nav" data-tts-canonical-navigation="true">
       <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
@@ -50,72 +170,123 @@
       <a href="/portal/">Portal</a>
     </nav>
 
-    <header class="shipdesk-hero">
-      <span class="tts-kicker"><span></span> Desktop workspace. Ready today.</span>
-      <h1>Ship<span class="cyan">Desk</span></h1>
-      <p>A Windows desktop workspace for developers preparing and maintaining mobile app releases. Connect App Store Connect to inspect release versions, subscription prices, offer-code settings, and screenshot inventories. Link your local project to compare the subscription IDs in your code with Apple’s records, or connect Google Play to audit listing metadata. Use Screenshot Studio to compare release images, check dimensions against supported Apple presets, and export resized copies. Ask questions in plain English, review what the stores returned, and export a report with findings and next steps.</p>
-      <p>ShipDesk runs on your computer, with optional OpenAI or Gemini explanations using your own API key. These store consoles are complicated. ShipDesk helps you set up your apps and troubleshoot issues locally, without sending your project or credentials to a remote server.</p>
-    </header>
+    <form id="buy" method="post" action="/api/shipdesk?action=checkout"></form>
 
-    <section class="shipdesk-section" id="features">
-      <h2>What ShipDesk does</h2>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <h3>App Store Connect</h3>
-          <p>List authorized apps, releases and attached build IDs, screenshot inventory by locale and device, and subscription offer configuration. Compare offer mode, active state and customer eligibility when troubleshooting redemption.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Google Play</h3>
-          <p>Enter a short-lived OAuth access token with the Android Publisher scope. ShipDesk opens a temporary edit to read listing metadata, then deletes the edit without committing changes. Audit this package to check listing text.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Screenshot Studio</h3>
-          <p>Compare two folders of PNG files by filename and SHA-256, display dimensions, and export the new folder as a ZIP. Check dimensions against supported Apple presets and export resized copies. Exact file comparison can flag encoding or metadata changes.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Local project comparison</h3>
-          <p>Link your local project to compare the subscription IDs in your code with Apple’s records. Ask questions in plain English and review what the stores returned. Export a report with findings and next steps.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Your own AI</h3>
-          <p>Optional OpenAI or Gemini explanations using your own API key. Everything runs locally on your computer. No remote processing of your store data or project files.</p>
-        </div>
-        <div class="feature-card">
-          <h3>Windows setup</h3>
-          <p>Extract the ZIP and double-click Setup.cmd. Installs Flet desktop dependencies into an existing Python. Pillow is required for resizing. OpenSSL is required for Apple connections. Desktop shortcut is created.</p>
-        </div>
-      </div>
-    </section>
+    <div class="sd-bar">
+      <a class="sd-brand" href="#top"><span class="sd-mark">S</span> ShipDesk</a>
+      <nav class="sd-links">
+        <a href="#problem">The problem</a>
+        <a href="#desk">The desk</a>
+        <a href="#setup">Setup</a>
+      </nav>
+      <button class="sd-buy" type="submit" form="buy">Get ShipDesk · $39/yr</button>
+    </div>
 
-    <section class="shipdesk-section" id="plan">
-      <h2>ShipDesk for Windows</h2>
-      <p><strong style="font-size:1.6rem;">$39 USD</strong> per year. Renews annually until canceled.</p>
-      <p>Complete and ready to download as of today. After payment you receive a private license and a protected download link for the current build.</p>
-      <form method="post" action="/api/shipdesk?action=checkout">
-        <button class="tts-btn tts-btn-primary" type="submit">Subscribe and download</button>
-      </form>
-    </section>
-
-    <section class="shipdesk-section" id="delivery" hidden>
+    <section id="delivery" hidden>
       <h2>Your ShipDesk download</h2>
       <p id="status" role="status">Verifying your Stripe payment…</p>
       <div id="entitlement" hidden>
         <label for="license">License for ShipDesk settings</label><br>
         <input id="license" readonly>
-        <p>Keep this license private. Paste it into ShipDesk Settings to check your subscription. The license is verified online against the active subscription.</p>
-        <button id="download" class="tts-btn tts-btn-primary">Download ShipDesk</button>
+        <p class="sd-muted">Keep this license private. Paste it into ShipDesk Settings. The app checks it online and tells you when the year ends.</p>
+        <button id="download" class="sd-btn" type="button">Download ShipDesk</button>
       </div>
     </section>
 
-    <section class="shipdesk-section">
-      <h2>How it works after purchase</h2>
-      <p>The checkout creates a yearly Stripe subscription. On the success page you receive a signed license. Paste that license into ShipDesk Settings. The desktop app verifies the license against this site’s billing service on each gated action (store checks, screenshot operations). Manage or cancel the subscription through the Stripe customer portal link provided in Settings. Downloads are served only while the subscription is active.</p>
-      <p>ShipDesk does not persist your Apple or Google credentials. Connection settings can be entered in the app or supplied as environment variables. Leave Issuer ID blank for an Apple individual key.</p>
-    </section>
+    <main id="top">
+      <section class="sd-wrap sd-hero">
+        <div>
+          <p class="sd-kicker">Windows desktop · on your machine</p>
+          <h1>Set up the stores.<span>ShipDesk checks the rest.</span></h1>
+          <p class="sd-lead">App Store Connect and Google Play hide the settings that get a release rejected. ShipDesk puts them on one desk.</p>
+          <div class="sd-actions">
+            <button class="sd-btn" type="submit" form="buy">Subscribe and download</button>
+            <a class="sd-btn ghost" href="#desk">See the desk</a>
+          </div>
+          <ul class="sd-checks">
+            <li>Subscription prices and offer codes</li>
+            <li>Screenshot sizes against Apple presets</li>
+            <li>Your own AI key. Nothing leaves the computer.</li>
+          </ul>
+        </div>
+        <figure class="sd-frame">
+          <header><span class="sd-dot"></span> ShipDesk · App Store Connect</header>
+          <img src="./shots/desk.png" alt="ShipDesk desktop workspace showing App Store Connect, a verification report, and a plain-English check for subscription pricing and offer codes" />
+        </figure>
+      </section>
 
-    <footer class="footer">
-      <p>2026 The Trendsetter Agency LLC <a href="/privacy.html">Privacy</a> <a href="/terms.html">Terms</a></p>
-    </footer>
+      <section id="problem" class="sd-band">
+        <div class="sd-wrap sd-grid3">
+          <article class="sd-card">
+            <h3>The console is the product.</h3>
+            <p>Releases, prices, codes, and screenshots live in different menus. One wrong setting stalls the ship.</p>
+          </article>
+          <article class="sd-card">
+            <h3>The code and the store drift.</h3>
+            <p>A subscription ID in the project does not match Apple. You find out after review, not before.</p>
+          </article>
+          <article class="sd-card">
+            <h3>Screenshots fail on size.</h3>
+            <p>Apple wants exact presets. ShipDesk compares folders, flags the mismatch, and exports resized copies.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="desk" class="sd-wrap">
+        <div class="sd-head">
+          <div>
+            <p class="sd-label">The desk</p>
+            <h2>One workspace. Ask it. Run the check.</h2>
+          </div>
+          <button class="sd-link" type="submit" form="buy">Get this desk →</button>
+        </div>
+        <div class="sd-desk">
+          <img class="sd-shot" src="./shots/desk.png" alt="ShipDesk App Store Connect workspace with an app selected and a check for subscription pricing" />
+          <ol class="sd-grid3" style="padding:0;margin:0;list-style:none">
+            <li class="sd-step"><span class="sd-num">1</span><h3>Pick the app</h3><p>Releases load from App Store Connect.</p></li>
+            <li class="sd-step"><span class="sd-num">2</span><h3>Ask in English</h3><p>Prices, offer codes, screenshots, or the whole account.</p></li>
+            <li class="sd-step"><span class="sd-num">3</span><h3>Export the report</h3><p>Findings and the next step. Copy or save.</p></li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="setup" class="sd-band">
+        <div class="sd-wrap sd-split">
+          <div>
+            <p class="sd-label">Easy setup</p>
+            <h2>Connect the stores in three steps.</h2>
+            <p class="sd-muted">The in-app guide walks the Apple key and the Google token. No dashboard to learn first.</p>
+            <ul class="sd-checks">
+              <li>Apple: individual or team key. Issuer ID stays blank for an individual key.</li>
+              <li>Google: a short-lived token. ShipDesk reads the listing and throws the edit away.</li>
+            </ul>
+            <button class="sd-btn" type="submit" form="buy" style="margin-top:28px">Open ShipDesk</button>
+          </div>
+          <img class="sd-shot" src="./shots/setup.png" alt="ShipDesk API setup screen with numbered steps for Apple App Store Connect and Google Play" />
+        </div>
+      </section>
+
+      <section id="plan" class="sd-wrap">
+        <div class="sd-price">
+          <div class="sd-price-grid">
+            <div>
+              <p class="sd-label">Ready today</p>
+              <h2>$39 a year.</h2>
+              <p class="sd-muted">Windows app. Apple and Google checks. Screenshot studio. Your license stays active while the year is paid. ShipDesk tells you when it ends.</p>
+              <button class="sd-btn" type="submit" form="buy" style="margin-top:28px;height:56px;font-size:18px">Subscribe and download</button>
+            </div>
+            <ul>
+              <li>App Store Connect releases, prices, offer codes</li>
+              <li>Google Play listing audit</li>
+              <li>Screenshot compare, size check, resized export</li>
+              <li>Plain-English questions with your own AI key</li>
+              <li>Runs locally. Store credentials stay on the PC</li>
+            </ul>
+          </div>
+        </div>
+        <p class="sd-foot">2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+      </section>
+    </main>
   </main>
 </body>
 </html>
