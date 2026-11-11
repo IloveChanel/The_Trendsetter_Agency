@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShipDesk | Windows Desktop Workspace for App Releases | The Trendsetter Agency</title>
+  <meta name="description" content="ShipDesk is a Windows desktop workspace for developers preparing and maintaining mobile app releases. Connect App Store Connect and Google Play, inspect subscriptions, offer codes, screenshots, compare with your local project, and get optional AI explanations using your own API key. Runs locally on your computer." />
+  <meta name="keywords" content="ShipDesk, App Store Connect, Google Play, mobile app releases, screenshot studio, subscription audit, desktop developer tool" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="The Trendsetter Agency LLC" />
+  <meta name="theme-color" content="#020714" />
+  <link rel="canonical" href="https://www.thetrendsetteragency.com/shipdesk/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ShipDesk | Desktop Workspace for Mobile App Releases" />
+  <meta property="og:description" content="Inspect releases, subscriptions, offer codes, and screenshots. Compare with your local project. Optional AI with your own key. Runs on your computer." />
+  <meta property="og:url" content="https://www.thetrendsetteragency.com/shipdesk/" />
+  <meta property="og:image" content="https://www.thetrendsetteragency.com/assets/healthlogic-front.jpg" />
+  <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
+  <style>
+    body.tts-image-home { background: #020714 url('/assets/healthlogic-background.jpg') center top / cover fixed no-repeat; }
+    body.tts-image-home::before { content: ""; position: fixed; inset: 0; background: rgba(2,7,20,.32); pointer-events: none; z-index: -1; }
+    .shipdesk-hero { padding: 54px 0 38px; }
+    .shipdesk-hero h1 { font-size: clamp(48px, 5vw, 72px); line-height: .98; letter-spacing: -.067em; }
+    .shipdesk-section { margin-top: 48px; padding: 36px; border: 1px solid rgba(255,255,255,.14); border-radius: 28px; background: linear-gradient(135deg, rgba(10,18,42,.84), rgba(2,6,18,.96)); box-shadow: 0 24px 90px rgba(0,0,0,.34); }
+    .shipdesk-section h2 { margin-top: 0; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; margin-top: 24px; }
+    .feature-card { padding: 24px; border: 1px solid rgba(255,255,255,.12); border-radius: 16px; background: rgba(8,13,32,.6); }
+    .feature-card h3 { margin: 0 0 12px; color: #e8fbff; }
+    button, .tts-btn { cursor: pointer; border: none; }
+    #license { width: min(100%, 42rem); padding: .7rem; box-sizing: border-box; background: rgba(8,13,32,.8); color: #fff; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; font-family: ui-monospace, monospace; }
+  </style>
+  <script defer src="./checkout.js"></script>
+</head>
+<body class="tts-image-home">
+  <div class="tts-page-glow"></div>
+  <main class="tts-shell">
+    <nav class="tts-nav" data-tts-canonical-navigation="true">
+      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+        <span class="tts-brand-mark">T</span>
+        <span class="tts-brand-copy">
+          <strong>The Trendsetter Agency</strong>
+          <em>Technology company • software, AI, and apps</em>
+        </span>
+      </a>
+      <div class="tts-links">
+        <a class="tts-pipeline-nav" href="/pipeline-expansion/">Next-Gen Tech Pipeline</a>
+        <a class="tts-pipeline-nav" href="/mobile-app-development/">I Build Mobile Apps</a>
+        <a class="tts-pipeline-nav" href="/shipdesk/">ShipDesk</a>
+      </div>
+      <a href="/portal/">Portal</a>
+    </nav>
+
+    <header class="shipdesk-hero">
+      <span class="tts-kicker"><span></span> Desktop workspace. Ready today.</span>
+      <h1>Ship<span class="cyan">Desk</span></h1>
+      <p>A Windows desktop workspace for developers preparing and maintaining mobile app releases. Connect App Store Connect to inspect release versions, subscription prices, offer-code settings, and screenshot inventories. Link your local project to compare the subscription IDs in your code with Apple’s records, or connect Google Play to audit listing metadata. Use Screenshot Studio to compare release images, check dimensions against supported Apple presets, and export resized copies. Ask questions in plain English, review what the stores returned, and export a report with findings and next steps.</p>
+      <p>ShipDesk runs on your computer, with optional OpenAI or Gemini explanations using your own API key. These store consoles are complicated. ShipDesk helps you set up your apps and troubleshoot issues locally, without sending your project or credentials to a remote server.</p>
+    </header>
+
+    <section class="shipdesk-section" id="features">
+      <h2>What ShipDesk does</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>App Store Connect</h3>
+          <p>List authorized apps, releases and attached build IDs, screenshot inventory by locale and device, and subscription offer configuration. Compare offer mode, active state and customer eligibility when troubleshooting redemption.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Google Play</h3>
+          <p>Enter a short-lived OAuth access token with the Android Publisher scope. ShipDesk opens a temporary edit to read listing metadata, then deletes the edit without committing changes. Audit this package to check listing text.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Screenshot Studio</h3>
+          <p>Compare two folders of PNG files by filename and SHA-256, display dimensions, and export the new folder as a ZIP. Check dimensions against supported Apple presets and export resized copies. Exact file comparison can flag encoding or metadata changes.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Local project comparison</h3>
+          <p>Link your local project to compare the subscription IDs in your code with Apple’s records. Ask questions in plain English and review what the stores returned. Export a report with findings and next steps.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Your own AI</h3>
+          <p>Optional OpenAI or Gemini explanations using your own API key. Everything runs locally on your computer. No remote processing of your store data or project files.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Windows setup</h3>
+          <p>Extract the ZIP and double-click Setup.cmd. Installs Flet desktop dependencies into an existing Python. Pillow is required for resizing. OpenSSL is required for Apple connections. Desktop shortcut is created.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="shipdesk-section" id="plan">
+      <h2>ShipDesk for Windows</h2>
+      <p><strong style="font-size:1.6rem;">$39 USD</strong> per year. Renews annually until canceled.</p>
+      <p>Complete and ready to download as of today. After payment you receive a private license and a protected download link for the current build.</p>
+      <form method="post" action="/api/shipdesk?action=checkout">
+        <button class="tts-btn tts-btn-primary" type="submit">Subscribe and download</button>
+      </form>
+    </section>
+
+    <section class="shipdesk-section" id="delivery" hidden>
+      <h2>Your ShipDesk download</h2>
+      <p id="status" role="status">Verifying your Stripe payment…</p>
+      <div id="entitlement" hidden>
+        <label for="license">License for ShipDesk settings</label><br>
+        <input id="license" readonly>
+        <p>Keep this license private. Paste it into ShipDesk Settings to check your subscription. The license is verified online against the active subscription.</p>
+        <button id="download" class="tts-btn tts-btn-primary">Download ShipDesk</button>
+      </div>
+    </section>
+
+    <section class="shipdesk-section">
+      <h2>How it works after purchase</h2>
+      <p>The checkout creates a yearly Stripe subscription. On the success page you receive a signed license. Paste that license into ShipDesk Settings. The desktop app verifies the license against this site’s billing service on each gated action (store checks, screenshot operations). Manage or cancel the subscription through the Stripe customer portal link provided in Settings. Downloads are served only while the subscription is active.</p>
+      <p>ShipDesk does not persist your Apple or Google credentials. Connection settings can be entered in the app or supplied as environment variables. Leave Issuer ID blank for an Apple individual key.</p>
+    </section>
+
+    <footer class="footer">
+      <p>2026 The Trendsetter Agency LLC <a href="/privacy.html">Privacy</a> <a href="/terms.html">Terms</a></p>
+    </footer>
+  </main>
+</body>
+</html>
