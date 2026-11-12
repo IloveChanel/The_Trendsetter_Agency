@@ -110,18 +110,7 @@
     .sd-frame { overflow: hidden; border: 1px solid #2c2c31; border-radius: 20px; background: #121214; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
     .sd-frame header { display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid #2c2c31; color: #a1a1aa; font-size: 12px; }
     .sd-dot { width: 10px; height: 10px; border-radius: 999px; background: #ff6a1a; }
-    .sd-app { padding: 16px; background: #0a0a0c; color: #fff; font-size: 13px; }
-    .sd-app-top b { display: block; font-size: 18px; }
-    .sd-app-top span, .sd-mini, .sd-field { color: #b7b4af; }
-    .sd-app-row, .sd-app-actions { display: flex; gap: 8px; margin-top: 12px; }
-    .sd-field { flex: 1; padding: 10px 12px; border: 1px solid #2d2d30; border-radius: 10px; background: #16161a; }
-    .sd-pill { padding: 8px 12px; border-radius: 10px; background: #ff6a1a; color: #1a0902; font-weight: 700; }
-    .sd-pill.ghost { background: #16161a; color: #fff; border: 1px solid #2d2d30; }
-    .sd-next { margin-top: 14px; padding: 16px; border: 1px solid #2d2d30; border-radius: 12px; background: #16161a; }
-    .sd-next b { display: block; }
-    .sd-stepn { display: block; margin: 12px 0 8px; color: #ff6a1a; font-size: 22px; }
-    .sd-do { margin-top: 12px; color: #ff6a1a; }
-    .sd-next p { margin: 6px 0; }
+    .sd-frame img, .sd-shot { display: block; width: 100%; }
     .sd-shot { border: 1px solid #2c2c31; border-radius: 20px; }
     .sd-band { border-top: 1px solid #2c2c31; border-bottom: 1px solid #2c2c31; background: #121214; }
     .sd-grid3, .sd-split, .sd-desk { display: grid; gap: 16px; }
@@ -222,27 +211,7 @@
         </div>
         <figure class="sd-frame">
           <header><span class="sd-dot"></span> ShipDesk · App Store Connect</header>
-          <div class="sd-app" role="img" aria-label="ShipDesk showing step 1 of 3. The App Store id is missing from the project.">
-            <div class="sd-app-top"><b>App Store Connect</b><span>Verify subscriptions, releases and screenshots.</span></div>
-            <div class="sd-app-row">
-              <div class="sd-field">Verifyly · com.verifyly.app</div>
-              <div class="sd-field">Release version</div>
-            </div>
-            <p class="sd-mini">Connected · 8 apps</p>
-            <div class="sd-app-actions">
-              <span class="sd-pill">I'm stuck</span>
-              <span class="sd-pill">I did this</span>
-              <span class="sd-pill ghost">I can't figure this out</span>
-            </div>
-            <div class="sd-next">
-              <b>Your next step</b>
-              <strong class="sd-stepn">Step 1 of 3</strong>
-              <p>This one is your code.</p>
-              <p>Apple has verifyly.plus.yearly. That exact id is not in the project.</p>
-              <b class="sd-do">Do this now:</b>
-              <p>Search the project folder for verifyly.plus.yearly.</p>
-            </div>
-          </div>
+          <img src="./shots/desk.png" alt="ShipDesk desktop workspace showing App Store Connect, a verification report, and a plain-English check for subscription pricing and offer codes" />
         </figure>
       </section>
 
@@ -267,23 +236,16 @@
         <div class="sd-head">
           <div>
             <p class="sd-label">The desk</p>
-            <h2>One step. Then the next.</h2>
+            <h2>One workspace. Ask it. Run the check.</h2>
           </div>
           <button class="sd-link" type="submit" form="buy">Get this desk →</button>
         </div>
         <div class="sd-desk">
-          <div class="sd-app sd-shot" role="img" aria-label="ShipDesk next step for a missing subscription id">
-            <div class="sd-app-top"><b>Your next step</b></div>
-            <strong class="sd-stepn">Step 1 of 3</strong>
-            <p>This one is your code.</p>
-            <p>Apple has verifyly.plus.yearly. That exact id is not in the project.</p>
-            <b class="sd-do">Do this now:</b>
-            <p>Search the project folder for verifyly.plus.yearly.</p>
-          </div>
+          <img class="sd-shot" src="./shots/desk.png" alt="ShipDesk App Store Connect workspace with an app selected and a check for subscription pricing" />
           <ol class="sd-grid3" style="padding:0;margin:0;list-style:none">
-            <li class="sd-step"><span class="sd-num">1</span><h3>I'm stuck</h3><p>ShipDesk reads Apple and the project folder.</p></li>
-            <li class="sd-step"><span class="sd-num">2</span><h3>Do this now</h3><p>One fix. It says if it is your code or the App Store.</p></li>
-            <li class="sd-step"><span class="sd-num">3</span><h3>I did this</h3><p>The next step appears. Lost? Click I can't figure this out.</p></li>
+            <li class="sd-step"><span class="sd-num">1</span><h3>Pick the app</h3><p>Releases load from App Store Connect.</p></li>
+            <li class="sd-step"><span class="sd-num">2</span><h3>Ask in English</h3><p>Prices, offer codes, screenshots, or the whole account.</p></li>
+            <li class="sd-step"><span class="sd-num">3</span><h3>Export the report</h3><p>Findings and the next step. Copy or save.</p></li>
           </ol>
         </div>
       </section>
