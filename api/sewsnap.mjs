@@ -6,8 +6,8 @@ function settings(env) {
   const site = env.SHIPDESK_SITE_URL || env.SEWSNAP_SITE_URL;
   const secret = env.SEWSNAP_LICENSE_SECRET || env.SHIPDESK_LICENSE_SECRET;
   const prices = {
-    month: env.SEWSNAP_MONTHLY_PRICE_ID,
-    year: env.SEWSNAP_ANNUAL_PRICE_ID,
+    month: env.SEWSNAP_MONTHLY_PRICE_ID || 'price_1Ub2qq8iPFK6atZj1f64oifj',
+    year: env.SEWSNAP_ANNUAL_PRICE_ID || 'price_1Ub2qr8iPFK6atZjmZtu7IZj',
   };
   if (!key || !site || !secret || secret.length < 32 || !prices.month || !prices.year) {
     throw Object.assign(new Error('SewSnap billing is not configured'), { status: 503 });
