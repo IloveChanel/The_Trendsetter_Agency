@@ -1037,6 +1037,32 @@ a.tts-pipeline-nav:focus-visible{
   letter-spacing:.01em;
 }
 .pipe-home-link{margin:22px 0 0}
+
+.tts-nav{flex-wrap:wrap;row-gap:10px}
+.tts-links{flex-wrap:wrap;gap:10px}
+a.tts-pipeline-nav,
+.tts-nav > a:not(.tts-brand){
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:42px;
+  padding:0 16px;
+  border-radius:999px;
+  white-space:nowrap;
+  box-sizing:border-box;
+  line-height:1;
+  font-size:14px;
+}
+.tts-nav > a:not(.tts-brand){
+  color:#041018!important;
+  font-weight:800;
+  letter-spacing:.03em;
+  text-decoration:none;
+  text-shadow:none;
+  background:linear-gradient(120deg,#67e8f9,#c4b5fd 48%,#fb7185);
+  box-shadow:0 0 22px rgba(34,211,238,.4);
+}
+
 .pipe-home-link a{color:#9aefff;font-weight:800;text-decoration:none}
 .pipe-home-link a:hover{color:#fff}
 .pipe-products{margin:8px 0 36px}

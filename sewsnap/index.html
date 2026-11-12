@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SewSnap | Turn Photos Into Custom Printable Sewing Patterns</title>
+  <meta name="description" content="Turn a clothing photo into a printable sewing pattern. Match a brand that fits, edit the design, and print. 7 days free, then $19.98 a month." />
+  <meta name="keywords" content="sewing pattern generator from photo, custom sewing pattern maker app, turn clothes into sewing patterns, printable PDF sewing patterns, digital pattern drafting software" />
+  <link rel="canonical" href="https://www.thetrendsetteragency.com/sewsnap" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="SewSnap | Turn Photos Into Custom Printable Sewing Patterns" />
+  <meta property="og:description" content="Snap a garment. Get a pattern that fits. 7 days free, then $19.98 a month or $119.98 a year." />
+  <meta property="og:url" content="https://www.thetrendsetteragency.com/sewsnap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SewSnap","applicationCategory":"DesignApplication","operatingSystem":"Windows","offers":[{"@type":"Offer","price":"19.98","priceCurrency":"USD"},{"@type":"Offer","price":"119.98","priceCurrency":"USD"}],"description":"Desktop app that turns clothing photos into printable sewing patterns."}
+  </script>
+  <style>
+    body { margin: 0; background: #fff7f2; color: #1c1917; font-family: Outfit, ui-sans-serif, system-ui, sans-serif; }
+    a { color: inherit; }
+    header, main { width: min(920px, calc(100% - 32px)); margin: 0 auto; }
+    header { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+    .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; }
+    .mark { width: 28px; height: 28px; border-radius: 8px; background: #fb7185; color: white; display: grid; place-items: center; font-weight: 700; }
+    .hero { background: linear-gradient(135deg, #fb7185, #fb923c); color: white; border-radius: 28px; padding: 36px 28px; }
+    .pill { display: inline-block; background: #facc15; color: #1c1917; font-weight: 700; font-size: 12px; letter-spacing: .06em; border-radius: 999px; padding: 8px 12px; }
+    h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 16px 0; }
+    h2 { margin: 0 0 8px; }
+    .card { background: white; border-radius: 24px; padding: 24px; margin-top: 16px; box-shadow: 0 10px 30px rgba(28,25,23,.05); }
+    .steps, .prices { display: grid; gap: 16px; }
+    .num { width: 36px; height: 36px; border-radius: 999px; background: #facc15; display: grid; place-items: center; font-weight: 700; }
+    .brands { display: flex; flex-wrap: wrap; gap: 8px; }
+    .brands span { border: 1px solid #fdba74; color: #c2410c; border-radius: 999px; padding: 8px 12px; }
+    button.buy { border: 0; cursor: pointer; background: #facc15; color: #1c1917; font-weight: 700; border-radius: 999px; padding: 14px 18px; font-size: 16px; }
+    button.ghost { background: white; border: 1px solid #fdba74; }
+    .price { font-size: 28px; font-weight: 700; }
+    footer { color: #78716c; font-size: 13px; padding: 28px 0 48px; }
+    @media (min-width: 800px) { .steps, .prices { grid-template-columns: repeat(3, 1fr); } .prices { grid-template-columns: 1fr 1fr; } }
+  </style>
+  <script defer src="./checkout.js"></script>
+</head>
+<body>
+  <header>
+    <a class="logo" href="/sewsnap"><span class="mark">S</span> SewSnap</a>
+    <a href="/">The Trendsetter Agency</a>
+  </header>
+  <main>
+    <section id="delivery" class="card" hidden>
+      <h2>Your SewSnap download</h2>
+      <p id="status">Checking your subscription…</p>
+      <div id="entitlement" hidden>
+        <label for="license">License</label>
+        <input id="license" readonly style="width:100%;padding:12px;border-radius:10px;border:1px solid #fdba74">
+        <p>Paste this into SewSnap. The app runs on your computer.</p>
+        <button id="download" class="buy" type="button">Download SewSnap</button>
+      </div>
+    </section>
+    <div id="offer">
+      <section class="hero">
+        <span class="pill">PHOTO → PATTERN → PRINT</span>
+        <h1>Turn any clothing photo into a custom sewing pattern in seconds.</h1>
+        <p>Snap a picture of an outfit you love. Match the fit to a brand you already wear. Print the pattern and follow the steps. It runs on your computer.</p>
+        <form method="post" action="/api/sewsnap?action=checkout&plan=month">
+          <button class="buy" type="submit">Start your 7-day free trial</button>
+        </form>
+      </section>
+      <section class="card">
+        <h2>How it works</h2>
+        <div class="steps">
+          <article><div class="num">1</div><h3>Snap 3 photos</h3><p>Front, back, and a close-up. Put a letter or a card beside the garment for scale.</p></article>
+          <article><div class="num">2</div><h3>Set the fit</h3><p>Pick the brand that already fits. Change a sleeve, a neckline, or a hem. The pieces update.</p></article>
+          <article><div class="num">3</div><h3>Print and sew</h3><p>Home-printer tiles or a copy-shop page, plus the steps, fabric, and notions.</p></article>
+        </div>
+      </section>
+      <section class="card">
+        <h2>Fit the brands you already wear</h2>
+        <p>The brand is a fit starting point. You can type your own measurements over it.</p>
+        <div class="brands">
+          <span>Everyday Ease Co</span><span>Maison Tailored</span><span>Athleisure Studio</span><span>Drape House</span>
+        </div>
+      </section>
+      <section class="card" id="price">
+        <h2>Simple, unlimited access</h2>
+        <p>7 days free. Then unlimited patterns, edits, and saved fit profiles. Cancel anytime. Your photos stay on the computer.</p>
+        <div class="prices">
+          <article>
+            <p class="price">$19.98<span style="font-size:16px"> / month</span></p>
+            <form method="post" action="/api/sewsnap?action=checkout&plan=month"><button class="buy" type="submit">Start monthly trial</button></form>
+          </article>
+          <article>
+            <p class="price">$119.98<span style="font-size:16px"> / year</span></p>
+            <form method="post" action="/api/sewsnap?action=checkout&plan=year"><button class="buy ghost" type="submit">Start yearly trial</button></form>
+          </article>
+        </div>
+      </section>
+    </div>
+    <footer>2026 The Trendsetter Agency LLC · <a href="/sewsnap/privacy">Privacy</a> · <a href="/shipdesk/privacy">ShipDesk privacy</a></footer>
+  </main>
+</body>
+</html>
