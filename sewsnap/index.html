@@ -31,7 +31,8 @@
     .num { width: 36px; height: 36px; border-radius: 999px; background: #facc15; display: grid; place-items: center; font-weight: 700; }
     .brands { display: flex; flex-wrap: wrap; gap: 8px; }
     .brands span { border: 1px solid #fdba74; color: #c2410c; border-radius: 999px; padding: 8px 12px; }
-    button.buy { border: 0; cursor: pointer; background: #facc15; color: #1c1917; font-weight: 700; border-radius: 999px; padding: 14px 18px; font-size: 16px; }
+    .agree { display: flex; gap: 8px; align-items: flex-start; margin: 12px 0; font-size: 14px; }
+    .agree a { text-decoration: underline; }
     button.ghost { background: white; border: 1px solid #fdba74; }
     .price { font-size: 28px; font-weight: 700; }
     footer { color: #78716c; font-size: 13px; padding: 28px 0 48px; }
@@ -61,6 +62,7 @@
         <h1>Turn any clothing photo into a custom sewing pattern in seconds.</h1>
         <p>Snap a picture of an outfit you love. Match the fit to a brand you already wear. Print the pattern and follow the steps. It runs on your computer.</p>
         <form method="post" action="/api/sewsnap?action=checkout&plan=month">
+          <label class="agree"><input type="checkbox" name="agree" value="yes" required /> I read the <a href="/purchase-terms">purchase terms</a>. After the trial, charges are final. My computer, printer, paper, and ink are my responsibility.</label>
           <button class="buy" type="submit">Start your 7-day free trial</button>
         </form>
       </section>
@@ -79,17 +81,21 @@
           <span>Everyday Ease Co</span><span>Maison Tailored</span><span>Athleisure Studio</span><span>Drape House</span>
         </div>
       </section>
+      <section class="card" id="requirements">
+        <h2>Your computer and your printer</h2>
+        <p>Windows 10 or 11, 64-bit, with 2 GB free. A phone or a Chromebook will not run the desktop app. Your printer, paper size, ink, and driver decide how the page comes out. We do not refund a bad print, an old PC, or a full disk. Cancel before the 7 days end or the charge stands. After that, no refunds.</p>
+      </section>
       <section class="card" id="price">
         <h2>Simple, unlimited access</h2>
         <p>7 days free. Then unlimited patterns, edits, and saved fit profiles. Cancel anytime. Your photos stay on the computer.</p>
         <div class="prices">
           <article>
             <p class="price">$19.98<span style="font-size:16px"> / month</span></p>
-            <form method="post" action="/api/sewsnap?action=checkout&plan=month"><button class="buy" type="submit">Start monthly trial</button></form>
+            <form method="post" action="/api/sewsnap?action=checkout&plan=month"><label class="agree"><input type="checkbox" name="agree" value="yes" required /> I agree. No refunds after the trial.</label><button class="buy" type="submit">Start monthly trial</button></form>
           </article>
           <article>
             <p class="price">$119.98<span style="font-size:16px"> / year</span></p>
-            <form method="post" action="/api/sewsnap?action=checkout&plan=year"><button class="buy ghost" type="submit">Start yearly trial</button></form>
+            <form method="post" action="/api/sewsnap?action=checkout&plan=year"><label class="agree"><input type="checkbox" name="agree" value="yes" required /> I agree. No refunds after the trial.</label><button class="buy ghost" type="submit">Start yearly trial</button></form>
           </article>
         </div>
       </section>

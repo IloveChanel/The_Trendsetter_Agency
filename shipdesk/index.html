@@ -149,7 +149,8 @@
     @media (min-width: 800px) { .pair { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 800px) { .desk { grid-template-columns: 1fr; } .rail { display: flex; gap: 8px; overflow: auto; } }
 
-    .sd-foot { margin: 24px 0 0; text-align: center; color: #71717a; font-size: 12px; }
+    .sd-agree { display: flex; gap: 10px; align-items: flex-start; max-width: 42rem; margin: 12px 16px 0; color: #d4d4d8; font-size: 14px; }
+    .sd-agree input { margin-top: 3px; }
     .sd-foot a { color: #a1a1aa; }
     #delivery { max-width: 72rem; margin: 24px auto; padding: 24px; border: 1px solid #2c2c31; border-radius: 20px; background: #121214; }
     #license { width: min(100%, 42rem); padding: 12px; box-sizing: border-box; background: #070708; color: #f4f4f5; border: 1px solid #2c2c31; border-radius: 8px; font-family: ui-monospace, monospace; }
@@ -190,15 +191,15 @@
           <em>Technology company • software, AI, and apps</em>
         </span>
       </a>
-      <div class="tts-links">
-        <a class="tts-pipeline-nav" href="/pipeline-expansion/">Next-Gen Tech Pipeline</a>
-        <a class="tts-pipeline-nav" href="/mobile-app-development/">I Build Mobile Apps</a>
-        <a class="tts-pipeline-nav" href="/shipdesk/">ShipDesk</a>
-      </div>
       <a href="/portal/">Portal</a>
     </nav>
 
-    <form id="buy" method="post" action="/api/shipdesk?action=checkout"></form>
+    <form id="buy" method="post" action="/api/shipdesk?action=checkout">
+      <label class="sd-agree">
+        <input type="checkbox" name="agree" value="yes" required />
+        <span>I read the <a href="/purchase-terms">purchase terms</a>. All sales are final. My computer, storage, setup, printer, and AI bill are my responsibility. Not The Trendsetter Agency's.</span>
+      </label>
+    </form>
 
     <div class="sd-bar">
       <a class="sd-brand" href="#top"><span class="sd-mark">S</span> ShipDesk</a>
@@ -282,6 +283,21 @@
             <li>Google Play listing text</li>
           </ul>
           <p class="sd-muted">Agreements, tax, and privacy are not in Apple's API. ShipDesk still points at the screen.</p>
+          <button class="sd-btn" type="submit" form="buy" style="margin-top:16px">Get ShipDesk · $39/yr</button>
+        </section>
+
+        <section id="requirements" class="panel">
+          <p class="sd-label">Read this before you pay</p>
+          <h2>Your computer. Your AI bill. No refunds.</h2>
+          <ul class="sd-checks">
+            <li>Windows 10 or Windows 11, 64-bit. Not Windows 7 or 8. Not a phone, tablet, Chromebook, or Mac.</li>
+            <li>Python 3.10 or newer from python.org, with Add to PATH checked. The Microsoft Store python shortcut does not count.</li>
+            <li>At least 2 GB free on the drive you install to. Setup downloads Flet and Pillow. That needs internet.</li>
+            <li>OpenSSL on PATH if you connect App Store Connect. You get the Apple key and the Google token yourself.</li>
+            <li>AI is optional. Bring your own OpenAI or Gemini key. You pay that company. A dead key, an empty balance, or a different AI is not our problem.</li>
+            <li>We do not remote in, we do not set up the store for you, and we do not refund because a computer is old, full, or missing Python.</li>
+          </ul>
+          <p class="sd-muted">All purchases are final. If you cannot install it, cannot follow the steps, or do not pay your AI bill, that is not a refund.</p>
           <button class="sd-btn" type="submit" form="buy" style="margin-top:16px">Get ShipDesk · $39/yr</button>
         </section>
 

@@ -15,6 +15,20 @@ function settings(env) {
   return { key, site: new URL(site).origin, secret, prices };
 }
 
+function agreed(body) {
+  const value = body && (body.agree ?? body.terms);
+  return value === 'yes' || value === 'on';
+}
+
+async function formFields(req) {
+  if (req.body && typeof req.body === 'object' && !Buffer.isBuffer(req.body)) return req.body;
+  const chunks = [];
+  for await (const chunk of req) chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+  const raw = Buffer.concat(chunks).toString('utf8');
+  if (!raw) return {};
+  try { return JSON.parse(raw); } catch { return Object.fromEntries(new URLSearchParams(raw)); }
+}
+
 function sign(id, secret) {
   return id + '.' + createHmac('sha256', secret).update('sewsnap:' + id).digest('base64url');
 }
@@ -46,6 +60,12 @@ export function createHandler({ env = process.env, fetcher = fetch } = {}) {
       }
 
       if (action === 'checkout' && req.method === 'POST') {
+        const fields = await formFields(req);
+        if (!agreed(fields)) {
+          res.statusCode = 303;
+          res.setHeader('Location', site + '/sewsnap/#requirements');
+          return res.end();
+        }
         const plan = url.searchParams.get('plan') === 'year' ? 'year' : 'month';
         const session = await stripe('checkout/sessions', {
           mode: 'subscription',
@@ -53,6 +73,7 @@ export function createHandler({ env = process.env, fetcher = fetch } = {}) {
           'line_items[0][quantity]': '1',
           'subscription_data[trial_period_days]': '7',
           'metadata[product]': 'sewsnap',
+          'metadata[terms]': 'accepted-no-refund-2026-11-12',
           success_url: site + '/sewsnap/?session_id={CHECKOUT_SESSION_ID}',
           cancel_url: site + '/sewsnap/',
         });
