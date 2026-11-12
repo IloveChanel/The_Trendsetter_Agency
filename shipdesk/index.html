@@ -135,6 +135,20 @@
     .sd-price ul { margin: 0; padding: 0; list-style: none; font-size: 14px; }
     .sd-price li { margin: 10px 0; }
     .sd-price li::before { content: "✓ "; color: #ff6a1a; font-weight: 700; }
+    body.sd:before, body.sd:after { display: none !important; }
+    body.sd { background: #070708 !important; }
+    .desk { display: grid; grid-template-columns: 220px 1fr; min-height: 80vh; background: #070708; }
+    .rail { padding: 18px 12px; border-right: 1px solid #2c2c31; background: #101012; }
+    .rail a { display: flex; align-items: center; gap: 10px; margin: 6px 0; padding: 10px 12px; border-radius: 12px; color: #a1a1aa; text-decoration: none; font-size: 14px; }
+    .rail a.on { background: #211a17; color: #ff6a1a; }
+    .work { padding: 18px; display: grid; gap: 14px; }
+    .panel { background: #121214; border: 1px solid #2c2c31; border-radius: 16px; padding: 18px; }
+    .panel h1 { font-size: clamp(32px, 4vw, 48px); }
+    .stepn { margin: 8px 0; color: #ff6a1a; font-size: 32px; font-weight: 700; }
+    .pair { display: grid; gap: 12px; }
+    @media (min-width: 800px) { .pair { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 800px) { .desk { grid-template-columns: 1fr; } .rail { display: flex; gap: 8px; overflow: auto; } }
+
     .sd-foot { margin: 24px 0 0; text-align: center; color: #71717a; font-size: 12px; }
     .sd-foot a { color: #a1a1aa; }
     #delivery { max-width: 72rem; margin: 24px auto; padding: 24px; border: 1px solid #2c2c31; border-radius: 20px; background: #121214; }
@@ -207,148 +221,90 @@
       </div>
     </section>
 
-    <main id="top">
-      <section class="sd-wrap sd-hero">
-        <div>
-          <p class="sd-kicker">Windows desktop · on your machine</p>
+    <main id="top" class="desk">
+      <aside class="rail">
+        <a class="sd-brand" href="#top"><span class="sd-mark">S</span> ShipDesk</a>
+        <a class="on" href="#step">Apple workspace</a>
+        <a href="#checks">Google Play</a>
+        <a href="#fix">Screenshot studio</a>
+        <a href="#price">$39 a year</a>
+      </aside>
+      <div class="work">
+        <section id="step" class="panel">
+          <p class="sd-label">App Store Connect</p>
           <h1>Stuck in the App Store?<span>Do this next.</span></h1>
-          <p class="sd-lead">ShipDesk reads App Store Connect and your project. Then it shows <strong>one fix</strong>.</p>
-          <ul class="sd-checks">
-            <li><strong>Your code</strong> gets the file and the line to change.</li>
-            <li><strong>The store</strong> gets the clicks. One at a time.</li>
-            <li>Lost? Hit <strong>I can't figure this out</strong>.</li>
-          </ul>
+          <p class="stepn">Step 1 of 3</p>
+          <p>This one is your code.</p>
+          <p>Change <strong>sample.plus.annual</strong> to <strong style="color:#ff6a1a">sample.plus.yearly</strong>.</p>
           <div class="sd-actions">
-            <button class="sd-btn" type="submit" form="buy">Get ShipDesk · $39/yr</button>
-            <a class="sd-btn ghost" href="#fix">See how it works</a>
+            <button class="sd-btn" type="submit" form="buy">I'm stuck · $39/yr</button>
+            <a class="sd-btn ghost" href="#fix">I did this</a>
           </div>
-        </div>
-        <figure class="sd-frame">
-          <header><span class="sd-dot"></span> ShipDesk · the next step</header>
-          <img src="/shipdesk/shots/step.jpg" alt="ShipDesk showing step 1 of 3. The fix is in the code: change the subscription id." width="1792" height="1008" />
-        </figure>
-      </section>
+        </section>
 
-      <section id="fix" class="sd-band">
-        <div class="sd-wrap">
-          <div class="sd-head">
-            <div>
-              <p class="sd-label">Before and after</p>
-              <h2>The store is a pile. ShipDesk is one step.</h2>
-            </div>
-            <button class="sd-btn" type="submit" form="buy">Get ShipDesk · $39/yr</button>
-          </div>
-          <img class="sd-shot" src="/shipdesk/shots/before-after.jpg" alt="Before: a pile of store settings. After: one step, do this now." width="1792" height="1008" />
-          <div class="sd-grid3" style="margin-top:16px">
+        <section id="fix" class="panel">
+          <p class="sd-label">Before and after</p>
+          <h2>The store is a pile. This desk is one step.</h2>
+          <div class="pair" style="margin-top:14px">
             <article class="sd-card">
-              <h3>The id is close. It is still wrong.</h3>
-              <p><strong>Before:</strong> Apple sells <strong>yearly</strong>. The code says <strong>annual</strong>.</p>
-              <p><strong>After:</strong> Open the file. Change annual to yearly. Save.</p>
+              <h3>Before</h3>
+              <p>Rejected. Missing screenshots. yearly in the store. annual in the code.</p>
             </article>
             <article class="sd-card">
-              <h3>No screenshots. Review stops.</h3>
-              <p><strong>Before:</strong> The version looks ready. Submit stays off.</p>
-              <p><strong>After:</strong> App Store Connect → this version → upload the iPhone size.</p>
-            </article>
-            <article class="sd-card">
-              <h3>The build never attached.</h3>
-              <p><strong>Before:</strong> You archived. The version still has no build.</p>
-              <p><strong>After:</strong> Wait until it says Valid. Select that build. Check again.</p>
+              <h3 style="color:#ff6a1a">After</h3>
+              <p><strong>Do this now.</strong> One line. One click. Then the next step.</p>
             </article>
           </div>
-        </div>
-      </section>
-
-      <section id="steps" class="sd-wrap">
-        <div class="sd-head">
-          <div>
-            <p class="sd-label">Three buttons</p>
-            <h2>I'm stuck. I did this. I'm lost.</h2>
+          <div class="sd-grid3" style="margin-top:14px">
+            <article class="sd-card"><h3>Close id</h3><p>Open the file. Change annual to yearly.</p></article>
+            <article class="sd-card"><h3>No screenshots</h3><p>This version. Upload the iPhone size.</p></article>
+            <article class="sd-card"><h3>No build</h3><p>Wait until it says Valid. Select it.</p></article>
           </div>
-          <button class="sd-btn" type="submit" form="buy">Get ShipDesk · $39/yr</button>
-        </div>
-        <ol class="sd-grid3" style="padding:0;margin:0;list-style:none">
-          <li class="sd-step"><span class="sd-num">1</span><h3>I'm stuck</h3><p>ShipDesk reads Apple and the folder on your PC.</p></li>
-          <li class="sd-step"><span class="sd-num">2</span><h3>Do this now</h3><p>One fix. It says code or App Store.</p></li>
-          <li class="sd-step"><span class="sd-num">3</span><h3>I did this</h3><p>Next step. Or the longer clicks if you are lost.</p></li>
-        </ol>
-      </section>
+          <button class="sd-btn" type="submit" form="buy" style="margin-top:16px">Get ShipDesk · $39/yr</button>
+        </section>
 
-      <section class="sd-band">
-        <div class="sd-wrap sd-split">
-          <div>
-            <p class="sd-label">What it checks</p>
-            <h2>Code against the store. Then the clicks.</h2>
-            <ul class="sd-checks">
-              <li>Bundle id, version, subscription ids</li>
-              <li>Description, keywords, support link, screenshots</li>
-              <li>Build, review contact, demo login, US price</li>
-              <li>Google Play listing text</li>
-              <li>Screenshot sizes, then a resized export</li>
-            </ul>
-            <p class="sd-muted">Agreements, tax, and the privacy form are not in Apple's API. ShipDesk still points at the screen.</p>
-            <button class="sd-btn" type="submit" form="buy" style="margin-top:20px">Get ShipDesk · $39/yr</button>
-          </div>
-          <img class="sd-shot" src="/shipdesk/shots/setup.png" alt="ShipDesk setup for the Apple key and the Google Play token" width="1200" height="800" />
-        </div>
-      </section>
+        <section id="steps" class="panel">
+          <h2>I'm stuck. I did this. I'm lost.</h2>
+          <ol class="sd-grid3" style="padding:0;margin:14px 0 0;list-style:none">
+            <li class="sd-step"><span class="sd-num">1</span><h3>I'm stuck</h3><p>It reads Apple and the folder on your PC.</p></li>
+            <li class="sd-step"><span class="sd-num">2</span><h3>Do this now</h3><p>It says your code or the App Store.</p></li>
+            <li class="sd-step"><span class="sd-num">3</span><h3>I did this</h3><p>Next step. Longer clicks if you are lost.</p></li>
+          </ol>
+        </section>
 
-      <section id="price" class="sd-wrap">
-        <div class="sd-price">
-          <div class="sd-price-grid">
-            <div>
-              <p class="sd-label">Ready today</p>
-              <h2>$39 a year.</h2>
-              <p class="sd-muted">Windows. Runs on your PC. Your Apple key stays there.</p>
-              <button class="sd-btn" type="submit" form="buy" style="margin-top:28px;height:56px;font-size:18px">Get ShipDesk · $39/yr</button>
-            </div>
-            <ul>
-              <li>One step at a time</li>
-              <li>The code change, written out</li>
-              <li>The App Store clicks, written out</li>
-              <li>Screenshot studio</li>
-              <li>License tells you when the year ends</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+        <section id="checks" class="panel">
+          <p class="sd-label">What it checks</p>
+          <h2>Code against the store. Then the clicks.</h2>
+          <ul class="sd-checks">
+            <li>Bundle id, version, subscription ids</li>
+            <li>Description, keywords, support link, screenshots</li>
+            <li>Build, review contact, demo login, US price</li>
+            <li>Google Play listing text</li>
+          </ul>
+          <p class="sd-muted">Agreements, tax, and privacy are not in Apple's API. ShipDesk still points at the screen.</p>
+          <button class="sd-btn" type="submit" form="buy" style="margin-top:16px">Get ShipDesk · $39/yr</button>
+        </section>
 
-      <section id="faq" class="sd-wrap">
-        <div class="sd-head">
-          <div>
-            <p class="sd-label">Questions people search</p>
-            <h2>App Store setup, in plain English.</h2>
+        <section id="price" class="panel">
+          <p class="sd-label">Ready today</p>
+          <h2>$39 a year.</h2>
+          <p class="sd-muted">Windows. On your PC. The Apple key stays there.</p>
+          <button class="sd-btn" type="submit" form="buy" style="margin-top:16px">Get ShipDesk · $39/yr</button>
+        </section>
+
+        <section id="faq" class="panel">
+          <h2>App Store setup, in plain English.</h2>
+          <div class="sd-grid3" style="margin-top:14px">
+            <article class="sd-card"><h3>What helps me set up the App Store?</h3><p>ShipDesk. It reads App Store Connect and shows the next click.</p></article>
+            <article class="sd-card"><h3>Why was my app rejected?</h3><p>It says if the fix is your code or the store page.</p></article>
+            <article class="sd-card"><h3>Why won't submit turn on?</h3><p>A missing screenshot, build, price, or support link.</p></article>
+            <article class="sd-card"><h3>The id looks right. Why did it fail?</h3><p>yearly and annual are not the same. It shows the line.</p></article>
+            <article class="sd-card"><h3>Does it work for Google Play?</h3><p>Yes. A short-lived token. It reads the listing and does not publish it.</p></article>
+            <article class="sd-card"><h3>Does my code leave the computer?</h3><p>No. The check runs on your Windows PC.</p></article>
           </div>
-          <button class="sd-btn" type="submit" form="buy">Get ShipDesk · $39/yr</button>
-        </div>
-        <div class="sd-grid3">
-          <article class="sd-card">
-            <h3>What helps me set up the App Store?</h3>
-            <p>ShipDesk. It reads App Store Connect and tells you the next click.</p>
-          </article>
-          <article class="sd-card">
-            <h3>Why was my app rejected?</h3>
-            <p>Open Resolution Center. ShipDesk says if the fix is your code or the store page.</p>
-          </article>
-          <article class="sd-card">
-            <h3>Why won't submit turn on?</h3>
-            <p>Usually a missing screenshot, build, price, or support link. ShipDesk names which one.</p>
-          </article>
-          <article class="sd-card">
-            <h3>My subscription id looks right. Why did it fail?</h3>
-            <p>yearly and annual are not the same. ShipDesk shows the line to change.</p>
-          </article>
-          <article class="sd-card">
-            <h3>Does it work for Google Play?</h3>
-            <p>Yes. Paste a short-lived token. ShipDesk reads the listing and does not publish it.</p>
-          </article>
-          <article class="sd-card">
-            <h3>Does my code leave the computer?</h3>
-            <p>No. The check runs on your Windows PC. The Apple key stays on that PC.</p>
-          </article>
-        </div>
-        <p class="sd-foot">2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
-      </section>
+          <p class="sd-foot">2026 The Trendsetter Agency LLC · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+        </section>
+      </div>
     </main>
   </main>
 </body>
