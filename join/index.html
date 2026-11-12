@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Join the List | The Trendsetter Agency</title>
+  <meta name="description" content="Get early updates when The Trendsetter Agency releases the next app. Health Logic is live. The rest of the pipeline is close." />
+  <link rel="canonical" href="https://www.thetrendsetteragency.com/join" />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
+  <style>
+    body { margin: 0; background: #020714; color: #f4f7ff; font-family: Outfit, ui-sans-serif, system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 28px 16px 64px; }
+    h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 12px 0; }
+    p.lead { color: #c9d4ea; font-size: 18px; }
+    form { display: grid; gap: 12px; margin-top: 22px; padding: 20px; border: 1px solid rgba(32,217,255,.35); border-radius: 18px; background: rgba(5,12,36,.8); }
+    label { display: grid; gap: 6px; font-weight: 700; }
+    input, select { width: 100%; box-sizing: border-box; padding: 12px; border-radius: 10px; border: 1px solid #245; background: #071126; color: #fff; font: inherit; }
+    .note { color: #9fb0c8; font-size: 14px; }
+    button { justify-self: start; }
+  </style>
+</head>
+<body class="tts-image-home">
+  <main>
+    <nav class="tts-nav" data-tts-canonical-navigation="true">
+      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+        <span class="tts-brand-mark">T</span>
+        <span class="tts-brand-copy"><strong>The Trendsetter Agency</strong><em>Technology company • software, AI, and apps</em></span>
+      </a>
+      <div class="tts-links">
+        <a class="tts-pipeline-nav" href="/pipeline-expansion/">Next-Gen Tech Pipeline</a>
+        <a class="tts-pipeline-nav" href="/mobile-app-development/">I Build Mobile Apps</a>
+        <a class="tts-pipeline-nav" href="/shipdesk/">ShipDesk</a>
+        <a class="tts-pipeline-nav" href="/contact">Build with us</a>
+        <a class="tts-pipeline-nav" href="/join">Join</a>
+      </div>
+      <a href="/portal/">Portal</a>
+    </nav>
+    <p class="tts-kicker"><span></span> Early updates</p>
+    <h1>See what drops next.</h1>
+    <p class="lead">Health Logic is live. The next apps are close. Leave your email and we will tell you when one is ready. Share the page if you want more people to see it.</p>
+    <form id="list">
+      <label>Your name <input name="name" required autocomplete="name" /></label>
+      <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+      <label>What do you want updates on?
+        <select name="topic">
+          <option>Everything that releases</option>
+          <option>Health Logic</option>
+          <option>ShipDesk</option>
+          <option>The upcoming apps</option>
+        </select>
+      </label>
+      <button class="tts-btn tts-btn-primary" type="submit">Join the list</button>
+      <p class="note">This opens an email to <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a> so your address is on the list. Send it.</p>
+      <button class="tts-btn tts-btn-secondary" type="button" id="share">Copy this page to share</button>
+    </form>
+  </main>
+  <script>
+    document.getElementById('list').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const body = ['Add me to the release list.', 'Name: ' + data.get('name'), 'Email: ' + data.get('email'), 'Updates: ' + data.get('topic')].join('\n');
+      location.href = 'mailto:MichelleTrendsetters@gmail.com?subject=' + encodeURIComponent('Release list: ' + data.get('email')) + '&body=' + encodeURIComponent(body);
+    });
+    document.getElementById('share').addEventListener('click', async function () {
+      const url = 'https://www.thetrendsetteragency.com/join';
+      try { await navigator.clipboard.writeText(url); this.textContent = 'Link copied'; }
+      catch (error) { this.textContent = url; }
+    });
+  </script>
+</body>
+</html>

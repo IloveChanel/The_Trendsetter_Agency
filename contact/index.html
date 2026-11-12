@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Build With Us | The Trendsetter Agency</title>
+  <meta name="description" content="Tell The Trendsetter Agency what you want built. Custom software, automation, a mobile app, or a connection into tools you already use." />
+  <link rel="canonical" href="https://www.thetrendsetteragency.com/contact" />
+  <meta name="robots" content="index, follow" />
+  <link rel="stylesheet" href="/assets/trendsetter-homepage-image-match.css" />
+  <style>
+    body { margin: 0; background: #020714; color: #f4f7ff; font-family: Outfit, ui-sans-serif, system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 28px 16px 64px; }
+    h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 12px 0; }
+    p.lead { color: #c9d4ea; font-size: 18px; }
+    form, .card { display: grid; gap: 12px; margin-top: 22px; padding: 20px; border: 1px solid rgba(32,217,255,.35); border-radius: 18px; background: rgba(5,12,36,.8); }
+    label { display: grid; gap: 6px; font-weight: 700; }
+    input, textarea, select { width: 100%; box-sizing: border-box; padding: 12px; border-radius: 10px; border: 1px solid #245; background: #071126; color: #fff; font: inherit; }
+    textarea { min-height: 140px; }
+    button, .tts-btn { justify-self: start; }
+    .note { color: #9fb0c8; font-size: 14px; }
+  </style>
+</head>
+<body class="tts-image-home">
+  <main>
+    <nav class="tts-nav" data-tts-canonical-navigation="true">
+      <a class="tts-brand" href="/" aria-label="The Trendsetter Agency home">
+        <span class="tts-brand-mark">T</span>
+        <span class="tts-brand-copy"><strong>The Trendsetter Agency</strong><em>Technology company • software, AI, and apps</em></span>
+      </a>
+      <div class="tts-links">
+        <a class="tts-pipeline-nav" href="/pipeline-expansion/">Next-Gen Tech Pipeline</a>
+        <a class="tts-pipeline-nav" href="/mobile-app-development/">I Build Mobile Apps</a>
+        <a class="tts-pipeline-nav" href="/shipdesk/">ShipDesk</a>
+        <a class="tts-pipeline-nav" href="/contact">Build with us</a>
+        <a class="tts-pipeline-nav" href="/join">Join</a>
+      </div>
+      <a href="/portal/">Portal</a>
+    </nav>
+    <p class="tts-kicker"><span></span> Custom build</p>
+    <h1>Tell us what you want built.</h1>
+    <p class="lead">A mobile app, a dashboard, automation, a workflow, or a hook into software you already use. Write it in plain English. This opens an email to us with your note filled in.</p>
+    <form id="build">
+      <label>Your name <input name="name" required autocomplete="name" /></label>
+      <label>Email <input name="email" type="email" required autocomplete="email" /></label>
+      <label>Phone <input name="phone" type="tel" autocomplete="tel" /></label>
+      <label>What should we build?
+        <textarea name="build" required placeholder="Example: a dashboard that pulls our store orders into one screen, or an app that checks a barcode and updates the count."></textarea>
+      </label>
+      <label>When do you need it? <input name="when" placeholder="This month, this quarter, or no rush" /></label>
+      <button class="tts-btn tts-btn-primary" type="submit">Send the build request</button>
+      <p class="note">Or call <a href="tel:+12483219121">(248) 321-9121</a> · <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a></p>
+    </form>
+  </main>
+  <script>
+    document.getElementById('build').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const body = [
+        'Name: ' + data.get('name'),
+        'Email: ' + data.get('email'),
+        'Phone: ' + (data.get('phone') || 'not given'),
+        'When: ' + (data.get('when') || 'not given'),
+        '',
+        'What to build:',
+        data.get('build')
+      ].join('\n');
+      location.href = 'mailto:MichelleTrendsetters@gmail.com?subject=' + encodeURIComponent('Build request from ' + data.get('name')) + '&body=' + encodeURIComponent(body);
+    });
+  </script>
+</body>
+</html>
