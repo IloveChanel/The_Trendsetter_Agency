@@ -32,15 +32,18 @@
         <a class="tts-pipeline-nav" href="/pipeline-expansion/">Next-Gen Tech Pipeline</a>
         <a class="tts-pipeline-nav" href="/mobile-app-development/">I Build Mobile Apps</a>
         <a class="tts-pipeline-nav" href="/shipdesk/">ShipDesk</a>
-        <a class="tts-pipeline-nav" href="/contact">Build with us</a>
-        <a class="tts-pipeline-nav" href="/join">Join</a>
       </div>
       <a href="/portal/">Portal</a>
     </nav>
     <p class="tts-kicker"><span></span> Custom build</p>
     <h1>Tell us what you want built.</h1>
-    <p class="lead">A mobile app, a dashboard, automation, a workflow, or a hook into software you already use. Write it in plain English. This opens an email to us with your note filled in.</p>
-    <form id="build">
+    <p class="lead">A mobile app, a dashboard, automation, a workflow, or a hook into software you already use. Write it in plain English. It goes to MichelleTrendsetters@gmail.com.</p>
+    <p class="note" id="sent" hidden>Sent. We have the request.</p>
+    <form id="build" action="https://formsubmit.co/MichelleTrendsetters@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Build request from the website" />
+      <input type="hidden" name="_template" value="table" />
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://www.thetrendsetteragency.com/contact?sent=1" />
       <label>Your name <input name="name" required autocomplete="name" /></label>
       <label>Email <input name="email" type="email" required autocomplete="email" /></label>
       <label>Phone <input name="phone" type="tel" autocomplete="tel" /></label>
@@ -49,24 +52,13 @@
       </label>
       <label>When do you need it? <input name="when" placeholder="This month, this quarter, or no rush" /></label>
       <button class="tts-btn tts-btn-primary" type="submit">Send the build request</button>
-      <p class="note">Or call <a href="tel:+12483219121">(248) 321-9121</a> · <a href="mailto:MichelleTrendsetters@gmail.com">MichelleTrendsetters@gmail.com</a></p>
+      <p class="note">Or call <a href="tel:+12483219121">(248) 321-9121</a></p>
     </form>
   </main>
   <script>
-    document.getElementById('build').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const data = new FormData(event.target);
-      const body = [
-        'Name: ' + data.get('name'),
-        'Email: ' + data.get('email'),
-        'Phone: ' + (data.get('phone') || 'not given'),
-        'When: ' + (data.get('when') || 'not given'),
-        '',
-        'What to build:',
-        data.get('build')
-      ].join('\n');
-      location.href = 'mailto:MichelleTrendsetters@gmail.com?subject=' + encodeURIComponent('Build request from ' + data.get('name')) + '&body=' + encodeURIComponent(body);
-    });
+    if (new URLSearchParams(location.search).get('sent') === '1') {
+      document.getElementById('sent').hidden = false;
+    }
   </script>
 </body>
 </html>
