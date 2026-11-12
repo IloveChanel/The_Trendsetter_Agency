@@ -71,7 +71,6 @@ export function createHandler({ env = process.env, fetcher = fetch } = {}) {
           mode: 'subscription',
           'line_items[0][price]': prices[plan],
           'line_items[0][quantity]': '1',
-          'subscription_data[trial_period_days]': '7',
           'metadata[product]': 'sewsnap',
           'metadata[terms]': 'accepted-no-refund-2026-11-12',
           success_url: site + '/sewsnap/?session_id={CHECKOUT_SESSION_ID}',

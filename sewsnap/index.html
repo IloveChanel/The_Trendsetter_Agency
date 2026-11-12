@@ -4,12 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>SewSnap | Turn Photos Into Custom Printable Sewing Patterns</title>
-  <meta name="description" content="Turn a clothing photo into a printable sewing pattern. Match a brand that fits, edit the design, and print. 7 days free, then $19.98 a month." />
+  <meta name="description" content="Try SewSnap on your computer. Saving a pattern and printing it stay locked until you pay. $19.98 a month or $119.98 a year." />
   <meta name="keywords" content="sewing pattern generator from photo, custom sewing pattern maker app, turn clothes into sewing patterns, printable PDF sewing patterns, digital pattern drafting software" />
   <link rel="canonical" href="https://www.thetrendsetteragency.com/sewsnap" />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="SewSnap | Turn Photos Into Custom Printable Sewing Patterns" />
-  <meta property="og:description" content="Snap a garment. Get a pattern that fits. 7 days free, then $19.98 a month or $119.98 a year." />
+  <meta property="og:description" content="Try it on your computer. Save and print stay locked until you pay. $19.98 a month or $119.98 a year." />
   <meta property="og:url" content="https://www.thetrendsetteragency.com/sewsnap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" />
   <script type="application/ld+json">
@@ -22,7 +22,11 @@
     header { display: flex; align-items: center; justify-content: space-between; height: 72px; }
     .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; text-decoration: none; }
     .mark { width: 28px; height: 28px; border-radius: 8px; background: #fb7185; color: white; display: grid; place-items: center; font-weight: 700; }
-    .hero { background: linear-gradient(135deg, #fb7185, #fb923c); color: white; border-radius: 28px; padding: 36px 28px; }
+    .hero { background: linear-gradient(135deg, #fb7185, #fb923c); color: white; border-radius: 28px; padding: 36px 32px 32px; overflow: visible; }
+    .hero p { max-width: 40rem; overflow-wrap: anywhere; }
+    .hero .agree, .hero .agree a { color: #fff; }
+    button.buy { border: 0; cursor: pointer; background: #facc15; color: #1c1917; font: 700 16px Outfit, ui-sans-serif, system-ui, sans-serif; border-radius: 999px; padding: 14px 18px; }
+    .card h2, .card p, .card li { background: transparent; color: #1c1917; }
     .pill { display: inline-block; background: #facc15; color: #1c1917; font-weight: 700; font-size: 12px; letter-spacing: .06em; border-radius: 999px; padding: 8px 12px; }
     h1 { font-size: clamp(32px, 5vw, 48px); line-height: 1.05; margin: 16px 0; }
     h2 { margin: 0 0 8px; }
@@ -59,11 +63,11 @@
     <div id="offer">
       <section class="hero">
         <span class="pill">PHOTO → PATTERN → PRINT</span>
-        <h1>Turn any clothing photo into a custom sewing pattern in seconds.</h1>
-        <p>Snap a picture of an outfit you love. Match the fit to a brand you already wear. Print the pattern and follow the steps. It runs on your computer.</p>
+        <h1>Snap a garment you love. Get a sewing pattern that actually fits.</h1>
+        <p>You can try SewSnap on your computer. Saving a pattern and printing it stay locked until you pay. There is no free week.</p>
         <form method="post" action="/api/sewsnap?action=checkout&plan=month">
-          <label class="agree"><input type="checkbox" name="agree" value="yes" required /> I read the <a href="/purchase-terms">purchase terms</a>. After the trial, charges are final. My computer, printer, paper, and ink are my responsibility.</label>
-          <button class="buy" type="submit">Start your 7-day free trial</button>
+          <label class="agree"><input type="checkbox" name="agree" value="yes" required /> I read the <a href="/purchase-terms">purchase terms</a>. All sales are final. My computer, printer, paper, and ink are my responsibility.</label>
+          <button class="buy" type="submit">Unlock save and print · $19.98/mo</button>
         </form>
       </section>
       <section class="card">
@@ -83,19 +87,19 @@
       </section>
       <section class="card" id="requirements">
         <h2>Your computer and your printer</h2>
-        <p>Windows 10 or 11, 64-bit, with 2 GB free. A phone or a Chromebook will not run the desktop app. Your printer, paper size, ink, and driver decide how the page comes out. We do not refund a bad print, an old PC, or a full disk. Cancel before the 7 days end or the charge stands. After that, no refunds.</p>
+        <p>Windows 10 or 11, 64-bit, with 2 GB free. A phone or a Chromebook will not run the desktop app. Your printer, paper size, ink, and driver decide how the page comes out. We do not refund a bad print, an old PC, a full disk, or a change of mind.</p>
       </section>
       <section class="card" id="price">
-        <h2>Simple, unlimited access</h2>
-        <p>7 days free. Then unlimited patterns, edits, and saved fit profiles. Cancel anytime. Your photos stay on the computer.</p>
+        <h2>SewSnap Pro</h2>
+        <p>Try the app. Save and print ask you to pay. $19.98 a month, or $119.98 a year. No free billing days. A charge that has already been made is not refunded.</p>
         <div class="prices">
           <article>
             <p class="price">$19.98<span style="font-size:16px"> / month</span></p>
-            <form method="post" action="/api/sewsnap?action=checkout&plan=month"><label class="agree"><input type="checkbox" name="agree" value="yes" required /> I agree. No refunds after the trial.</label><button class="buy" type="submit">Start monthly trial</button></form>
+            <form method="post" action="/api/sewsnap?action=checkout&plan=month"><label class="agree"><input type="checkbox" name="agree" value="yes" required /> I agree. All sales are final.</label><button class="buy" type="submit">Pay monthly</button></form>
           </article>
           <article>
             <p class="price">$119.98<span style="font-size:16px"> / year</span></p>
-            <form method="post" action="/api/sewsnap?action=checkout&plan=year"><label class="agree"><input type="checkbox" name="agree" value="yes" required /> I agree. No refunds after the trial.</label><button class="buy ghost" type="submit">Start yearly trial</button></form>
+            <form method="post" action="/api/sewsnap?action=checkout&plan=year"><label class="agree"><input type="checkbox" name="agree" value="yes" required /> I agree. All sales are final.</label><button class="buy ghost" type="submit">Pay yearly</button></form>
           </article>
         </div>
       </section>
